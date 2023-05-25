@@ -10,7 +10,6 @@ Utilizing cutting-edge technology,I have developed a robust, interactive web app
 ![image-002](https://github.com/Mak-3/Stocks-Laboratory/assets/75625675/63d8ff9f-97ef-4396-83e1-e2cca64f4d0b)
 ![image-003](https://github.com/Mak-3/Stocks-Laboratory/assets/75625675/e4063b2e-05df-4214-ad42-3ce6db3367e8)
 ![image-004](https://github.com/Mak-3/Stocks-Laboratory/assets/75625675/e5cb80e8-c645-4386-a321-d08be506a5f0)
-![image-005](https://github.com/Mak-3/Stocks-Laboratory/assets/75625675/144292d5-694c-4386-8788-e1383883909b)
 ![image-006](https://github.com/Mak-3/Stocks-Laboratory/assets/75625675/d82dc80b-c82b-4628-9b22-9fd0e1b9e0a1)
 ![image-007](https://github.com/Mak-3/Stocks-Laboratory/assets/75625675/cfc24705-26fd-47cf-86f5-6df22aad966c)
 ![image-008](https://github.com/Mak-3/Stocks-Laboratory/assets/75625675/73c79f53-6c33-4521-a682-6a4eafcfee5e)
