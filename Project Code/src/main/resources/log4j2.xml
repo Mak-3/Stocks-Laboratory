@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="stdout" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{dd MMM yyyy HH:mm:ss,SSS} -%X{X-WM-Request-Track-Id} %t %p [%c] - %encode{%m}{CRLF}%n" charset = "UTF-8"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="stdout"/>
+        </Root>
+
+        <!-- Runtime Rest services calls, For brief url level logging and request and response processors information -->
+        <!--<logger name="com.wavemaker.runtime.rest" level="DEBUG"/>-->
+
+        <!-- To log cleanup tasks performed on un-deployment of webapp -->
+        <!--<logger name="com.wavemaker.runtime.server.CleanupListener" level="DEBUG"/>-->
+
+        <!--To log cleanup tasks performed post request-->
+        <!--<logger name="com.wavemaker.runtime.web.filter.WMRequestFilter" level="DEBUG"/>-->
+
+        <!-- Hikari DB Connection Pool -->
+        <!--<logger name="com.zaxxer.hikari" level="DEBUG"/>-->
+
+        <!-- For detailed http client calls logging-->
+        <!--<logger name="org.apache.http.client" level="DEBUG"/>-->
+
+        <!-- Hibernate -->
+        <logger name="org.hibernate" level="WARN"/>
+
+        <!-- log cache activity -->
+        <!--<logger name="org.hibernate.cache" level="DEBUG"/>-->
+
+        <!-- log database import -->
+        <!--<logger name="org.hibernate.cfg.reveng" level="DEBUG"/>-->
+
+        <!-- enable the following line if you want to track down connection
+        leakages when using DriverManagerConnectionProvider -->
+        <!--<logger name="org.hibernate.connection.DriverManagerConnectionProvider" level="TRACE"/>-->
+
+        <!-- log HQL parse trees and its activity -->
+        <!--<logger name="org.hibernate.hql" level="DEBUG"/>-->
+
+        <!-- log JDBC resource acquisition -->
+        <!--<logger name="org.hibernate.jdbc" level="DEBUG"/>-->
+
+        <!-- log just the SQL -->
+        <!--<logger name="org.hibernate.SQL" level="DEBUG"/>-->
+
+        <!-- log schema export/update -->
+        <!--<logger name="org.hibernate.tool.hbm2ddl" level="DEBUG"/>-->
+
+        <!-- log transaction activity -->
+        <!--<logger name="org.hibernate.transaction" level="DEBUG"/>-->
+
+        <!-- log JDBC bind parameters -->
+        <!--<logger name="org.hibernate.type" level="DEBUG"/>-->
+
+        <!-- Spring -->
+        <logger name="org.springframework" level="WARN"/>
+
+        <!-- Security -->
+        <!--<logger name="org.springframework.security" level="DEBUG"/>-->
+
+        <!-- log LDAP provider -->
+        <!--<logger name="org.springframework.security.ldap" level="DEBUG"/>-->
+    </Loggers>
+</Configuration>

@@ -1,0 +1,165 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "96d6ecb6-7512-4d59-99b5-ba59cfdc2ea7",
+    "x-WM-SERVICE_ID" : "twelvedata4",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "host" : "api.twelvedata.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "twelvedata4"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/twelvedata4/quote" : {
+      "get" : {
+        "tags" : [ "twelvedata4" ],
+        "operationId" : "twelvedata4_invoke",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "symbol",
+          "in" : "query",
+          "description" : "symbol",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "name" : "apikey",
+          "in" : "query",
+          "description" : "apikey",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "name" : "source",
+          "in" : "query",
+          "description" : "source",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/twelvedata4/quote",
+      "x-WM-TAG" : "twelvedata4",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.twelvedata4.scheme}://${rest.twelvedata4.host}${rest.twelvedata4.basepath}/quote"
+    }
+  },
+  "definitions" : {
+    "Response.fifty_two_week" : {
+      "required" : [ "high", "high_change", "high_change_percent", "low", "low_change", "low_change_percent", "range" ],
+      "properties" : {
+        "low_change" : {
+          "type" : "string"
+        },
+        "high" : {
+          "type" : "string"
+        },
+        "low_change_percent" : {
+          "type" : "string"
+        },
+        "low" : {
+          "type" : "string"
+        },
+        "range" : {
+          "type" : "string"
+        },
+        "high_change" : {
+          "type" : "string"
+        },
+        "high_change_percent" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "twelvedata4.Response.fifty_two_week",
+      "x-WM-TAGS" : [ "twelvedata4" ]
+    },
+    "RootResponse" : {
+      "required" : [ "average_volume", "change", "close", "currency", "datetime", "exchange", "fifty_two_week", "high", "is_market_open", "low", "mic_code", "name", "open", "percent_change", "previous_close", "symbol", "timestamp", "volume" ],
+      "properties" : {
+        "symbol" : {
+          "type" : "string"
+        },
+        "mic_code" : {
+          "type" : "string"
+        },
+        "change" : {
+          "type" : "string"
+        },
+        "volume" : {
+          "type" : "string"
+        },
+        "datetime" : {
+          "type" : "string"
+        },
+        "high" : {
+          "type" : "string"
+        },
+        "fifty_two_week" : {
+          "$ref" : "#/definitions/Response.fifty_two_week"
+        },
+        "low" : {
+          "type" : "string"
+        },
+        "previous_close" : {
+          "type" : "string"
+        },
+        "average_volume" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "is_market_open" : {
+          "type" : "boolean"
+        },
+        "exchange" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "close" : {
+          "type" : "string"
+        },
+        "percent_change" : {
+          "type" : "string"
+        },
+        "open" : {
+          "type" : "string"
+        },
+        "timestamp" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "twelvedata4.RootResponse",
+      "x-WM-TAGS" : [ "twelvedata4" ]
+    }
+  }
+}

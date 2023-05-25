@@ -1,0 +1,10 @@
+{
+  "messages" : { },
+  "formats" : { },
+  "files" : {
+    "angular" : "en",
+    "fullCalendar" : null,
+    "moment" : null
+  },
+  "prefabMessages" : { }
+}

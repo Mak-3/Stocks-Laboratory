@@ -1,0 +1,120 @@
+{
+  "basePath" : "${rest.twelvedata3.basepath}",
+  "paths" : {
+    "/stocks" : {
+      "x-WM-BASE_PATH" : "/stocks",
+      "x-WM-TAG" : "twelvedata3",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "twelvedata3_invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "apikey",
+          "format" : "string",
+          "description" : "apikey",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "exchange",
+          "format" : "string",
+          "description" : "exchange",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "source",
+          "format" : "string",
+          "description" : "source",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "tags" : [ "twelvedata3" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.twelvedata3.scheme}://${rest.twelvedata3.host}${rest.twelvedata3.basepath}/stocks"
+    }
+  },
+  "host" : "${rest.twelvedata3.host}",
+  "schemes" : [ "${rest.twelvedata3.scheme}" ],
+  "definitions" : {
+    "Response.dataEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "twelvedata3.Response.dataEntryItem",
+      "x-WM-TAGS" : [ "twelvedata3" ],
+      "required" : [ "country", "currency", "exchange", "mic_code", "name", "symbol", "type" ],
+      "properties" : {
+        "symbol" : {
+          "type" : "string"
+        },
+        "country" : {
+          "type" : "string"
+        },
+        "mic_code" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "exchange" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "twelvedata3.RootResponse",
+      "x-WM-TAGS" : [ "twelvedata3" ],
+      "required" : [ "data", "status" ],
+      "properties" : {
+        "data" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Response.dataEntryItem"
+          }
+        },
+        "status" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "x-WM-API_ID" : "a7ee8265-a758-49b3-be21-2670e77da17b",
+    "x-WM-SERVICE_ID" : "twelvedata3",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "tags" : [ {
+    "name" : "twelvedata3"
+  } ]
+}

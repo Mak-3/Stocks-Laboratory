@@ -1,0 +1,6 @@
+{
+  "id" : "IndianNews",
+  "type" : "RestService",
+  "title" : "IndianNews",
+  "mockEnabled" : false
+}

@@ -1,0 +1,107 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "x-WM-API_ID" : "9240da7f-4711-459e-9c41-de614728ea0a",
+    "x-WM-SERVICE_ID" : "p",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "host" : "share-market-news-api-india.p.rapidapi.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "IndianNews"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/marketNews" : {
+      "get" : {
+        "tags" : [ "IndianNews" ],
+        "operationId" : "IndianNews_invoke",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "X-RapidAPI-Key",
+          "in" : "header",
+          "description" : "X-RapidAPI-Key",
+          "required" : false,
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : true,
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "name" : "X-RapidAPI-Host",
+          "in" : "header",
+          "description" : "X-RapidAPI-Host",
+          "required" : false,
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : true,
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/Response.RootResponseROOTEntryItem"
+              },
+              "x-WM-IS_LIST" : true
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/marketNews",
+      "x-WM-TAG" : "IndianNews",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.IndianNews.scheme}://${rest.IndianNews.host}${rest.IndianNews.basepath}/marketNews"
+    }
+  },
+  "definitions" : {
+    "Response.RootResponseROOTEntryItem" : {
+      "required" : [ "Source", "Title", "URL" ],
+      "properties" : {
+        "Title" : {
+          "type" : "string"
+        },
+        "URL" : {
+          "type" : "string"
+        },
+        "Source" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "IndianNews.Response.RootResponseROOTEntryItem",
+      "x-WM-TAGS" : [ "IndianNews" ]
+    },
+    "RootResponse" : {
+      "required" : [ "RootResponseROOT" ],
+      "properties" : {
+        "RootResponseROOT" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Response.RootResponseROOTEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "IndianNews.RootResponse",
+      "x-WM-TAGS" : [ "IndianNews" ]
+    }
+  }
+}

@@ -1,0 +1,216 @@
+<wm-page pagetitle="Portfolio" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-linearlayout direction="column" spacing="4" padding="4px" name="linearlayout1" width="100%" height="100%">
+                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem1">
+                    <wm-linearlayout direction="row" name="linearlayout2">
+                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem2">
+                            <wm-linearlayout direction="column" name="linearlayout3">
+                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem4">
+                                    <wm-linearlayout direction="row" name="linearlayout17_1">
+                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem39_1">
+                                            <wm-linearlayout direction="column" name="linearlayout18">
+                                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem42">
+                                                    <wm-linearlayout direction="row" name="linearlayout19">
+                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem44">
+                                                            <wm-picture resizemode="cover" name="picture3" picturesource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_India.png/2560px-Flag_of_India.png" width="40px" height="30px"></wm-picture>
+                                                            <wm-label padding="unset 0.5em" name="label21_1" caption="INDIAN STOCKS" fontweight="bold" fontsize="20"></wm-label>
+                                                        </wm-linearlayoutitem>
+                                                    </wm-linearlayout>
+                                                </wm-linearlayoutitem>
+                                            </wm-linearlayout>
+                                        </wm-linearlayoutitem>
+                                        <wm-linearlayoutitem name="linearlayoutitem41" flexgrow="1" horizontalalign="right">
+                                            <wm-button class="btn-info" caption="Trade in American stocks" type="button" margin="unset 0.5em" name="button1" on-click="Actions.goToPage_BuyAmericanStocks.invoke()"></wm-button>
+                                        </wm-linearlayoutitem>
+                                    </wm-linearlayout>
+                                </wm-linearlayoutitem>
+                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem5">
+                                    <wm-list listclass="list-group" template="true" template-name="Business Card" itemsperrow="xs-1 sm-2 md-3 lg-4" class="list-card" statehandler="URL" name="Nifty100StocksList1" dataset="bind:Variables.Nifty100StocksInvoke.dataSet"
+                                        navigation="Basic" title="NIFTY 100 STOCKS OF INDIA" direction="vertical" pagesize="12" on-render="Nifty100StocksList1Render(widget, $data)" on-beforedatarender="Nifty100StocksList1Beforedatarender(widget, $data)" showrecordcount="true">
+                                        <wm-listtemplate layout="media" name="listtemplate1">
+                                            <wm-card name="card1">
+                                                <wm-card-content fontsize="0.8" fontunit="em" name="card_content1" class="Nifty100cards" overflow="hidden" borderwidth="2px" bordercolor="#000000" on-load="card_content1Load($event, widget, item, currentItemWidgets)">
+                                                    <wm-linearlayout direction="column" name="linearlayout5" spacing="0" height="300px">
+                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem9">
+                                                            <wm-linearlayout direction="row" name="linearlayout6">
+                                                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem13" horizontalalign="left">
+                                                                    <wm-label padding="unset 0.5em" name="label6" caption="bind:Variables.Nifty100StocksInvoke.dataSet[$i].symbol" width="100%" class="h6" fontweight="bold"></wm-label>
+                                                                </wm-linearlayoutitem>
+                                                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem14" horizontalalign="center">
+                                                                    <wm-label padding="unset 0.5em" name="label7" caption="bind:Variables.Nifty100StocksInvoke.dataSet[$i].identifier" width="100%" class="h6" fontweight="bold"></wm-label>
+                                                                </wm-linearlayoutitem>
+                                                                <wm-linearlayoutitem name="linearlayoutitem15" flexgrow="1" horizontalalign="right">
+                                                                    <wm-label padding="unset 0.5em" name="label8" caption="bind:Variables.Nifty100StocksInvoke.dataSet[$i].lastUpdateTime" width="100%" class="h6" fontsize="8"></wm-label>
+                                                                </wm-linearlayoutitem>
+                                                            </wm-linearlayout>
+                                                        </wm-linearlayoutitem>
+                                                        <wm-linearlayoutitem name="linearlayoutitem10" flexgrow="1">
+                                                            <wm-linearlayout direction="row" name="linearlayout7">
+                                                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem17">
+                                                                    <wm-linearlayout direction="column" name="linearlayout16">
+                                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem37" padding="0px unset">
+                                                                            <wm-label padding="0em 0.5em" name="label9" caption="Price (rs)" margin="0px unset" class="text-muted"></wm-label>
+                                                                        </wm-linearlayoutitem>
+                                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem38" padding="0px unset">
+                                                                            <wm-label padding="0em 0.5em" name="label11" caption="bind:Variables.Nifty100StocksInvoke.dataSet[$i].lastPrice" margin="0px unset"></wm-label>
+                                                                        </wm-linearlayoutitem>
+                                                                    </wm-linearlayout>
+                                                                </wm-linearlayoutitem>
+                                                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem18">
+                                                                    <wm-linearlayout direction="column" name="linearlayout17">
+                                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem39" horizontalalign="right" padding="0px unset">
+                                                                            <wm-label padding="0em 0.5em" name="label10" caption="Change (%)" margin="0px unset" class="text-muted"></wm-label>
+                                                                        </wm-linearlayoutitem>
+                                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem40" horizontalalign="right">
+                                                                            <wm-label padding="0em 0.5em" name="label12" caption="bind:Variables.Nifty100StocksInvoke.dataSet[$i].pChange" margin="0px unset"></wm-label>
+                                                                        </wm-linearlayoutitem>
+                                                                    </wm-linearlayout>
+                                                                </wm-linearlayoutitem>
+                                                            </wm-linearlayout>
+                                                        </wm-linearlayoutitem>
+                                                        <wm-linearlayoutitem name="linearlayoutitem11" flexgrow="1">
+                                                            <wm-linearlayout direction="row" name="linearlayout8">
+                                                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem19">
+                                                                    <wm-linearlayout direction="column" name="linearlayout13">
+                                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem31" horizontalalign="left">
+                                                                            <wm-label padding="0em 0.5em" name="label13" caption="Year change (%)" margin="0px unset" class="text-muted"></wm-label>
+                                                                        </wm-linearlayoutitem>
+                                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem32" horizontalalign="left">
+                                                                            <wm-label padding="unset 0.5em" name="label16" caption="bind:Variables.Nifty100StocksInvoke.dataSet[$i].perChange365d"></wm-label>
+                                                                        </wm-linearlayoutitem>
+                                                                    </wm-linearlayout>
+                                                                </wm-linearlayoutitem>
+                                                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem20">
+                                                                    <wm-linearlayout direction="column" name="linearlayout14">
+                                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem33" horizontalalign="center">
+                                                                            <wm-label padding="0em 0.5em" name="label14" caption="Day high (rs)" margin="0px unset" class="text-muted"></wm-label>
+                                                                        </wm-linearlayoutitem>
+                                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem34" horizontalalign="center">
+                                                                            <wm-label padding="unset 0.5em" name="label17" caption="bind:Variables.Nifty100StocksInvoke.dataSet[$i].dayHigh" color="green"></wm-label>
+                                                                        </wm-linearlayoutitem>
+                                                                    </wm-linearlayout>
+                                                                </wm-linearlayoutitem>
+                                                                <wm-linearlayoutitem name="linearlayoutitem21" flexgrow="1">
+                                                                    <wm-linearlayout direction="column" name="linearlayout15">
+                                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem35" horizontalalign="right">
+                                                                            <wm-label padding="0em 0.5em" name="label15" caption="Day low (rs)" margin="0px unset" class="text-muted"></wm-label>
+                                                                        </wm-linearlayoutitem>
+                                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem36" horizontalalign="right">
+                                                                            <wm-label padding="unset 0.5em" name="label18" caption="bind:Variables.Nifty100StocksInvoke.dataSet[$i].dayLow" color="red"></wm-label>
+                                                                        </wm-linearlayoutitem>
+                                                                    </wm-linearlayout>
+                                                                </wm-linearlayoutitem>
+                                                            </wm-linearlayout>
+                                                        </wm-linearlayoutitem>
+                                                        <wm-linearlayoutitem name="linearlayoutitem12" flexgrow="1">
+                                                            <wm-linearlayout direction="row" name="linearlayout9">
+                                                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem22">
+                                                                    <wm-linearlayout direction="column" name="linearlayout10">
+                                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem25" horizontalalign="left">
+                                                                            <wm-label padding="0em 0.5em" name="label23" caption="Prev close (rs)" margin="0px unset" class="text-muted"></wm-label>
+                                                                        </wm-linearlayoutitem>
+                                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem26" horizontalalign="left">
+                                                                            <wm-label padding="0em 0.5em" name="label24" caption="bind:Variables.Nifty100StocksInvoke.dataSet[$i].previousClose" margin="0px unset"></wm-label>
+                                                                        </wm-linearlayoutitem>
+                                                                    </wm-linearlayout>
+                                                                </wm-linearlayoutitem>
+                                                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem23">
+                                                                    <wm-linearlayout direction="column" name="linearlayout11">
+                                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem27" horizontalalign="center">
+                                                                            <wm-label padding="0em 0.5em" name="label22" caption="Traded value" margin="0px unset" class="text-muted"></wm-label>
+                                                                        </wm-linearlayoutitem>
+                                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem28" horizontalalign="center">
+                                                                            <wm-label padding="0em 0.5em" name="label21" caption="bind:Variables.Nifty100StocksInvoke.dataSet[$i].totalTradedValue" margin="0px unset"></wm-label>
+                                                                        </wm-linearlayoutitem>
+                                                                    </wm-linearlayout>
+                                                                </wm-linearlayoutitem>
+                                                                <wm-linearlayoutitem name="linearlayoutitem24" flexgrow="1">
+                                                                    <wm-linearlayout direction="column" name="linearlayout12">
+                                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem29" horizontalalign="right">
+                                                                            <wm-label padding="0em 0.5em" name="label19" caption="Traded volume" margin="0px unset" class="text-muted"></wm-label>
+                                                                        </wm-linearlayoutitem>
+                                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem30" horizontalalign="right">
+                                                                            <wm-label padding="0em 0.5em" name="label20" caption="bind:Variables.Nifty100StocksInvoke.dataSet[$i].totalTradedVolume" margin="0px unset"></wm-label>
+                                                                        </wm-linearlayoutitem>
+                                                                    </wm-linearlayout>
+                                                                </wm-linearlayoutitem>
+                                                            </wm-linearlayout>
+                                                        </wm-linearlayoutitem>
+                                                        <wm-linearlayoutitem name="linearlayoutitem43" flexgrow="1">
+                                                            <wm-linearlayout direction="row" name="linearlayout20" height="100%">
+                                                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem44_1" horizontalalign="left">
+                                                                    <wm-anchor margin="unset 0.5em unset unset" name="anchor2" fontweight="bold" caption="Add to fav" iconclass="fa fa-heart" padding="4px" class="btn-danger" on-click="Variables.addToWatchlist.createRecord()"></wm-anchor>
+                                                                </wm-linearlayoutitem>
+                                                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem45" horizontalalign="right" fontweight="bold" color="green" padding="unset 0px unset unset">
+                                                                    <wm-anchor margin="unset unset unset 0.5em" name="anchor1" caption="Buy now" iconclass="fa fa-cart-plus" class="text btn-success" padding="4px" on-click="Widgets.dialog1.open();anchor1Click($event, widget, item, currentItemWidgets)"></wm-anchor>
+                                                                </wm-linearlayoutitem>
+                                                            </wm-linearlayout>
+                                                        </wm-linearlayoutitem>
+                                                    </wm-linearlayout>
+                                                </wm-card-content>
+                                            </wm-card>
+                                        </wm-listtemplate>
+                                    </wm-list>
+                                </wm-linearlayoutitem>
+                                <wm-linearlayoutitem name="linearlayoutitem38_1" flexgrow="1"></wm-linearlayoutitem>
+                                <wm-linearlayoutitem name="linearlayoutitem6" flexgrow="1"></wm-linearlayoutitem>
+                                <wm-linearlayoutitem name="linearlayoutitem7" flexgrow="1"></wm-linearlayoutitem>
+                            </wm-linearlayout>
+                        </wm-linearlayoutitem>
+                    </wm-linearlayout>
+                </wm-linearlayoutitem>
+            </wm-linearlayout>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Buy stocks now" iconclass="fa fa-cart-plus" name="dialog1">
+        <wm-dialogactions name="dialogactions1">
+            <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button2"></wm-button>
+        </wm-dialogactions>
+        <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.Stocks_laboratoryCreateIndianStockTransaction.dataSet" captionalign="left" name="form1" postmessage="Stocks purchased Successfully"
+            messagelayout="Toaster" on-success="form1Success($event, widget, $data)">
+            <wm-layoutgrid columns="1" name="layoutgrid2">
+                <wm-gridrow name="gridrow5">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                        <wm-form-field name="IndianStockTransaction_price" readonly="false" displayname="Price" key="IndianStockTransaction.price" type="double" show="true" widget="number" textalign="left" defaultvalue="bind:Widgets.Nifty100StocksList1.selecteditem.lastPrice"
+                            inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow6">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn6">
+                        <wm-form-field name="IndianStockTransaction_shares" readonly="false" displayname="Shares" key="IndianStockTransaction.shares" type="integer" show="true" widget="number" textalign="left" inputtype="number" placeholder="Enter value"
+                            defaultvalue="1"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow7">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                        <wm-form-field name="IndianStockTransaction_stockSymbol" readonly="true" displayname="Stock Symbol" key="IndianStockTransaction.stockSymbol" type="string" show="true" widget="text" defaultvalue="bind:Widgets.Nifty100StocksList1.selecteditem.symbol"
+                            disabled="true" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow9">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                        <wm-form-field name="IndianStockTransaction_transactionType" readonly="false" displayname="Transaction Type" key="IndianStockTransaction.transactionType" type="string" show="false" widget="text" defaultvalue="buy" inputtype="text"
+                            placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow10">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                        <wm-form-field name="IndianStockTransaction_userId" readonly="false" displayname="User Id" key="IndianStockTransaction.userId" type="integer" show="false" widget="number" textalign="right" defaultvalue="bind:Variables.loggedInUserData.dataSet.id"
+                            inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn name="gridcolumn1" columnwidth="12">
+                        <wm-form-field name="Total" key="Total" displayname="Total" show="true" type="float" defaultvalue="bind:Widgets.form1.formWidgets.IndianStockTransaction_price.datavalue*Widgets.form1.formWidgets.IndianStockTransaction_shares.datavalue"
+                            readonly="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="save" display-name="Buy now" show="true" class="form-save btn-success" iconclass="" title="Buy now" action="Variables.updateBalanceBuyInd.updateRecord();Variables.Stocks_laboratoryCreateIndianStockTransaction.invoke();Variables.qvCheckExitsingStock.invoke();Widgets.dialog1.close()"
+                disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+        </wm-form>
+    </wm-dialog>
+</wm-page>

@@ -1,0 +1,23 @@
+{
+  "endpointAddress" : "https://api.twelvedata.com/quote",
+  "method" : "GET",
+  "headers" : { },
+  "redirectEnabled" : true,
+  "requestBody" : "",
+  "queryParams" : {
+    "symbol" : "AAPL,TSLA,MSFT,GOOGL,GOOGL",
+    "apikey" : "20808422e1a9413ea17c13259c41230d",
+    "source" : "docs"
+  },
+  "authDetails" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 0,
+    "headers" : {
+      "content-type" : [ "application/json" ]
+    },
+    "responseBody" : "{\"AAPL\":{\"symbol\":\"AAPL\",\"name\":\"Apple Inc\",\"exchange\":\"NASDAQ\",\"mic_code\":\"XNGS\",\"currency\":\"USD\",\"datetime\":\"2023-05-12\",\"timestamp\":1683921551,\"open\":\"173.62000\",\"high\":\"174.06000\",\"low\":\"171.00000\",\"close\":\"172.57001\",\"volume\":\"45497800\",\"previous_close\":\"173.75000\",\"change\":\"-1.17999\",\"percent_change\":\"-0.67913\",\"average_volume\":\"61061310\",\"is_market_open\":false,\"fifty_two_week\":{\"low\":\"124.17000\",\"high\":\"176.14999\",\"low_change\":\"48.40001\",\"high_change\":\"-3.57999\",\"low_change_percent\":\"38.97883\",\"high_change_percent\":\"-2.03235\",\"range\":\"124.169998 - 176.149994\"}},\"TSLA\":{\"symbol\":\"TSLA\",\"name\":\"Tesla Inc\",\"exchange\":\"NASDAQ\",\"mic_code\":\"XNGS\",\"currency\":\"USD\",\"datetime\":\"2023-05-12\",\"timestamp\":1683921550,\"open\":\"176.07001\",\"high\":\"177.38000\",\"low\":\"167.23000\",\"close\":\"167.98000\",\"volume\":\"157577100\",\"previous_close\":\"172.08000\",\"change\":\"-4.10001\",\"percent_change\":\"-2.38262\",\"average_volume\":\"114207420\",\"is_market_open\":false,\"fifty_two_week\":{\"low\":\"101.81000\",\"high\":\"314.66641\",\"low_change\":\"66.17000\",\"high_change\":\"-146.68642\",\"low_change_percent\":\"64.99362\",\"high_change_percent\":\"-46.61648\",\"range\":\"101.809998 - 314.666412\"}},\"MSFT\":{\"symbol\":\"MSFT\",\"name\":\"Microsoft Corp\",\"exchange\":\"NASDAQ\",\"mic_code\":\"XNGS\",\"currency\":\"USD\",\"datetime\":\"2023-05-12\",\"timestamp\":1683921551,\"open\":\"310.54999\",\"high\":\"310.64999\",\"low\":\"306.60001\",\"close\":\"308.97000\",\"volume\":\"19758100\",\"previous_close\":\"310.10999\",\"change\":\"-1.13998\",\"percent_change\":\"-0.36761\",\"average_volume\":\"24493610\",\"is_market_open\":false,\"fifty_two_week\":{\"low\":\"213.43100\",\"high\":\"313.00000\",\"low_change\":\"95.53900\",\"high_change\":\"-4.03000\",\"low_change_percent\":\"44.76341\",\"high_change_percent\":\"-1.28754\",\"range\":\"213.431000 - 313.000000\"}},\"GOOGL\":{\"symbol\":\"GOOGL\",\"name\":\"Alphabet Inc\",\"exchange\":\"NASDAQ\",\"mic_code\":\"XNGS\",\"currency\":\"USD\",\"datetime\":\"2023-05-12\",\"timestamp\":1683921551,\"open\":\"116.68000\",\"high\":\"118.03000\",\"low\":\"116.11000\",\"close\":\"117.51000\",\"volume\":\"41073800\",\"previous_close\":\"116.57000\",\"change\":\"0.94000\",\"percent_change\":\"0.80638\",\"average_volume\":\"37551760\",\"is_market_open\":false,\"fifty_two_week\":{\"low\":\"83.34000\",\"high\":\"122.43000\",\"low_change\":\"34.17001\",\"high_change\":\"-4.92000\",\"low_change_percent\":\"41.00073\",\"high_change_percent\":\"-4.01862\",\"range\":\"83.339996 - 122.430000\"}}}",
+    "convertedResponse" : null
+  }
+}

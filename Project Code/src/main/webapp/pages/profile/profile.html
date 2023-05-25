@@ -1,0 +1,150 @@
+<wm-page name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-linearlayout direction="column" spacing="4" padding="4px" name="linearlayout11_1">
+                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem18" horizontalalign="right">
+                    <wm-button class="btn-primary" caption="Log out" type="button" margin="unset 0.5em" name="button1" textalign="center" on-click="Actions.logoutAction.invoke()"></wm-button>
+                </wm-linearlayoutitem>
+            </wm-linearlayout>
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn2">
+                        <wm-linearlayout direction="column" spacing="4" padding="4px" name="linearlayout3_1" class="balanceDashboard">
+                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem5_1">
+                                <wm-linearlayout direction="row" name="linearlayout4" verticalalign="center" horizontalalign="center" class="dashboardBalance">
+                                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem9" class="h3">
+                                        <wm-linearlayout direction="column" name="linearlayout8">
+                                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem23" horizontalalign="center">
+                                                <wm-linearlayout direction="row" name="linearlayout12">
+                                                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem33">
+                                                        <wm-label padding="unset 0.5em" name="label2" caption="My balance"></wm-label>
+                                                    </wm-linearlayoutitem>
+                                                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem34">
+                                                        <wm-label padding="unset 0.5em" caption="bind:Variables.loggedInUserData.dataSet.balance + ' rs'" name="label12"></wm-label>
+                                                    </wm-linearlayoutitem>
+                                                </wm-linearlayout>
+                                            </wm-linearlayoutitem>
+                                            <wm-linearlayoutitem name="linearlayoutitem25" flexgrow="1">
+                                                <wm-linearlayout direction="row" name="linearlayout9">
+                                                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem26">
+                                                        <wm-linearlayout direction="column" name="linearlayout10">
+                                                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem29">
+                                                                <wm-label padding="unset 0.5em" caption="Starting balance" name="label8"></wm-label>
+                                                            </wm-linearlayoutitem>
+                                                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem30">
+                                                                <wm-label padding="unset 0.5em" caption="Utilized amount" name="label10"></wm-label>
+                                                            </wm-linearlayoutitem>
+                                                        </wm-linearlayout>
+                                                    </wm-linearlayoutitem>
+                                                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem27">
+                                                        <wm-linearlayout direction="column" name="linearlayout11">
+                                                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem31">
+                                                                <wm-label padding="unset 0.5em" caption="1000000 rs" name="label9"></wm-label>
+                                                            </wm-linearlayoutitem>
+                                                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem32">
+                                                                <wm-label padding="unset 0.5em" caption="bind:1000000-Variables.loggedInUserData.dataSet.balance + ' rs'" name="label11"></wm-label>
+                                                            </wm-linearlayoutitem>
+                                                        </wm-linearlayout>
+                                                    </wm-linearlayoutitem>
+                                                </wm-linearlayout>
+                                            </wm-linearlayoutitem>
+                                        </wm-linearlayout>
+                                    </wm-linearlayoutitem>
+                                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem10" horizontalalign="center">
+                                        <wm-progress-circle width="150px" height="150px" name="progress_circle1" datavalue="bind:(Variables.loggedInUserData.dataSet.balance*100)/1000000" displayformat="9.9%"></wm-progress-circle>
+                                    </wm-linearlayoutitem>
+                                </wm-linearlayout>
+                            </wm-linearlayoutitem>
+                        </wm-linearlayout>
+                        <wm-linearlayout direction="column" spacing="4" padding="4px" name="linearlayout10_1">
+                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem17" horizontalalign="left" padding="10px unset">
+                                <wm-label padding="unset 0.5em" name="label7" caption="History" fontweight="bold" class="h3"></wm-label>
+                                <wm-tabs type="static" statehandler="URL" name="tabs1">
+                                    <wm-tabpane name="tabpane1" title="Indian">
+                                        <wm-table statehandler="none" name="IndianStockTransactionTable1" title="" dataset="bind:Variables.Stocks_laboratoryIndianStockTransactionData.dataSet" navigation="On-Demand" nodatamessage="You have not purchased anything">
+                                            <wm-table-column binding="transactionDate" caption="Transaction Date" edit-widget-type="timestamp" type="timestamp" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                            <wm-table-column binding="stockSymbol" caption="Stock Symbol" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                            <wm-table-column binding="transactionType" caption="Transaction Type" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                            <wm-table-column binding="price" caption="Price (INR)" edit-widget-type="number" type="double" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                            <wm-table-column binding="shares" caption="Shares" edit-widget-type="number" type="integer" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                        </wm-table>
+                                    </wm-tabpane>
+                                    <wm-tabpane name="tabpane2" title="American">
+                                        <wm-table statehandler="none" name="AmericanStockTransactionTable1" title="" dataset="bind:Variables.Stocks_laboratoryAmericanStockTransactionData.dataSet" navigation="On-Demand" nodatamessage="You have not purchased anything">
+                                            <wm-table-column binding="transactionDate" caption="Transaction Date" edit-widget-type="timestamp" type="timestamp" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                            <wm-table-column binding="stockSymbol" caption="Stock Symbol" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                            <wm-table-column binding="transactionType" caption="Transaction Type" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                            <wm-table-column binding="price" caption="Price (USD)" edit-widget-type="number" type="double" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                            <wm-table-column binding="shares" caption="Shares" edit-widget-type="number" type="integer" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                        </wm-table>
+                                    </wm-tabpane>
+                                </wm-tabs>
+                            </wm-linearlayoutitem>
+                        </wm-linearlayout>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                        <wm-linearlayout direction="column" spacing="4" padding="4px" name="linearlayout3">
+                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem7">
+                                <wm-linearlayout direction="row" name="linearlayout2">
+                                    <wm-linearlayoutitem name="linearlayoutitem5" flexgrow="1" horizontalalign="center">
+                                        <wm-picture resizemode="cover" name="picture2" picturesource="bind:Variables.userData.dataSet[$i].profilePicture" width="300px"></wm-picture>
+                                    </wm-linearlayoutitem>
+                                </wm-linearlayout>
+                            </wm-linearlayoutitem>
+                            <wm-linearlayoutitem name="linearlayoutitem8" flexgrow="1">
+                                <wm-form errormessage="" captionposition="top" title="Edit profile" enctype="application/x-www-form-urlencoded" method="put" dataset="bind:Variables.Stocks_laboratoryEditUsers.dataSet" captionalign="left" autocomplete="true"
+                                    formdata="bind:Variables.usersUpdate.dataSet" iconclass="" name="form2">
+                                    <wm-layoutgrid columns="2" name="layoutgrid3">
+                                        <wm-gridrow name="gridrow9">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn11" horizontalalign="left">
+                                                <wm-form-field name="form_field22" readonly="true" displayname="Balance" type="long" show="true" widget="number" textalign="left" inputtype="number" placeholder="Enter value" defaultvalue="bind:Variables.loggedInUserData.dataSet.balance"
+                                                    disabled="true" key="form_field22"></wm-form-field>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn12">
+                                                <wm-form-field name="form_field23" readonly="true" displayname="Email" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.loggedInUserData.dataSet.email"
+                                                    disabled="true" key="form_field23"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow10">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn13">
+                                                <wm-form-field name="form_field24" readonly="false" displayname="First Name" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.loggedInUserData.dataSet.firstName"
+                                                    key="form_field24"></wm-form-field>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn14">
+                                                <wm-form-field name="form_field25" readonly="false" displayname="Last Name" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.loggedInUserData.dataSet.lastName"
+                                                    key="form_field25"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow11">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn15">
+                                                <wm-form-field name="form_field26" readonly="false" displayname="Password" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.loggedInUserData.dataSet.password"
+                                                    key="form_field26"></wm-form-field>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn16">
+                                                <wm-form-field name="form_field27" readonly="false" displayname="Profile Picture" type="string" show="true" widget="upload" filetype="image" key="form_field27"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow12">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn17">
+                                                <wm-form-field name="form_field28" readonly="false" displayname="Id" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value" defaultvalue="bind:Variables.loggedInUserData.dataSet.id"
+                                                    key="form_field28"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                    <wm-form-action display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" disabled="false" widget-type="button" type="reset" update-mode="true"></wm-form-action>
+                                    <wm-form-action display-name="Update" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Update" action="Variables.usersUpdate.updateRecord()" disabled="false" widget-type="button"
+                                        type="submit" update-mode="true"></wm-form-action>
+                                </wm-form>
+                            </wm-linearlayoutitem>
+                        </wm-linearlayout>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn4"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

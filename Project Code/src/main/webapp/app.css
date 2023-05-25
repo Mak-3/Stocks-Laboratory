@@ -1,0 +1,51 @@
+.app-checkboxset.inline.list-group,
+.app-radioset.inline.list-group {
+    display: flex;
+}
+
+.wm-app .app-form .form-group .form-control-static+.app-input-wrapper>.form-control {
+    width: 90%;
+}
+
+.wm-app .app-device-liveform .form-action,
+.wm-app .app-form .form-action,
+.wm-app .app-livefilter .form-action,
+.wm-app .app-liveform .form-action,
+.wm-app .app-livelist .form-action {
+    text-align: center;
+}
+
+.page-title {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.wm-app .pull-left {
+    text-align: center;
+    width: 100%;
+}
+
+.wm-app .app-header .nav>li .profile::before,
+.wm-app .app-mobile-header .nav>li .profile::before,
+.wm-app .app-header .nav>li:last-child a::before,
+.wm-app .app-mobile-header .nav>li:last-child a::before {
+    content: none;
+}
+
+.wm-app .navbar-left {
+    float: left !important;
+}
+
+.app-linear-layout.app-linear-layout-direction-row-reverse>.app-linear-layout-item,
+.app-linear-layout.app-linear-layout-direction-row>.app-linear-layout-item {
+    width: 100%;
+}
+
+
+/*.app-anchor:hover {*/
+
+
+/*    transform: scale(1.05);*/
+
+
+/*}*/

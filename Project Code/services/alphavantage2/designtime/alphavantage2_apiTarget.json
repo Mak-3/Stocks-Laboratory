@@ -1,0 +1,193 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "x-WM-API_ID" : "624c5aad-70b6-4047-861b-1e63aae02347",
+    "x-WM-SERVICE_ID" : "alphavantage2",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "host" : "www.alphavantage.co",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "alphavantage2"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/query" : {
+      "get" : {
+        "tags" : [ "alphavantage2" ],
+        "operationId" : "alphavantage2_invoke",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "apikey",
+          "in" : "query",
+          "description" : "apikey",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "name" : "function",
+          "in" : "query",
+          "description" : "function",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "name" : "tickers",
+          "in" : "query",
+          "description" : "tickers",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/query",
+      "x-WM-TAG" : "alphavantage2",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.alphavantage2.scheme}://${rest.alphavantage2.host}${rest.alphavantage2.basepath}/query"
+    }
+  },
+  "definitions" : {
+    "Response.topicsEntryItem" : {
+      "required" : [ "relevance_score", "topic" ],
+      "properties" : {
+        "topic" : {
+          "type" : "string"
+        },
+        "relevance_score" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "alphavantage2.Response.topicsEntryItem",
+      "x-WM-TAGS" : [ "alphavantage2" ]
+    },
+    "Response.feedEntryItem" : {
+      "required" : [ "authors", "banner_image", "category_within_source", "overall_sentiment_label", "overall_sentiment_score", "source", "source_domain", "summary", "ticker_sentiment", "time_published", "title", "topics", "url" ],
+      "properties" : {
+        "summary" : {
+          "type" : "string"
+        },
+        "source_domain" : {
+          "type" : "string"
+        },
+        "topics" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Response.topicsEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "overall_sentiment_label" : {
+          "type" : "string"
+        },
+        "ticker_sentiment" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Response.ticker_sentimentEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "overall_sentiment_score" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "source" : {
+          "type" : "string"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "url" : {
+          "type" : "string"
+        },
+        "category_within_source" : {
+          "type" : "string"
+        },
+        "banner_image" : {
+          "type" : "string"
+        },
+        "time_published" : {
+          "type" : "string"
+        },
+        "authors" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "alphavantage2.Response.feedEntryItem",
+      "x-WM-TAGS" : [ "alphavantage2" ]
+    },
+    "java.lang.Object" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "alphavantage2.java.lang.Object",
+      "x-WM-TAGS" : [ "alphavantage2" ]
+    },
+    "Response.ticker_sentimentEntryItem" : {
+      "required" : [ "relevance_score", "ticker", "ticker_sentiment_label", "ticker_sentiment_score" ],
+      "properties" : {
+        "ticker" : {
+          "type" : "string"
+        },
+        "ticker_sentiment_score" : {
+          "type" : "string"
+        },
+        "ticker_sentiment_label" : {
+          "type" : "string"
+        },
+        "relevance_score" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "alphavantage2.Response.ticker_sentimentEntryItem",
+      "x-WM-TAGS" : [ "alphavantage2" ]
+    },
+    "RootResponse" : {
+      "required" : [ "feed", "items", "relevance_score_definition", "sentiment_score_definition" ],
+      "properties" : {
+        "feed" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Response.feedEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "sentiment_score_definition" : {
+          "type" : "string"
+        },
+        "relevance_score_definition" : {
+          "type" : "string"
+        },
+        "items" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "alphavantage2.RootResponse",
+      "x-WM-TAGS" : [ "alphavantage2" ]
+    }
+  }
+}

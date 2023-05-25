@@ -1,0 +1,7 @@
+[ {
+  "name" : "user",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "Home_Copy"
+  }
+} ]

@@ -1,0 +1,46 @@
+{
+  "description" : null,
+  "methods" : {
+    "sampleJavaOperation" : [ {
+      "url" : {
+        "value" : "/sampleJavaOperation",
+        "modified" : false
+      },
+      "method" : {
+        "value" : "GET",
+        "modified" : false
+      },
+      "accessSpecifier" : "APP_ONLY",
+      "parameters" : {
+        "name" : {
+          "name" : {
+            "value" : "name",
+            "modified" : false
+          },
+          "in" : {
+            "value" : "QUERY",
+            "modified" : false
+          },
+          "required" : {
+            "value" : false,
+            "modified" : false
+          }
+        },
+        "request" : {
+          "name" : {
+            "value" : "request",
+            "modified" : false
+          },
+          "in" : {
+            "value" : "NONE",
+            "modified" : false
+          },
+          "required" : {
+            "value" : false,
+            "modified" : false
+          }
+        }
+      }
+    } ]
+  }
+}

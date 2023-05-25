@@ -1,0 +1,100 @@
+<project name="ProjectBuildHelper" basedir=".">
+    <description>
+        Project Build Helper
+    </description>
+    <property name="webInf" location="src/main/webapp/WEB-INF"/>
+    <property name="uiOutputDirectory" location="target/ui-build/output-files"/>
+    <!-- Below are the default build values -->
+    <property name="cdn-url" value=""/>
+    <property name="optimizeUIBuild" value=""/>
+    <property name="build.ui.mode" value="wm"/>
+    <property name="app.pwa.enabled" value="false"/>
+
+    <condition property="wmBuild" value="true">
+        <equals arg1="${build.ui.mode}" arg2="wm" casesensitive="false" trim="true"/>
+    </condition>
+    <condition property="angularBuild" value="true">
+        <equals arg1="${build.ui.mode}" arg2="angular" casesensitive="false" trim="true"/>
+    </condition>
+
+    <target name="copy-libs-jar">
+        <mkdir dir="${webInf}/lib"/>
+        <echo>Copying jars from ${basedir}/lib to ${webInf}/lib</echo>
+        <copy todir="${webInf}/lib" overwrite="true">
+            <fileset dir="lib">
+                <exclude name="Readme.txt"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="copy-wm-project-properties">
+        <mkdir dir="target/classes"/>
+        <echo>Copying .wmproject.properties file to target/classes(classpath)</echo>
+        <copy file=".wmproject.properties" todir="target/classes" overwrite="true" failonerror="false"/>
+    </target>
+
+    <target name="cdnUrl-replace">
+        <replaceregexp file="src/main/webapp/index.html" byline="true">
+            <regexp pattern="//.*.cloudfront.net/app-runtime/.*/wmapp"/>
+            <substitution expression="_cdnUrl_/wmapp"/>
+        </replaceregexp>
+        <replaceregexp file="src/main/webapp/index.html" byline="true">
+            <regexp pattern="/app-runtime/.*/wmapp"/>
+            <substitution expression="_cdnUrl_/wmapp"/>
+        </replaceregexp>
+        <replaceregexp file="src/main/webapp/index.html" byline="true">
+            <regexp pattern="//.*.cloudfront.net/app-runtime/.*/wmmobile"/>
+            <substitution expression="_cdnUrl_/wmmobile"/>
+        </replaceregexp>
+        <replaceregexp file="src/main/webapp/index.html" byline="true">
+            <regexp pattern="/app-runtime/.*/wmmobile"/>
+            <substitution expression="_cdnUrl_/wmmobile"/>
+        </replaceregexp>
+    </target>
+
+
+    <target name="cmd-template">
+        <condition property="cmd.executable" value="cmd" else="${cmd.name}">
+            <os family="windows"/>
+        </condition>
+        <condition property="cmd.argline" value="/c ${cmd.name} ${cmd.arg}" else="${cmd.arg}">
+            <os family="windows"/>
+        </condition>
+
+        <echo>Executing command "${cmd.executable}" with args "${cmd.argline}" in directory ${cmd.executable.dir}</echo>
+        <exec executable="${cmd.executable}" dir="${cmd.executable.dir}" failonerror="true">
+            <arg line="${cmd.argline}"/>
+        </exec>
+    </target>
+
+    <target name="generate-ui-zip" if="angularBuild">
+        <echo>creating target/ui-artifact.zip from ${uiOutputDirectory}.</echo>
+        <zip destfile="target/ui-artifact.zip" basedir="${uiOutputDirectory}"/>
+    </target>
+
+    <target name="uiBuild">
+        <antcall target="cmd-template">
+            <param name="cmd.name" value="node"/>
+            <param name="cmd.arg"
+                value="ui-build.js --nodeVMArgs='${build.ui.node.args}' --ngBuildParams='${build.ui.ng.config}' --runtimeUIVersion=${wavemaker.app.runtime.ui.version} --appSrc=. --appTarget=./target/ui-build/generated-app --buildType=${build.ui.mode} --platformType=${wavemaker.artifactType} --cdnUrl=${cdn-url} --optimizeUIBuild=${optimizeUIBuild} --pwa=${app.pwa.enabled} --csp=${security.general.csp.enabled} --spa=${app.build.ui.spa.enabled}"/>
+            <param name="cmd.executable.dir" value="./"/>
+        </antcall>
+        <antcall target="generate-ui-zip"/>
+    </target>
+
+    <target name="generate-resources">
+        <delete dir="target/generated-resources"/>
+        <mkdir dir="target/generated-resources"/>
+        <copy todir="target/generated-resources" includeemptydirs="false">
+            <fileset dir="services" includes="**/src/**" defaultexcludes="no" casesensitive="yes" erroronmissingdir="false">
+                <patternset id="excluded.files">
+                    <exclude name="**/*.java"/>
+                    <exclude name="**/*.md"/>
+                </patternset>
+            </fileset>
+            <cutdirsmapper dirs="2"/>
+        </copy>
+    </target>
+
+    <target name="init" depends="copy-libs-jar,copy-wm-project-properties,cdnUrl-replace"></target>
+</project>

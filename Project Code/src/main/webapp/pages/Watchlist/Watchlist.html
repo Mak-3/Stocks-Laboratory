@@ -1,0 +1,51 @@
+<wm-page pagetitle="Triggers" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-linearlayout direction="column" spacing="4" padding="4px" name="linearlayout2">
+                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem1" horizontalalign="center" fontweight="bold">
+                    <wm-label padding="unset 0.5em" name="label1" caption="Favourite stocks" fontweight="bold" class="h3"></wm-label>
+                </wm-linearlayoutitem>
+            </wm-linearlayout>
+            <wm-livetable formlayout="dialog" name="StockWatchlistLiveTable1">
+                <wm-table gridfirstrowselect="true" editmode="dialog" statehandler="none" name="StockWatchlistTable1" title="" dataset="bind:Variables.Stocks_laboratoryStockWatchlistData1.dataSet" navigation="On-Demand">
+                    <wm-table-column binding="symbol" caption="Symbol" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                    <wm-table-column binding="createdAt" caption="Created At" edit-widget-type="timestamp" type="timestamp" generator="assigned" show="true" readonly="false"></wm-table-column>
+                    <wm-table-column binding="rowOperations" caption="Actions" width="120px" edit-widget-type="text" type="custom" readonly="true" sortable="false" searchable="false" show="true"></wm-table-column>
+                    <wm-table-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false" widget-type="button" position="header"></wm-table-action>
+                    <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow($event)" disabled="false" widget-type="button"></wm-table-row-action>
+                    <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow($event)" disabled="false" widget-type="button"></wm-table-row-action>
+                </wm-table>
+                <wm-liveform errormessage="" title="Add stocks to your watchlist" formlayout="dialog" iconclass="fa fa-heart" name="StockWatchlistLiveForm1" dataset="bind:Variables.Stocks_laboratoryStockWatchlistData1.dataSet" captionalign="left" captionposition="floating"
+                    deletemessage="Stock removed from watchlist" updatemessage="Stock data updated successfully" insertmessage="Stock added to watchlist">
+                    <wm-layoutgrid columns="1" name="layoutgrid3">
+                        <wm-gridrow name="gridrow8">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn6">
+                                <wm-form-field name="symbol" displayname="Symbol" show="true" primary-key="false" generator="assigned" key="symbol" type="string" readonly="false" required="true" widget="text" maxchars="10" inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow9">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                                <wm-form-field name="createdAt" displayname="Created At" show="false" primary-key="false" generator="assigned" key="createdAt" type="timestamp" readonly="false" required="true" widget="timestamp" datepattern="MMM d, y h:mm:ss a"
+                                    placeholder="Select date time" outputformat="timestamp"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow10">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn8">
+                                <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow1">
+                            <wm-gridcolumn name="gridcolumn1" columnwidth="12">
+                                <wm-form-field name="createdBy" key="createdBy" displayname="Created By" show="false" type="integer" defaultvalue="bind:Variables.loggedInUserData.dataSet.id" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-default" iconclass="wi wi-cancel" title="Cancel" action="cancel()" disabled="false" widget-type="button" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" display-name="Add" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Add" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+            </wm-livetable>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

@@ -1,0 +1,8 @@
+{
+  "id" : "MyJavaService",
+  "type" : "JavaService",
+  "packageNames" : [ "com.stocks_laboratory.myjavaservice" ],
+  "serviceClassNames" : [ "com.stocks_laboratory.myjavaservice.MyJavaService" ],
+  "title" : "MyJavaService",
+  "mockEnabled" : false
+}

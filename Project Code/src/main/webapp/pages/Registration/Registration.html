@@ -1,0 +1,78 @@
+<wm-page pagetitle="Registration" name="page1">
+    <wm-content name="content1" overflow="hidden">
+        <wm-page-content columnwidth="12" name="page_content1" padding="0px" backgroundimage="resources/images/imagelists/21650fb26199ba5719d66f7648bad8af.jpeg">
+            <wm-layoutgrid name="layoutgrid4">
+                <wm-gridrow name="gridrow6">
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn7"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn8">
+                        <wm-linearlayout direction="column" spacing="4" padding="4px" horizontalalign="left" borderwidth="0.5px" verticalalign="center" name="linearlayout6">
+                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem11">
+                                <wm-linearlayout direction="column" name="linearlayout7">
+                                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem12">
+                                        <wm-linearlayout direction="column" name="linearlayout8">
+                                            <wm-linearlayoutitem flexgrow="1" horizontalalign="center" name="linearlayoutitem13">
+                                                <wm-linearlayout direction="column" horizontalalign="center" verticalalign="center" spacing="0" name="linearlayout9">
+                                                    <wm-linearlayoutitem flexgrow="1" horizontalalign="center" name="linearlayoutitem14">
+                                                        <wm-picture resizemode="cover" pictureplaceholder="resources/images/logos/logo.png" width="50px" height="50px" shape="circle" show="false" name="picture2"></wm-picture>
+                                                    </wm-linearlayoutitem>
+                                                    <wm-linearlayoutitem flexgrow="1" horizontalalign="center" name="linearlayoutitem15">
+                                                        <wm-label padding="unset 0.5em" caption="Register now" fontweight="bold" textalign="center" color="#ffffff" class="h1" name="label3"></wm-label>
+                                                    </wm-linearlayoutitem>
+                                                </wm-linearlayout>
+                                            </wm-linearlayoutitem>
+                                        </wm-linearlayout>
+                                    </wm-linearlayoutitem>
+                                </wm-linearlayout>
+                            </wm-linearlayoutitem>
+                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem16">
+                                <wm-form errormessage="" captionposition="floating" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.Stocks_laboratoryCreateUsers.dataSet" captionalign="left" class="regForm" on-beforesubmit="createUsersForm1Beforesubmit($event, widget, $data)"
+                                    messagelayout="Toaster" postmessage="Registration successfull" name="form2">
+                                    <wm-layoutgrid columns="1" name="layoutgrid5">
+                                        <wm-gridrow name="gridrow8">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn12">
+                                                <wm-form-field name="form_field6" readonly="false" displayname="First Name" type="string" show="true" widget="text" inputtype="text" placeholder="Enter first name" backgroundcolor="transparent" required="true"
+                                                    regexp="^[a-z]+$" validationmessage="Only alphabets are allowed" key="form_field6"></wm-form-field>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn13">
+                                                <wm-form-field name="form_field7" readonly="false" displayname="Last Name" type="string" show="true" widget="text" inputtype="text" placeholder="Enter last name" backgroundcolor="transparent" regexp="^[a-z]+$"
+                                                    validationmessage="Only alphabets are allowed" required="true" key="form_field7"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow9">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn14">
+                                                <wm-form-field name="form_field8" readonly="false" displayname="Email" type="string" show="true" widget="text" inputtype="text" placeholder="Enter email" width="95%" backgroundcolor="transparent" regexp="^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                                                    validationmessage="enter correct email id" required="true" key="form_field8"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow10">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn15">
+                                                <wm-form-field name="form_field9" readonly="false" displayname="Password" type="string" show="true" widget="password" inputtype="password" placeholder="create password" width="95%" backgroundcolor="transparent"
+                                                    required="true" regexp="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&amp;])[A-Za-z\d@$!%*#?&amp;]{8,}$" validationmessage="Password must contain 8 characters and at least one number, one letter and one unique character"
+                                                    key="form_field9"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow11">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn16">
+                                                <wm-form-field name="form_field10" displayname="Profile Picture" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" key="form_field10"></wm-form-field>
+                                                <wm-label padding="unset 0.5em" caption="Upload your profile picture" name="label4"></wm-label>
+                                                <wm-fileupload cleariconclass="wi wi-clear" cleariconhint="Clear" on-select="Variables.FileServiceUploadFile2.invoke()" maxfilesize="20" name="fileupload2" class="panel-primary"></wm-fileupload>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                    <wm-form-action display-name="Reset" show="true" class="form-reset btn-primary" iconclass="wi wi-refresh" title="Reset" disabled="false" widget-type="button" type="reset" update-mode="true"></wm-form-action>
+                                    <wm-form-action display-name="Submit" show="true" class="form-save btn-success" iconclass="fa fa-check" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+                                </wm-form>
+                            </wm-linearlayoutitem>
+                            <wm-linearlayoutitem flexgrow="1" horizontalalign="center" name="linearlayoutitem17">
+                                <wm-anchor margin="unset 0.5em" caption="Already have an account? login here" name="anchor2" color="#fefefe"></wm-anchor>
+                            </wm-linearlayoutitem>
+                        </wm-linearlayout>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn11"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+        <wm-layoutgrid name="layoutgrid3"></wm-layoutgrid>
+    </wm-content>
+    <wm-alertdialog on-ok="Widgets.alertdialog1.close()" name="alertdialog1"></wm-alertdialog>
+</wm-page>

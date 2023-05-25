@@ -1,0 +1,23 @@
+{
+  "endpointAddress" : "https://api.twelvedata.com/logo",
+  "method" : "GET",
+  "headers" : { },
+  "redirectEnabled" : true,
+  "requestBody" : "",
+  "queryParams" : {
+    "symbol" : "AAPL",
+    "apikey" : "20808422e1a9413ea17c13259c41230d",
+    "source" : "docs"
+  },
+  "authDetails" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 0,
+    "headers" : {
+      "content-type" : [ "application/json; charset=utf-8" ]
+    },
+    "responseBody" : "{\"meta\":{\"symbol\":\"AAPL\"},\"url\":\"https://api.twelvedata.com/logo/apple.com\"}",
+    "convertedResponse" : null
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "basePath" : "${rest.twelvedata5.basepath}",
+  "paths" : {
+    "/logo" : {
+      "x-WM-BASE_PATH" : "/logo",
+      "x-WM-TAG" : "twelvedata5",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "twelvedata5_invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "symbol",
+          "format" : "string",
+          "description" : "symbol",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "apikey",
+          "format" : "string",
+          "description" : "apikey",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "source",
+          "format" : "string",
+          "description" : "source",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "tags" : [ "twelvedata5" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.twelvedata5.scheme}://${rest.twelvedata5.host}${rest.twelvedata5.basepath}/logo"
+    }
+  },
+  "host" : "${rest.twelvedata5.host}",
+  "schemes" : [ "${rest.twelvedata5.scheme}" ],
+  "definitions" : {
+    "Response.meta" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "twelvedata5.Response.meta",
+      "x-WM-TAGS" : [ "twelvedata5" ],
+      "required" : [ "symbol" ],
+      "properties" : {
+        "symbol" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "twelvedata5.RootResponse",
+      "x-WM-TAGS" : [ "twelvedata5" ],
+      "required" : [ "meta", "url" ],
+      "properties" : {
+        "meta" : {
+          "$ref" : "#/definitions/Response.meta"
+        },
+        "url" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "x-WM-API_ID" : "c02246f2-5c95-4919-bf77-6d79bec936a3",
+    "x-WM-SERVICE_ID" : "twelvedata5",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "tags" : [ {
+    "name" : "twelvedata5"
+  } ]
+}

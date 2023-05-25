@@ -1,0 +1,46 @@
+{
+  "endpointAddress" : "https://currency-converter-by-api-ninjas.p.rapidapi.com/v1/convertcurrency",
+  "method" : "GET",
+  "headers" : {
+    "X-RapidAPI-Host" : [ "currency-converter-by-api-ninjas.p.rapidapi.com" ],
+    "X-RapidAPI-Key" : [ "9bd2aa8d90msh89253751226ef58p127f9djsn29ed772c4dac" ]
+  },
+  "redirectEnabled" : true,
+  "requestBody" : "",
+  "queryParams" : {
+    "amount" : "1",
+    "want" : "INR",
+    "have" : "USD"
+  },
+  "authDetails" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 0,
+    "headers" : {
+      "access-control-allow-credentials" : [ "true" ],
+      "access-control-allow-headers" : [ "*" ],
+      "access-control-allow-methods" : [ "PUT, GET, HEAD, POST, DELETE, OPTIONS" ],
+      "access-control-allow-origin" : [ "https://www.wavemakeronline.com" ],
+      "allow" : [ "GET, OPTIONS, POST" ],
+      "content-length" : [ "86" ],
+      "content-type" : [ "application/json" ],
+      "date" : [ "Wed, 17 May 2023 14:01:06 GMT" ],
+      "server" : [ "RapidAPI-1.2.8" ],
+      "via" : [ "1.1 b4eebfe47952c39ed1b8a9637b729eb4.cloudfront.net (CloudFront)" ],
+      "x-amz-apigw-id" : [ "FEelcHzMPHcFoTw=" ],
+      "x-amz-cf-id" : [ "t0mcc4Ew8rlyzj9fZYW0wziX8P7Kd-topWAxFZu9A4gilHISqdluFw==" ],
+      "x-amz-cf-pop" : [ "SIN5-C1" ],
+      "x-amzn-requestid" : [ "9950f93a-c98b-4305-89de-af566bf7f476" ],
+      "x-amzn-trace-id" : [ "Root=1-6464de22-5bc3b3b413b1b52e7979837f;Sampled=0;lineage=e12a18af:0" ],
+      "x-cache" : [ "Miss from cloudfront" ],
+      "x-rapidapi-region" : [ "AWS - ap-southeast-1" ],
+      "x-rapidapi-version" : [ "1.2.8" ],
+      "x-ratelimit-requests-limit" : [ "3000" ],
+      "x-ratelimit-requests-remaining" : [ "2989" ],
+      "x-ratelimit-requests-reset" : [ "2652109" ]
+    },
+    "responseBody" : "{\"new_amount\":82.39,\"new_currency\":\"INR\",\"old_currency\":\"USD\",\"old_amount\":1}",
+    "convertedResponse" : null
+  }
+}
