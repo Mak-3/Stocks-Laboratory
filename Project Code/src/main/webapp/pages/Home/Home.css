@@ -1,0 +1,40 @@
+.niftycard{
+    border-radius: 29px;
+background: #282d39;
+box-shadow:  8px 8px 20px #13161b,
+             -8px -8px 20px #3d4457;
+}
+/*.rightcontent{*/
+/*    position: fixed;*/
+/*    height: 100vh;*/
+/*    right: 0;*/
+/*    top: 20px;*/
+/*}*/
+.wm-app .nav-tabs, .wm-app .nav-justified{
+    background-color: transparent;
+}
+.graphs{
+    background-color: transparent;
+}
+.cardContent{
+    text-overflow: ellipsis;
+    height: 220px;
+}
+.IndianNewsCard{
+margin-top: 20px;
+}
+.rightcontent{
+background-color: #282d39;
+    background-image: linear-gradient(147deg, #282d39 0%, #56535d4f 4%);
+    border-left: 1px solid #515151;
+    /*position: fixed;*/
+    /*height: 100vh;*/
+    /*top: 55px;*/
+    /*right: 0;*/
+    /*overflow:hidden;*/
+    /*z-index: -1;*/
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}

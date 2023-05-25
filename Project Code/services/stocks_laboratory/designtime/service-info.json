@@ -1,0 +1,7 @@
+{
+  "id" : "stocks_laboratory",
+  "type" : "DataService",
+  "packageNames" : [ "com.stocks_laboratory.stocks_laboratory" ],
+  "title" : "stocks_laboratory",
+  "mockEnabled" : false
+}

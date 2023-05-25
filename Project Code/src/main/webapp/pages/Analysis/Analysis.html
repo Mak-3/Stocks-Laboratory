@@ -1,0 +1,204 @@
+<wm-page pagetitle="Analysis" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-linearlayout direction="column" spacing="0" padding="0px 4px 4px 4px" name="linearlayout1" width="100%">
+                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem1">
+                    <wm-linearlayout direction="column" name="linearlayout2">
+                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem2" horizontalalign="center" padding="0px unset unset unset">
+                            <wm-label padding="unset 0.5em" name="label1" caption="Analyze a company/stock by it's performance" class="h3" fontweight="bold" margin="0px unset unset unset"></wm-label>
+                        </wm-linearlayoutitem>
+                    </wm-linearlayout>
+                    <wm-linearlayout direction="column" name="linearlayout3">
+                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem4">
+                            <wm-linearlayout direction="row" name="linearlayout4">
+                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem6">
+                                    <wm-linearlayout direction="column" name="linearlayout5" spacing="4">
+                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem8"></wm-linearlayoutitem>
+                                        <wm-linearlayoutitem name="linearlayoutitem10" flexgrow="1"></wm-linearlayoutitem>
+                                    </wm-linearlayout>
+                                </wm-linearlayoutitem>
+                            </wm-linearlayout>
+                        </wm-linearlayoutitem>
+                    </wm-linearlayout>
+                    <wm-tabs type="static" statehandler="URL" name="tabs1" tabsposition="top">
+                        <wm-tabpane name="tabpane1" title="NSE">
+                            <wm-linearlayout direction="column" name="linearlayout7">
+                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem9_1" horizontalalign="left" padding="4px unset" backgroundcolor="#0096FF">
+                                    <wm-linearlayout direction="row" name="linearlayout8">
+                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem11" horizontalalign="center" padding="4px unset">
+                                            <wm-label padding="unset 0.5em" name="label4" caption="NATIONAL STOCK EXCHANGE" color="#ffffff" fontweight="bold"></wm-label>
+                                        </wm-linearlayoutitem>
+                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem12">
+                                            <wm-linearlayout direction="column" name="linearlayout9">
+                                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem15" horizontalalign="center" padding="4px unset">
+                                                    <wm-label padding="unset 0.5em" name="label7" caption="India" fontweight="bold" color="#ffffff"></wm-label>
+                                                </wm-linearlayoutitem>
+                                            </wm-linearlayout>
+                                        </wm-linearlayoutitem>
+                                        <wm-linearlayoutitem name="linearlayoutitem13" flexgrow="1">
+                                            <wm-linearlayout direction="column" name="linearlayout10">
+                                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem18" horizontalalign="center" padding="4px unset">
+                                                    <wm-label padding="unset 0.5em" name="label10" caption="INR" fontweight="bold" color="#ffffff"></wm-label>
+                                                </wm-linearlayoutitem>
+                                            </wm-linearlayout>
+                                        </wm-linearlayoutitem>
+                                    </wm-linearlayout>
+                                </wm-linearlayoutitem>
+                                <wm-linearlayoutitem name="linearlayoutitem10_1" flexgrow="1" padding="10px unset unset unset">
+                                    <wm-table statehandler="URL" name="twelvedataTable1" title="" dataset="bind:Variables.TwelvedataInvoke.dataSet.data" navigation="Basic" pagesize="10" on-rowclick="Widgets.dialog1.open();twelvedataTable1Rowclick($event, widget, row);No Event">
+                                        <wm-table-column binding="name" caption="Name" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                                        <wm-table-column binding="symbol" caption="Symbol" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                                        <wm-table-column binding="mic_code" caption="Mic Code" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                                        <wm-table-column binding="type" caption="Type" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                                    </wm-table>
+                                </wm-linearlayoutitem>
+                            </wm-linearlayout>
+                        </wm-tabpane>
+                        <wm-tabpane name="tabpane2" title="BSE">
+                            <wm-linearlayout direction="column" name="linearlayout11">
+                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem21">
+                                    <wm-linearlayoutitem flexgrow="1" horizontalalign="left" padding="4px unset" backgroundcolor="#0096FF" name="linearlayoutitem23">
+                                        <wm-linearlayout direction="row" name="linearlayout12">
+                                            <wm-linearlayoutitem flexgrow="1" horizontalalign="center" padding="4px unset" name="linearlayoutitem24">
+                                                <wm-label padding="unset 0.5em" caption="BOMBAY STOCK EXCHANGE" color="#ffffff" fontweight="bold" name="label11"></wm-label>
+                                            </wm-linearlayoutitem>
+                                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem25">
+                                                <wm-linearlayout direction="column" name="linearlayout13">
+                                                    <wm-linearlayoutitem flexgrow="1" horizontalalign="center" padding="4px unset" name="linearlayoutitem26">
+                                                        <wm-label padding="unset 0.5em" caption="India" fontweight="bold" color="#ffffff" name="label12"></wm-label>
+                                                    </wm-linearlayoutitem>
+                                                </wm-linearlayout>
+                                            </wm-linearlayoutitem>
+                                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem27">
+                                                <wm-linearlayout direction="column" name="linearlayout14">
+                                                    <wm-linearlayoutitem flexgrow="1" horizontalalign="center" padding="4px unset" name="linearlayoutitem28">
+                                                        <wm-label padding="unset 0.5em" caption="INR" fontweight="bold" color="#ffffff" name="label13"></wm-label>
+                                                    </wm-linearlayoutitem>
+                                                </wm-linearlayout>
+                                            </wm-linearlayoutitem>
+                                        </wm-linearlayout>
+                                    </wm-linearlayoutitem>
+                                </wm-linearlayoutitem>
+                                <wm-linearlayoutitem name="linearlayoutitem22" flexgrow="1" padding="10px unset unset unset">
+                                    <wm-table statehandler="URL" name="twelvedata2Table1" title="" dataset="bind:Variables.Twelvedata2Invoke.dataSet.data" navigation="Basic" pagesize="10" on-rowclick="Widgets.dialog1.open();twelvedata2Table1Rowclick($event, widget, row)"
+                                        filtermode="search" searchlabel="bind:Variables.Twelvedata2Invoke.dataSet.data[$i].symbol">
+                                        <wm-table-column binding="name" caption="Name" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                                        <wm-table-column binding="symbol" caption="Symbol" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                                        <wm-table-column binding="mic_code" caption="Mic Code" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                                        <wm-table-column binding="type" caption="Type" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                                    </wm-table>
+                                </wm-linearlayoutitem>
+                            </wm-linearlayout>
+                        </wm-tabpane>
+                        <wm-tabpane name="tabpane3" title="NASDAQ">
+                            <wm-linearlayout direction="column" name="linearlayout15">
+                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem29">
+                                    <wm-linearlayoutitem flexgrow="1" horizontalalign="left" padding="4px unset" backgroundcolor="#0096FF" name="linearlayoutitem31">
+                                        <wm-linearlayout direction="row" name="linearlayout16">
+                                            <wm-linearlayoutitem flexgrow="2" horizontalalign="center" padding="4px unset" name="linearlayoutitem32">
+                                                <wm-label padding="unset 0.5em" caption="National Association of Securities Dealers Automated Quotations" color="#ffffff" fontweight="bold" name="label14"></wm-label>
+                                            </wm-linearlayoutitem>
+                                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem33">
+                                                <wm-linearlayout direction="column" name="linearlayout17">
+                                                    <wm-linearlayoutitem flexgrow="1" horizontalalign="center" padding="4px unset" name="linearlayoutitem34">
+                                                        <wm-label padding="unset 0.5em" caption="United States" fontweight="bold" color="#ffffff" name="label15"></wm-label>
+                                                    </wm-linearlayoutitem>
+                                                </wm-linearlayout>
+                                            </wm-linearlayoutitem>
+                                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem35">
+                                                <wm-linearlayout direction="column" name="linearlayout18">
+                                                    <wm-linearlayoutitem flexgrow="1" horizontalalign="center" padding="4px unset" name="linearlayoutitem36">
+                                                        <wm-label padding="unset 0.5em" caption="USD" fontweight="bold" color="#ffffff" name="label16"></wm-label>
+                                                    </wm-linearlayoutitem>
+                                                </wm-linearlayout>
+                                            </wm-linearlayoutitem>
+                                        </wm-linearlayout>
+                                    </wm-linearlayoutitem>
+                                </wm-linearlayoutitem>
+                                <wm-linearlayoutitem name="linearlayoutitem30" flexgrow="1" padding="10px unset unset unset" horizontalalign="right">
+                                    <wm-table statehandler="URL" name="twelvedata3Table1" title="" dataset="bind:Variables.Twelvedata3Invoke.dataSet.data" navigation="Basic" pagesize="10" on-rowclick="Widgets.dialog1.open()" filtermode="search" searchlabel="bind:Variables.Twelvedata3Invoke.dataSet.data[$i].symbol">
+                                        <wm-table-column binding="name" caption="Name" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                                        <wm-table-column binding="symbol" caption="Symbol" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                                        <wm-table-column binding="mic_code" caption="Mic Code" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                                        <wm-table-column binding="type" caption="Type" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                                    </wm-table>
+                                </wm-linearlayoutitem>
+                            </wm-linearlayout>
+                        </wm-tabpane>
+                    </wm-tabs>
+                </wm-linearlayoutitem>
+            </wm-linearlayout>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Stock Details" iconclass="fa fa-history" name="dialog1">
+        <wm-dialogactions name="dialogactions1">
+            <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button1"></wm-button>
+        </wm-dialogactions>
+        <wm-linearlayout direction="column" spacing="4" padding="4px" name="linearlayout18_1">
+            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem31_1" horizontalalign="center">
+                <wm-linearlayout direction="row" name="linearlayout27" horizontalalign="center" verticalalign="center">
+                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem55_1">
+                        <wm-label padding="unset 0.5em" width="100%" caption="Company details" name="label32_1" fontweight="bold" margin="unset unset 4px unset"></wm-label>
+                    </wm-linearlayoutitem>
+                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem56">
+                        <wm-picture resizemode="contain" name="picture1" picturesource="bind:Variables.companyLogos.dataSet.url" backgroundcolor="transparent"></wm-picture>
+                    </wm-linearlayoutitem>
+                </wm-linearlayout>
+            </wm-linearlayoutitem>
+            <wm-linearlayoutitem name="linearlayoutitem38" flexgrow="1" horizontalalign="left">
+                <wm-linearlayout direction="row" name="linearlayout21">
+                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem42">
+                        <wm-label padding="unset 0.5em" name="label16_1" width="100%" caption="bind:Variables.serviceVariable1.dataSet.Name" fontweight="bold" fontstyle="italic" color="#82b6dc"></wm-label>
+                    </wm-linearlayoutitem>
+                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem43" horizontalalign="right">
+                        <wm-label padding="unset 0.5em" width="100%" name="label43" caption="bind:Variables.serviceVariable1.dataSet.Symbol" fontweight="bold" color="#82b6dc"></wm-label>
+                    </wm-linearlayoutitem>
+                </wm-linearlayout>
+            </wm-linearlayoutitem>
+            <wm-linearlayoutitem name="linearlayoutitem32_1" flexgrow="1" horizontalalign="left">
+                <wm-label padding="unset 0.5em" width="100%" name="label17" caption="bind:Variables.serviceVariable1.dataSet.Description"></wm-label>
+            </wm-linearlayoutitem>
+            <wm-linearlayoutitem name="linearlayoutitem39_1" flexgrow="1">
+                <wm-linearlayout direction="row" name="linearlayout20_1">
+                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem40_1">
+                        <wm-label padding="unset 0.5em" width="100%" name="label41" caption="bind:Variables.serviceVariable1.dataSet.Sector"></wm-label>
+                    </wm-linearlayoutitem>
+                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem41">
+                        <wm-label padding="unset 0.5em" width="100%" name="label42" caption="bind:Variables.serviceVariable1.dataSet.Industry"></wm-label>
+                    </wm-linearlayoutitem>
+                </wm-linearlayout>
+            </wm-linearlayoutitem>
+            <wm-linearlayoutitem name="linearlayoutitem37_1" flexgrow="1" horizontalalign="center">
+                <wm-linearlayoutitem flexgrow="1" horizontalalign="center" name="linearlayoutitem46">
+                    <wm-label padding="unset 0.5em" width="100%" name="label44" caption="bind:Variables.serviceVariable1.dataSet.Address"></wm-label>
+                </wm-linearlayoutitem>
+            </wm-linearlayoutitem>
+            <wm-linearlayoutitem name="linearlayoutitem45" flexgrow="1" horizontalalign="center">
+                <wm-label padding="unset 0.5em" width="100%" name="label31_1" caption="Financials" fontweight="bold" margin="4px unset unset unset"></wm-label>
+            </wm-linearlayoutitem>
+            <wm-linearlayoutitem name="linearlayoutitem39" flexgrow="1" horizontalalign="center">
+                <wm-linearlayout direction="row" name="linearlayout22">
+                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem47">
+                        <wm-label padding="unset 0.5em" width="100%" name="label34" caption="Analyst target price" fontweight="bold"></wm-label>
+                    </wm-linearlayoutitem>
+                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem48">
+                        <wm-label padding="unset 0.5em" width="100%" name="label53" caption="bind:Variables.serviceVariable1.dataSet.AnalystTargetPrice"></wm-label>
+                    </wm-linearlayoutitem>
+                </wm-linearlayout>
+            </wm-linearlayoutitem>
+            <wm-linearlayoutitem name="linearlayoutitem40" flexgrow="1" horizontalalign="center">
+                <wm-linearlayout direction="row" name="linearlayout23">
+                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem49">
+                        <wm-label padding="unset 0.5em" width="100%" caption="Graham's Number" fontweight="bold" name="label55"></wm-label>
+                    </wm-linearlayoutitem>
+                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem50">
+                        <wm-label padding="unset 0.5em" width="100%" caption="bind:calculateRoot(Variables.serviceVariable1.dataSet.EPS,Variables.serviceVariable1.dataSet.BookValue)" fontweight="bold" name="label54"></wm-label>
+                    </wm-linearlayoutitem>
+                </wm-linearlayout>
+            </wm-linearlayoutitem>
+        </wm-linearlayout>
+        <wm-label padding="unset 0.5em" name="label26" caption=""></wm-label>
+    </wm-dialog>
+</wm-page>

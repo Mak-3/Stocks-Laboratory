@@ -1,0 +1,165 @@
+{
+  "basePath" : "${rest.twelvedata4.basepath}",
+  "paths" : {
+    "/quote" : {
+      "x-WM-BASE_PATH" : "/quote",
+      "x-WM-TAG" : "twelvedata4",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "twelvedata4_invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "symbol",
+          "format" : "string",
+          "description" : "symbol",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "apikey",
+          "format" : "string",
+          "description" : "apikey",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "source",
+          "format" : "string",
+          "description" : "source",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "tags" : [ "twelvedata4" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.twelvedata4.scheme}://${rest.twelvedata4.host}${rest.twelvedata4.basepath}/quote"
+    }
+  },
+  "host" : "${rest.twelvedata4.host}",
+  "schemes" : [ "${rest.twelvedata4.scheme}" ],
+  "definitions" : {
+    "Response.fifty_two_week" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "twelvedata4.Response.fifty_two_week",
+      "x-WM-TAGS" : [ "twelvedata4" ],
+      "required" : [ "high", "high_change", "high_change_percent", "low", "low_change", "low_change_percent", "range" ],
+      "properties" : {
+        "low_change" : {
+          "type" : "string"
+        },
+        "high" : {
+          "type" : "string"
+        },
+        "low_change_percent" : {
+          "type" : "string"
+        },
+        "low" : {
+          "type" : "string"
+        },
+        "range" : {
+          "type" : "string"
+        },
+        "high_change" : {
+          "type" : "string"
+        },
+        "high_change_percent" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "twelvedata4.RootResponse",
+      "x-WM-TAGS" : [ "twelvedata4" ],
+      "required" : [ "average_volume", "change", "close", "currency", "datetime", "exchange", "fifty_two_week", "high", "is_market_open", "low", "mic_code", "name", "open", "percent_change", "previous_close", "symbol", "timestamp", "volume" ],
+      "properties" : {
+        "symbol" : {
+          "type" : "string"
+        },
+        "mic_code" : {
+          "type" : "string"
+        },
+        "change" : {
+          "type" : "string"
+        },
+        "volume" : {
+          "type" : "string"
+        },
+        "datetime" : {
+          "type" : "string"
+        },
+        "high" : {
+          "type" : "string"
+        },
+        "fifty_two_week" : {
+          "$ref" : "#/definitions/Response.fifty_two_week"
+        },
+        "low" : {
+          "type" : "string"
+        },
+        "previous_close" : {
+          "type" : "string"
+        },
+        "average_volume" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "is_market_open" : {
+          "type" : "boolean"
+        },
+        "exchange" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "close" : {
+          "type" : "string"
+        },
+        "percent_change" : {
+          "type" : "string"
+        },
+        "open" : {
+          "type" : "string"
+        },
+        "timestamp" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "96d6ecb6-7512-4d59-99b5-ba59cfdc2ea7",
+    "x-WM-SERVICE_ID" : "twelvedata4",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "tags" : [ {
+    "name" : "twelvedata4"
+  } ]
+}

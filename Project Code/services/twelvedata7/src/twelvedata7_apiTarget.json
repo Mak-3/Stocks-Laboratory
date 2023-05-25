@@ -1,0 +1,370 @@
+{
+  "basePath" : "${rest.twelvedata7.basepath}",
+  "paths" : {
+    "/quote" : {
+      "x-WM-BASE_PATH" : "/quote",
+      "x-WM-TAG" : "twelvedata7",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "twelvedata7_invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "symbol",
+          "format" : "string",
+          "description" : "symbol",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "apikey",
+          "format" : "string",
+          "description" : "apikey",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "source",
+          "format" : "string",
+          "description" : "source",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "tags" : [ "twelvedata7" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.twelvedata7.scheme}://${rest.twelvedata7.host}${rest.twelvedata7.basepath}/quote"
+    }
+  },
+  "host" : "${rest.twelvedata7.host}",
+  "schemes" : [ "${rest.twelvedata7.scheme}" ],
+  "definitions" : {
+    "Response.fifty_two_week" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "twelvedata7.Response.fifty_two_week",
+      "x-WM-TAGS" : [ "twelvedata7" ],
+      "required" : [ "high", "high_change", "high_change_percent", "low", "low_change", "low_change_percent", "range" ],
+      "properties" : {
+        "low_change" : {
+          "type" : "string"
+        },
+        "high" : {
+          "type" : "string"
+        },
+        "low_change_percent" : {
+          "type" : "string"
+        },
+        "low" : {
+          "type" : "string"
+        },
+        "range" : {
+          "type" : "string"
+        },
+        "high_change" : {
+          "type" : "string"
+        },
+        "high_change_percent" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.MSFT" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "twelvedata7.Response.MSFT",
+      "x-WM-TAGS" : [ "twelvedata7" ],
+      "required" : [ "average_volume", "change", "close", "currency", "datetime", "exchange", "fifty_two_week", "high", "is_market_open", "low", "mic_code", "name", "open", "percent_change", "previous_close", "symbol", "timestamp", "volume" ],
+      "properties" : {
+        "symbol" : {
+          "type" : "string"
+        },
+        "mic_code" : {
+          "type" : "string"
+        },
+        "change" : {
+          "type" : "string"
+        },
+        "volume" : {
+          "type" : "string"
+        },
+        "datetime" : {
+          "type" : "string"
+        },
+        "high" : {
+          "type" : "string"
+        },
+        "fifty_two_week" : {
+          "$ref" : "#/definitions/Response.fifty_two_week"
+        },
+        "low" : {
+          "type" : "string"
+        },
+        "previous_close" : {
+          "type" : "string"
+        },
+        "average_volume" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "is_market_open" : {
+          "type" : "boolean"
+        },
+        "exchange" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "close" : {
+          "type" : "string"
+        },
+        "percent_change" : {
+          "type" : "string"
+        },
+        "open" : {
+          "type" : "string"
+        },
+        "timestamp" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "Response.TSLA" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "twelvedata7.Response.TSLA",
+      "x-WM-TAGS" : [ "twelvedata7" ],
+      "required" : [ "average_volume", "change", "close", "currency", "datetime", "exchange", "fifty_two_week", "high", "is_market_open", "low", "mic_code", "name", "open", "percent_change", "previous_close", "symbol", "timestamp", "volume" ],
+      "properties" : {
+        "symbol" : {
+          "type" : "string"
+        },
+        "mic_code" : {
+          "type" : "string"
+        },
+        "change" : {
+          "type" : "string"
+        },
+        "volume" : {
+          "type" : "string"
+        },
+        "datetime" : {
+          "type" : "string"
+        },
+        "high" : {
+          "type" : "string"
+        },
+        "fifty_two_week" : {
+          "$ref" : "#/definitions/Response.fifty_two_week"
+        },
+        "low" : {
+          "type" : "string"
+        },
+        "previous_close" : {
+          "type" : "string"
+        },
+        "average_volume" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "is_market_open" : {
+          "type" : "boolean"
+        },
+        "exchange" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "close" : {
+          "type" : "string"
+        },
+        "percent_change" : {
+          "type" : "string"
+        },
+        "open" : {
+          "type" : "string"
+        },
+        "timestamp" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "twelvedata7.RootResponse",
+      "x-WM-TAGS" : [ "twelvedata7" ],
+      "required" : [ "AAPL", "GOOGL", "MSFT", "TSLA" ],
+      "properties" : {
+        "MSFT" : {
+          "$ref" : "#/definitions/Response.MSFT"
+        },
+        "GOOGL" : {
+          "$ref" : "#/definitions/Response.GOOGL"
+        },
+        "AAPL" : {
+          "$ref" : "#/definitions/Response.AAPL"
+        },
+        "TSLA" : {
+          "$ref" : "#/definitions/Response.TSLA"
+        }
+      }
+    },
+    "Response.AAPL" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "twelvedata7.Response.AAPL",
+      "x-WM-TAGS" : [ "twelvedata7" ],
+      "required" : [ "average_volume", "change", "close", "currency", "datetime", "exchange", "fifty_two_week", "high", "is_market_open", "low", "mic_code", "name", "open", "percent_change", "previous_close", "symbol", "timestamp", "volume" ],
+      "properties" : {
+        "symbol" : {
+          "type" : "string"
+        },
+        "mic_code" : {
+          "type" : "string"
+        },
+        "change" : {
+          "type" : "string"
+        },
+        "volume" : {
+          "type" : "string"
+        },
+        "datetime" : {
+          "type" : "string"
+        },
+        "high" : {
+          "type" : "string"
+        },
+        "fifty_two_week" : {
+          "$ref" : "#/definitions/Response.fifty_two_week"
+        },
+        "low" : {
+          "type" : "string"
+        },
+        "previous_close" : {
+          "type" : "string"
+        },
+        "average_volume" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "is_market_open" : {
+          "type" : "boolean"
+        },
+        "exchange" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "close" : {
+          "type" : "string"
+        },
+        "percent_change" : {
+          "type" : "string"
+        },
+        "open" : {
+          "type" : "string"
+        },
+        "timestamp" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "Response.GOOGL" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "twelvedata7.Response.GOOGL",
+      "x-WM-TAGS" : [ "twelvedata7" ],
+      "required" : [ "average_volume", "change", "close", "currency", "datetime", "exchange", "fifty_two_week", "high", "is_market_open", "low", "mic_code", "name", "open", "percent_change", "previous_close", "symbol", "timestamp", "volume" ],
+      "properties" : {
+        "symbol" : {
+          "type" : "string"
+        },
+        "mic_code" : {
+          "type" : "string"
+        },
+        "change" : {
+          "type" : "string"
+        },
+        "volume" : {
+          "type" : "string"
+        },
+        "datetime" : {
+          "type" : "string"
+        },
+        "high" : {
+          "type" : "string"
+        },
+        "fifty_two_week" : {
+          "$ref" : "#/definitions/Response.fifty_two_week"
+        },
+        "low" : {
+          "type" : "string"
+        },
+        "previous_close" : {
+          "type" : "string"
+        },
+        "average_volume" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "is_market_open" : {
+          "type" : "boolean"
+        },
+        "exchange" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "close" : {
+          "type" : "string"
+        },
+        "percent_change" : {
+          "type" : "string"
+        },
+        "open" : {
+          "type" : "string"
+        },
+        "timestamp" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "x-WM-API_ID" : "516e6e8b-3865-4c7c-aab6-28b8920f9e97",
+    "x-WM-SERVICE_ID" : "twelvedata7",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "tags" : [ {
+    "name" : "twelvedata7"
+  } ]
+}

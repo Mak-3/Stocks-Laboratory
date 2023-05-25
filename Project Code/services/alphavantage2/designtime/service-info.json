@@ -1,0 +1,6 @@
+{
+  "id" : "alphavantage2",
+  "type" : "RestService",
+  "title" : "alphavantage2",
+  "mockEnabled" : false
+}

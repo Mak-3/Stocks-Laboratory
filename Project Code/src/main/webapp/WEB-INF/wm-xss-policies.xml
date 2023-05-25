@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<anti-samy-rules>
+    <directives>
+        <directive name="omitXmlDeclaration" value="true"/>
+        <directive name="omitDoctypeDeclaration" value="true"/>
+        <directive name="formatOutput" value="false"/>
+        <directive name="embedStyleSheets" value="true"/>
+        <directive name="maxStyleSheetImports" value="1"/>
+        <directive name="connectionTimeout" value="1000"/>
+        <directive name="preserveSpace" value="false"/>
+        <directive name="useXHTML" value="true"/>
+        <directive name="onUnknownTag" value="remove"/>
+    </directives>
+    <common-regexps>
+        <regexp name="colorName" value="(aqua|black|blue|fuchsia|gray|grey|green|lime|maroon|navy|olive|purple|red|silver|teal|white|yellow)"/>
+        <regexp name="colorCode" value="(#([0-9a-fA-F]{6}|[0-9a-fA-F]{3}))"/>
+        <regexp name="numberOrPercent" value="(\d)+(%{0,1})"/>
+        <regexp name="htmlId" value="[a-zA-Z0-9-_]+"/>
+        <regexp name="htmlTitle" value="[\p{L}\p{N}\s-_',:\[\]!\./\\\(\)]*"/>
+        <regexp name="htmlClass" value="[a-zA-Z0-9\s,-_]+"/>
+        <regexp name="onsiteURL" value="([\p{L}\p{N}\\\.\#@\$%\+&amp;;\-_~,\?=/!]+|\#(\w)+)"/>
+        <regexp name="offsiteURL" value="(\s)*((ht|f)tp(s?)://|mailto:)[\p{L}\p{N}]+[\p{L}\p{N}\p{Zs}\.\#@\$%\+&amp;;:\-_~,\?=/!]*(\s)*"/>
+        <regexp name="number" value="(-|\+)?([0-9]+(.[0-9]+)?)"/>
+    </common-regexps>
+    <common-attributes>
+        <attribute name="id" description="The 'id' of any HTML attribute should not contain anything besides letters and numbers">
+            <regexp-list>
+                <regexp name="htmlId"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="lang" description="The 'lang' attribute tells the browser what language the element's attribute values and content are written in">
+            <regexp-list>
+                <regexp value="[a-zA-Z]{2,20}"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="title" description="The 'title' attribute provides text that shows up in a 'tooltip' when a user hovers their mouse over the element">
+            <regexp-list>
+                <regexp name="htmlTitle"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="class" description="The 'class' of any HTML attribute is usually a single word, but it can also be a list of class names separated by spaces">
+            <regexp-list>
+                <regexp name="htmlClass"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="href">
+            <regexp-list>
+                <regexp name="onsiteURL"/>
+                <regexp name="offsiteURL"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="target">
+            <regexp-list>
+                <regexp name="htmlId"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="border">
+            <regexp-list>
+                <regexp name="number"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="cellpadding">
+            <regexp-list>
+                <regexp name="number"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="cellspacing">
+            <regexp-list>
+                <regexp name="number"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="colspan">
+            <regexp-list>
+                <regexp name="number"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="rowspan">
+            <regexp-list>
+                <regexp name="number"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="background">
+            <regexp-list>
+                <regexp name="onsiteURL"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="bgcolor">
+            <regexp-list>
+                <regexp name="colorName"/>
+                <regexp name="colorCode"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="width">
+            <regexp-list>
+                <regexp name="numberOrPercent"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="height">
+            <regexp-list>
+                <regexp name="numberOrPercent"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="align" description="The 'align' attribute of an HTML element is a direction word, like 'left', 'right' or 'center'">
+            <literal-list>
+                <literal value="center"/>
+                <literal value="middle"/>
+                <literal value="left"/>
+                <literal value="right"/>
+                <literal value="justify"/>
+                <literal value="char"/>
+            </literal-list>
+        </attribute>
+        <attribute name="valign" description="The 'valign' attribute of an HTML attribute is a direction word, like 'baseline','bottom','middle' or 'top'">
+            <literal-list>
+                <literal value="baseline"/>
+                <literal value="bottom"/>
+                <literal value="middle"/>
+                <literal value="top"/>
+            </literal-list>
+        </attribute>
+        <attribute name="size">
+            <regexp-list>
+                <regexp name="number"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="autocomplete">
+            <literal-list>
+                <literal value="on"/>
+                <literal value="off"/>
+            </literal-list>
+        </attribute>
+        <attribute name="rows">
+            <regexp-list>
+                <regexp name="number"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="cols">
+            <regexp-list>
+                <regexp name="number"/>
+            </regexp-list>
+        </attribute>
+        <attribute name="onFocus" description="The 'onFocus' event is executed when the control associated with the tag gains focus"/>
+        <attribute name="onBlur" description="The 'onBlur' event is executed when the control associated with the tag loses focus"/>
+        <attribute name="onClick" description="The 'onClick' event is executed when the control associated with the tag is clicked"/>
+        <attribute name="onDblClick" description="The 'onDblClick' event is executed when the control associated with the tag is clicked twice immediately"/>
+        <attribute name="onMouseDown" description="The 'onMouseDown' event is executed when the control associated with the tag is clicked but not yet released"/>
+        <attribute name="onMouseUp" description="The 'onMouseUp' event is executed when the control associated with the tag is clicked after the button is released"/>
+        <attribute name="onMouseOver" description="The 'onMouseOver' event is executed when the user's mouse hovers over the control associated with the tag"/>
+        <attribute name="scope" description="The 'scope' attribute defines what's covered by the header cells"/>
+    </common-attributes>
+    <global-tag-attributes>
+        <attribute name="title"/>
+        <attribute name="lang"/>
+    </global-tag-attributes>
+    <tags-to-encode>
+        <tag xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">g</tag>
+        <tag xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">grin</tag>
+    </tags-to-encode>
+    <tag-rules>
+        <tag name="tt" action="validate"/>
+        <tag name="a" action="validate"/>
+        <tag name="b" action="filter"/>
+        <tag name="blockquote" action="validate"/>
+        <tag name="frameset" action="remove"/>
+        <tag name="em" action="validate"/>
+        <tag name="i" action="validate"/>
+        <tag name="script" action="remove"/>
+        <tag name="noframes" action="remove"/>
+        <tag name="p" action="validate"/>
+        <tag name="div" action="validate"/>
+        <tag name="br" action="truncate"/>
+        <tag name="noscript" action="remove"/>
+        <tag name="ul" action="validate"/>
+        <tag name="iframe" action="remove"/>
+        <tag name="ol" action="validate"/>
+        <tag name="li" action="validate"/>
+        <tag name="frame" action="remove"/>
+    </tag-rules>
+    <css-rules/>
+</anti-samy-rules>

@@ -1,0 +1,17 @@
+*   text=auto eol=lf
+
+#Declaring the binary files
+*.eot   binary
+*.otf   binary
+*.ttf   binary
+*.woff  binary
+*.woff2 binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.ico  binary
+*.gif   binary
+*.jar   binary
+*.xlsm	binary
+*.xlsx	binary
+*.pdf	binary

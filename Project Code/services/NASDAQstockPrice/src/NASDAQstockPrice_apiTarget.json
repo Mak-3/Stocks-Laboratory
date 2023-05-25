@@ -1,0 +1,103 @@
+{
+  "basePath" : "${rest.NASDAQstockPrice.basepath}",
+  "paths" : {
+    "/{name}" : {
+      "x-WM-BASE_PATH" : "/{name}",
+      "x-WM-TAG" : "NASDAQstockPrice",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "NASDAQstockPrice_invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : true,
+          "in" : "header",
+          "name" : "X-RapidAPI-Key",
+          "format" : "string",
+          "description" : "X-RapidAPI-Key",
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : true,
+          "in" : "header",
+          "name" : "X-RapidAPI-Host",
+          "format" : "string",
+          "description" : "X-RapidAPI-Host",
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "in" : "path",
+          "name" : "name",
+          "format" : "string",
+          "type" : "string",
+          "required" : true,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "tags" : [ "NASDAQstockPrice" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.NASDAQstockPrice.scheme}://${rest.NASDAQstockPrice.host}${rest.NASDAQstockPrice.basepath}/{name}"
+    }
+  },
+  "host" : "${rest.NASDAQstockPrice.host}",
+  "schemes" : [ "${rest.NASDAQstockPrice.scheme}" ],
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "NASDAQstockPrice.RootResponse",
+      "x-WM-TAGS" : [ "NASDAQstockPrice" ],
+      "required" : [ "change_percentage", "change_point", "price", "total_vol" ],
+      "properties" : {
+        "change_point" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "change_percentage" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "total_vol" : {
+          "type" : "string"
+        },
+        "price" : {
+          "format" : "double",
+          "type" : "number"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "91f302d5-a5c1-4fd5-99ff-1a0814663098",
+    "x-WM-SERVICE_ID" : "p",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "tags" : [ {
+    "name" : "NASDAQstockPrice"
+  } ]
+}

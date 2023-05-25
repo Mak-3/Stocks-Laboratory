@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="com.wavemaker.runtime.rest.processor.RestRuntimeConfig" id="appDefaultRestRuntimeConfig">
+        <property name="httpRequestProcessorList">
+            <list>
+                <bean class="com.wavemaker.runtime.rest.processor.request.PassDefaultHeadersRequestProcessor">
+                    <property name="enabled" value="true"/>
+                    <property name="defaultHeaders">
+                        <list>
+                            <value>User-Agent</value>
+                            <value>Content-Type</value>
+                            <value>Accept</value>
+                            <value>Accept-Charset</value>
+                            <value>Accept-Language</value>
+                            <value>X-Requested-With</value>
+                        </list>
+                    </property>
+                </bean>
+                <bean class="com.wavemaker.runtime.rest.processor.request.HttpRequestCookieProcessor">
+                    <property name="enabled" value="true"/>
+                </bean>
+            </list>
+        </property>
+        <property name="httpResponseProcessorList">
+            <list>
+                <bean class="com.wavemaker.runtime.rest.processor.response.HttpResponseCookieProcessor">
+                    <property name="enabled" value="true"/>
+                    <property name="persistenceStrategy" value="NONE"/>
+                </bean>
+                <bean class="com.wavemaker.runtime.rest.processor.response.PrefixHttpResponseHeadersResponseProcessor">
+                    <property name="enabled" value="true"/>
+                    <property name="headerPrefix" value="X-WM-"/>
+                    <property name="excludeList">
+                        <list>
+                            <value>Content-Disposition</value>
+                            <value>Content-Type</value>
+                            <value>Set-Cookie</value>
+                        </list>
+                    </property>
+                </bean>
+            </list>
+        </property>
+    </bean>
+</beans>

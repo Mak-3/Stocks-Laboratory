@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GetAccessToken</title>
+    <script type="text/javascript">
+        /**
+         * this file is used as the redirect uri for an implicit oAuth flow. The access token is set in the local storage
+         * which is then used to make the respective api calls.
+         */
+        function poponload() {
+            var code = location.href.match(/code=([^&#]*)/);
+            var access_token = location.href.match(/access_token=([^&#]*)/), decodedURI, stateObj, parsedObj, dest;
+            access_token = access_token ? access_token[1] : undefined;
+            code = code ? code[1] : undefined;
+            decodedURI = decodeURIComponent(location.href);
+            stateObj = decodedURI.match(/\{([^)]+)\}/)[1];
+            parsedObj = JSON.parse('{' + stateObj + '}');
+            var valueToSet = parsedObj.flow === 'implicit' ? access_token : code;
+            dest = '://services/oauth/' + parsedObj.providerId + '?access_token=' + valueToSet;
+            if (parsedObj.requestSourceType === "MOBILE") {
+                location.href = parsedObj.scheme + dest;
+            } else if (parsedObj.requestSourceType === "WAVELENS") {
+                location.href = "com.wavemaker.wavelens" + dest;
+            } else {
+                localStorage.setItem(parsedObj.providerId + parsedObj.suffix, valueToSet);
+                if (window.opener) {
+                    window.opener.postMessage("oauth_success", window.location.origin);
+                }
+                window.close();
+            }
+        }
+    </script>
+</head>
+
+<body onload="javascript: poponload()"></body>
+
+</html>

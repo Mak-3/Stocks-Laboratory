@@ -1,0 +1,6 @@
+{
+  "id" : "NASDAQstockPrice",
+  "type" : "RestService",
+  "title" : "NASDAQstockPrice",
+  "mockEnabled" : false
+}

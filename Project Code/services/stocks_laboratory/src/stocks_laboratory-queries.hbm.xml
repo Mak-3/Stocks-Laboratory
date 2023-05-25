@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <sql-query name="CheckExitsingStock">
+        <![CDATA[
+        select * from indian_stock_portfolio where user_id=:user_id AND stock_symbol=:stock_symbol
+        ]]>
+    <query-param name="user_id" type="java.lang.Integer"/>
+    <query-param name="stock_symbol" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="CheckExitsingStock__count">
+        <![CDATA[
+        select count(*) from (select * from indian_stock_portfolio where user_id=:user_id AND stock_symbol=:stock_symbol) wmTempTable
+        ]]>
+    <query-param name="user_id" type="java.lang.Integer"/>
+    <query-param name="stock_symbol" type="java.lang.String"/>
+    </sql-query>
+</hibernate-mapping>

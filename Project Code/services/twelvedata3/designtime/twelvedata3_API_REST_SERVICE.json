@@ -1,0 +1,120 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "x-WM-API_ID" : "a7ee8265-a758-49b3-be21-2670e77da17b",
+    "x-WM-SERVICE_ID" : "twelvedata3",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "host" : "api.twelvedata.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "twelvedata3"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/twelvedata3/stocks" : {
+      "get" : {
+        "tags" : [ "twelvedata3" ],
+        "operationId" : "twelvedata3_invoke",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "apikey",
+          "in" : "query",
+          "description" : "apikey",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "name" : "exchange",
+          "in" : "query",
+          "description" : "exchange",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "name" : "source",
+          "in" : "query",
+          "description" : "source",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/twelvedata3/stocks",
+      "x-WM-TAG" : "twelvedata3",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.twelvedata3.scheme}://${rest.twelvedata3.host}${rest.twelvedata3.basepath}/stocks"
+    }
+  },
+  "definitions" : {
+    "Response.dataEntryItem" : {
+      "required" : [ "country", "currency", "exchange", "mic_code", "name", "symbol", "type" ],
+      "properties" : {
+        "symbol" : {
+          "type" : "string"
+        },
+        "country" : {
+          "type" : "string"
+        },
+        "mic_code" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "type" : "string"
+        },
+        "exchange" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "twelvedata3.Response.dataEntryItem",
+      "x-WM-TAGS" : [ "twelvedata3" ]
+    },
+    "RootResponse" : {
+      "required" : [ "data", "status" ],
+      "properties" : {
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Response.dataEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "status" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "twelvedata3.RootResponse",
+      "x-WM-TAGS" : [ "twelvedata3" ]
+    }
+  }
+}

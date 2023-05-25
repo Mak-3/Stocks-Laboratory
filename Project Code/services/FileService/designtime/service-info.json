@@ -1,0 +1,8 @@
+{
+  "id" : "FileService",
+  "type" : "JavaService",
+  "packageNames" : [ "com.stocks_laboratory.fileservice" ],
+  "serviceClassNames" : [ "com.stocks_laboratory.fileservice.FileService" ],
+  "title" : "FileService",
+  "mockEnabled" : false
+}

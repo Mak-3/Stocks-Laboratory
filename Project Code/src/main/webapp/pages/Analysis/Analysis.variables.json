@@ -1,0 +1,181 @@
+{
+  "companyLogos" : {
+    "_id" : "wm-companyLogos-wm.ServiceVariable-1683983801556",
+    "name" : "companyLogos",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "symbol",
+      "value" : "bind:Widgets.twelvedata3Table1.selecteditem.symbol",
+      "type" : "string"
+    }, {
+      "target" : "apikey",
+      "value" : "20808422e1a9413ea17c13259c41230d",
+      "type" : "string"
+    }, {
+      "target" : "source",
+      "value" : "docs",
+      "type" : "string"
+    } ],
+    "type" : "twelvedata5.RootResponse",
+    "service" : "twelvedata5",
+    "operation" : "invoke",
+    "operationId" : "twelvedata5_invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "twelvedata5"
+  },
+  "serviceVariable1" : {
+    "_id" : "wm-serviceVariable1-wm.ServiceVariable-1683722359766",
+    "name" : "serviceVariable1",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "symbol",
+      "value" : "bind:Widgets.twelvedata3Table1.selecteditem.symbol",
+      "type" : "string"
+    }, {
+      "target" : "apikey",
+      "value" : "1X4XN0NDMKE52D6R",
+      "type" : "string"
+    }, {
+      "target" : "function",
+      "value" : "OVERVIEW",
+      "type" : "string"
+    } ],
+    "type" : "alphavantage.RootResponse",
+    "service" : "alphavantage",
+    "operation" : "invoke",
+    "operationId" : "alphavantage_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "Twelvedata2Invoke" : {
+    "_id" : "wm-Twelvedata2Invoke-wm.ServiceVariable-1683451585556",
+    "name" : "Twelvedata2Invoke",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "country",
+      "value" : "India",
+      "type" : "java.lang.String"
+    }, {
+      "target" : "apikey",
+      "value" : "20808422e1a9413ea17c13259c41230d",
+      "type" : "java.lang.String"
+    }, {
+      "target" : "exchange",
+      "value" : "BSE",
+      "type" : "java.lang.String"
+    }, {
+      "target" : "source",
+      "value" : "docs",
+      "type" : "java.lang.String"
+    } ],
+    "type" : "twelvedata2.RootResponse",
+    "service" : "twelvedata2",
+    "operation" : "invoke",
+    "operationId" : "twelvedata2_invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "twelvedata2"
+  },
+  "Twelvedata3Invoke" : {
+    "_id" : "wm-Twelvedata3Invoke-wm.ServiceVariable-1683640301942",
+    "name" : "Twelvedata3Invoke",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "apikey",
+      "value" : "20808422e1a9413ea17c13259c41230d",
+      "type" : "java.lang.String"
+    }, {
+      "target" : "exchange",
+      "value" : "NASDAQ",
+      "type" : "java.lang.String"
+    }, {
+      "target" : "source",
+      "value" : "docs",
+      "type" : "java.lang.String"
+    } ],
+    "type" : "twelvedata3.RootResponse",
+    "service" : "twelvedata3",
+    "operation" : "invoke",
+    "operationId" : "twelvedata3_invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "twelvedata3"
+  },
+  "TwelvedataInvoke" : {
+    "_id" : "wm-TwelvedataInvoke-wm.ServiceVariable-1683448856625",
+    "name" : "TwelvedataInvoke",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "country",
+      "value" : "India",
+      "type" : "string"
+    }, {
+      "target" : "apikey",
+      "value" : "20808422e1a9413ea17c13259c41230d",
+      "type" : "string"
+    }, {
+      "target" : "exchange",
+      "value" : "NSE",
+      "type" : "string"
+    }, {
+      "target" : "source",
+      "value" : "docs",
+      "type" : "string"
+    } ],
+    "type" : "twelvedata.RootResponse",
+    "service" : "twelvedata",
+    "operation" : "invoke",
+    "operationId" : "twelvedata_RestServiceVirtualController-invoke",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  }
+}

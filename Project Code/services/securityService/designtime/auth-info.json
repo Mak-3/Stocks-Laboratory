@@ -1,0 +1,91 @@
+{
+  "enforceSecurity" : true,
+  "loginConfig" : {
+    "type" : "PAGE",
+    "pageName" : "Login",
+    "cookieMaxAge" : -1,
+    "sessionTimeout" : {
+      "type" : "DIALOG",
+      "pageName" : null,
+      "timeoutValue" : 30
+    },
+    "sessionConcurrencyConfig" : {
+      "maxSessionsAllowed" : -1
+    }
+  },
+  "rememberMeConfig" : {
+    "enabled" : true,
+    "tokenValiditySeconds" : 1296000
+  },
+  "tokenAuthConfig" : {
+    "enabled" : true,
+    "parameter" : "WM_AUTH_TOKEN",
+    "tokenValiditySeconds" : 1800
+  },
+  "csrfConfig" : {
+    "enforceCsrfSecurity" : true,
+    "headerName" : "X-WM-XSRF-TOKEN",
+    "cookieName" : "wm_xsrf_token"
+  },
+  "sessionPersistenceConfig" : {
+    "enabledType" : "IN_MEMORY",
+    "config" : {
+      "REDIS" : {
+        "hostName" : "",
+        "port" : "",
+        "database" : "0",
+        "password" : "7b6a43524a78700d662158",
+        "type" : "REDIS"
+      },
+      "JDBC" : {
+        "serviceName" : "",
+        "type" : "JDBC"
+      },
+      "MONGODB" : {
+        "host" : "",
+        "port" : "",
+        "dbname" : "",
+        "username" : "",
+        "password" : "",
+        "type" : "MONGODB"
+      }
+    }
+  },
+  "authProviders" : {
+    "DEMO" : {
+      "enabled" : false,
+      "users" : [ {
+        "userid" : "user",
+        "password" : "user",
+        "roles" : [ "user" ]
+      }, {
+        "userid" : "admin",
+        "password" : "admin",
+        "roles" : [ "admin" ]
+      } ],
+      "type" : "DEMO"
+    },
+    "DATABASE" : {
+      "enabled" : true,
+      "modelName" : "stocks_laboratory",
+      "entityName" : "Users",
+      "tableName" : "users",
+      "unamePropertyName" : "email",
+      "unameColumnName" : "email",
+      "uidPropertyName" : "id",
+      "uidColumnName" : "id",
+      "pwPropertyName" : "password",
+      "pwColumnName" : "password",
+      "rolePropertyName" : "id",
+      "roleColumnName" : "id",
+      "useRolesQuery" : false,
+      "rolesByUsernameQuery" : "",
+      "tenantIdField" : null,
+      "defTenantId" : 0,
+      "tenantIdPropertyName" : null,
+      "queryType" : "HQL",
+      "type" : "DATABASE"
+    }
+  },
+  "secondaryAuthProviders" : { }
+}

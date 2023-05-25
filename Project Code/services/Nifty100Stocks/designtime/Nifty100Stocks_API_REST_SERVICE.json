@@ -1,0 +1,169 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "x-WM-API_ID" : "e7529e8e-2e2b-41b7-b93b-91afa7072987",
+    "x-WM-SERVICE_ID" : "p",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "host" : "latest-stock-price.p.rapidapi.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "Nifty100Stocks"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/Nifty100Stocks/price" : {
+      "get" : {
+        "tags" : [ "Nifty100Stocks" ],
+        "operationId" : "Nifty100Stocks_invoke",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "X-RapidAPI-Key",
+          "in" : "header",
+          "description" : "X-RapidAPI-Key",
+          "required" : false,
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : true,
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "name" : "X-RapidAPI-Host",
+          "in" : "header",
+          "description" : "X-RapidAPI-Host",
+          "required" : false,
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : true,
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "name" : "Indices",
+          "in" : "query",
+          "description" : "Indices",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/Response.RootResponseROOTEntryItem"
+              },
+              "x-WM-IS_LIST" : true
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/Nifty100Stocks/price",
+      "x-WM-TAG" : "Nifty100Stocks",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.Nifty100Stocks.scheme}://${rest.Nifty100Stocks.host}${rest.Nifty100Stocks.basepath}/price"
+    }
+  },
+  "definitions" : {
+    "Response.RootResponseROOTEntryItem" : {
+      "required" : [ "change", "dayHigh", "dayLow", "identifier", "lastPrice", "lastUpdateTime", "open", "pChange", "perChange30d", "perChange365d", "previousClose", "symbol", "totalTradedValue", "totalTradedVolume", "yearHigh", "yearLow" ],
+      "properties" : {
+        "yearLow" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "symbol" : {
+          "type" : "string"
+        },
+        "identifier" : {
+          "type" : "string"
+        },
+        "totalTradedVolume" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "change" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "dayLow" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "perChange30d" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "yearHigh" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "perChange365d" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "previousClose" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "pChange" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "totalTradedValue" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "open" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "dayHigh" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "lastPrice" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "lastUpdateTime" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "Nifty100Stocks.Response.RootResponseROOTEntryItem",
+      "x-WM-TAGS" : [ "Nifty100Stocks" ]
+    },
+    "RootResponse" : {
+      "required" : [ "RootResponseROOT" ],
+      "properties" : {
+        "RootResponseROOT" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Response.RootResponseROOTEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "Nifty100Stocks.RootResponse",
+      "x-WM-TAGS" : [ "Nifty100Stocks" ]
+    }
+  }
+}

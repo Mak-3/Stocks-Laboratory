@@ -1,0 +1,21 @@
+<wm-partial name="header" type="header">
+    <wm-navbar title="Stocks Laboratory" name="navbar1" imgsrc="resources/images/logos/logo.png" backgroundcolor="transparent" class="topnav" backgroundattachment="fixed" backgroundrepeat="no-repeat">
+        <wm-nav type="navbar" class="navbar-right" name="nav2" horizontalalign="center">
+            <wm-nav-item name="nav_item6">
+                <wm-anchor caption="Home" name="anchor6" on-click="Actions.goToPage_Home.invoke()"></wm-anchor>
+            </wm-nav-item>
+            <wm-nav-item name="nav_item7">
+                <wm-anchor caption="Buy now" name="anchor7" on-click="Actions.goToPage_BuyIndianStocks.invoke()"></wm-anchor>
+            </wm-nav-item>
+            <wm-nav-item name="nav_item8">
+                <wm-anchor caption="portfolio" name="anchor8" on-click="Actions.goToPage_portfolio.invoke()"></wm-anchor>
+            </wm-nav-item>
+            <wm-nav-item name="nav_item12">
+                <wm-anchor name="anchor12" iconclass="" caption="Analysis" on-click="Actions.goToPage_Analysis.invoke()"></wm-anchor>
+            </wm-nav-item>
+            <wm-nav-item name="nav_item7_1">
+                <wm-anchor name="anchor6_1" iconclass="" caption="bind:'hey! ' + Variables.usersData.dataSet[$i].firstName" iconposition="right" on-click="Actions.goToPage_profile.invoke()"></wm-anchor>
+            </wm-nav-item>
+        </wm-nav>
+    </wm-navbar>
+</wm-partial>

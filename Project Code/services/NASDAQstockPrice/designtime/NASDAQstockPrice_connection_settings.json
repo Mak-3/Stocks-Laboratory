@@ -1,0 +1,31 @@
+{
+  "endpointAddress" : "https://realstonks.p.rapidapi.com/{name}",
+  "method" : "GET",
+  "headers" : {
+    "X-RapidAPI-Key" : [ "9bd2aa8d90msh89253751226ef58p127f9djsn29ed772c4dac" ],
+    "X-RapidAPI-Host" : [ "realstonks.p.rapidapi.com" ]
+  },
+  "redirectEnabled" : true,
+  "requestBody" : "",
+  "queryParams" : { },
+  "authDetails" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 200,
+    "headers" : {
+      "Date" : [ "Sun, 14 May 2023 14:13:00 GMT" ],
+      "Content-Type" : [ "application/json" ],
+      "Content-Length" : [ "92" ],
+      "Connection" : [ "keep-alive" ],
+      "X-RateLimit-Requests-Limit" : [ "100000" ],
+      "X-RateLimit-Requests-Remaining" : [ "99992" ],
+      "X-RateLimit-Requests-Reset" : [ "2672875" ],
+      "Server" : [ "RapidAPI-1.2.8" ],
+      "X-RapidAPI-Version" : [ "1.2.8" ],
+      "X-RapidAPI-Region" : [ "AWS - us-east-1" ]
+    },
+    "responseBody" : "{\"price\":167.2,\"change_point\":-0.78,\"change_percentage\":-0.46,\"total_vol\":\"157.85M\"}",
+    "convertedResponse" : null
+  }
+}

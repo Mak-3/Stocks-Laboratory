@@ -1,0 +1,8 @@
+.Nifty100cards{
+    min-width: 300px !important;
+    background: radial-gradient(circle at 10% 20%, rgb(90, 92, 106) 0%, rgb(32, 45, 58) 81.3%);
+}
+.app-list ul.list-group, .app-livelist ul.list-group {
+    margin-bottom: 0;
+    margin-top: 20px;
+}

@@ -1,0 +1,124 @@
+{
+  "basePath" : "${rest.USDtoINR.basepath}",
+  "paths" : {
+    "/convertcurrency" : {
+      "x-WM-BASE_PATH" : "/convertcurrency",
+      "x-WM-TAG" : "USDtoINR",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "USDtoINR_invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : true,
+          "in" : "header",
+          "name" : "X-RapidAPI-Host",
+          "format" : "string",
+          "description" : "X-RapidAPI-Host",
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : true,
+          "in" : "header",
+          "name" : "X-RapidAPI-Key",
+          "format" : "string",
+          "description" : "X-RapidAPI-Key",
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "amount",
+          "format" : "string",
+          "description" : "amount",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "want",
+          "format" : "string",
+          "description" : "want",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "have",
+          "format" : "string",
+          "description" : "have",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "tags" : [ "USDtoINR" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.USDtoINR.scheme}://${rest.USDtoINR.host}${rest.USDtoINR.basepath}/convertcurrency"
+    }
+  },
+  "host" : "${rest.USDtoINR.host}",
+  "schemes" : [ "${rest.USDtoINR.scheme}" ],
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "USDtoINR.RootResponse",
+      "x-WM-TAGS" : [ "USDtoINR" ],
+      "required" : [ "new_amount", "new_currency", "old_amount", "old_currency" ],
+      "properties" : {
+        "new_amount" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "new_currency" : {
+          "type" : "string"
+        },
+        "old_amount" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "old_currency" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "x-WM-API_ID" : "0a691974-4bbe-4e7c-88ce-d9ba8248b8bb",
+    "x-WM-SERVICE_ID" : "p",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "tags" : [ {
+    "name" : "USDtoINR"
+  } ]
+}

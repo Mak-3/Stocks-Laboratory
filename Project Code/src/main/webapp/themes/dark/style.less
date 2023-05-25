@@ -1,0 +1,2230 @@
+/*START - Dark Theme*/
+
+.wm-app {
+
+  @import url("../../../components/bootstrap/less/bootstrap.less");
+  @import url("variables.less");
+
+  font-size: @font-size-base;
+  color: @text-color;
+  font-family: @font-family-base;
+  background-color: @body-bg;
+
+  //Header
+  @wm-header-border-color: @brand-primary;
+  @wm-header-text-color: #fff;
+  @wm-header-bg-color: @body-bg;
+  @wm-header-height: auto;
+
+  //left panel
+  @wm-left-panel-bg: @body-bg;
+  @wm-left-panel-list-border: 1px @input-border solid;
+  @wm-left-panel-border-color: @input-border;
+  @wm-left-panel-link-color: @btn-default-color;
+  @wm-left-panel-link-hover-bg: #363d50;
+  @wm-left-panel-link-active-bg: #363d50;
+  @wm-left-panel-link-hover-text-color: #fff;
+  @wm-left-panel-link-hover-border-color: transparent;
+  @wm-left-panel-dropdown-menu-bg: transparent;
+
+  //right panel
+  @wm-right-panel-bg: @body-bg;
+  @wm-right-panel-list-border: 1px @input-border solid;
+  @wm-right-panel-border-color: @input-border;
+  @wm-right-panel-btn-color: #515253;
+
+  //Footer
+  @wm-footer-border-color: @input-border;
+  @wm-footer-text-color: #fff;
+  @wm-footer-bg-color: @body-bg;
+  @wm-footer-height: auto;
+
+  //Table
+  @wm-table-header-bg: @input-border;
+  @wm-pagination-active-hover-bg: darken(@brand-primary, 15%);
+  @wm-pagination-basic-bg: @input-border;
+  @wm-grid-selection-bg: #CFD8DC;
+
+  //Tabset
+  @wm-nav-tabs-color : #fff;
+  @wm-nav-tabs-bg: @input-border;
+
+  //input color
+  @wm-input-disabled-color: #767e8f;
+
+  //Buttons
+  @wm-btn-group-active-btn-bg: #fff;
+
+  //Ratings
+  @wm-rating-text-color: @brand-primary;
+  @wm-rating-hover-text-color: @brand-primary;
+
+  //modal dialogs
+  @wm-modal-header-bg: @brand-primary;
+  @wm-modal-header-color: @navbar-default-link-active-color;
+
+  @wm-form-label-color: @btn-default-color;
+  @wm-calendar-header-color: #fff;
+  @wm-calendar-text-color: #fff;
+  @wm-calendar-event-bg: #20242E;
+  @wm-calendar-event-color: @btn-default-color;
+  @wm-datepicker-text-color: #fff;
+  @wm-datepicker-header-bg: @navbar-default-bg;
+  @wm-datepicker-btn-hover-bg: @btn-default-border;
+  @wm-checked-color: #fff;
+
+  /*Box Shadow effect*/
+  .box-shadow (@x:0px, @y:2px, @blur:5px, @color:#DBDBDB) {
+    box-shadow: @arguments;
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    -ms-box-shadow: @arguments;
+    -o-box-shadow: @arguments;
+  }
+  .btn-shadow {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  /*Applies inset shadow effect*/
+  .inset-shadow(@x:0px, @y:2px, @blur:5px, @spread:0 , @color:#DBDBDB) {
+    box-shadow: inset @arguments;
+    -webkit-box-shadow: inset @arguments;
+    -moz-box-shadow: inset @arguments;
+    -ms-box-shadow: inset @arguments;
+    -o-box-shadow: inset @arguments;
+  }
+
+  .img-rounded {
+    border-radius: @thumbnail-border-radius;
+  }
+
+  /******Label: overiding the label class as bootstrap is making all the labels bold***/
+  label {
+    font-weight: normal;
+  }
+  .label-primary, .label-success, .label-info, .label-warning, .label-danger {
+    color: #fff;
+  }
+  .text-danger {
+    color: @brand-danger;
+  }
+  .text-success {
+    color: @brand-success;
+  }
+  .text-info {
+    color: @brand-info;
+  }
+  .text-primary {
+    color: @brand-primary;
+  }
+  .text-warning {
+    color: @brand-warning;
+  }
+  //toaster
+  .toast {
+    background-color: @body-bg;
+  }
+  .toast-success {
+    background-color: @state-success-bg;
+  }
+  .toast-error {
+    background-color: @state-danger-bg;
+  }
+  .toast-info {
+    background-color: @state-info-bg;
+  }
+  .toast-warning {
+    background-color: @state-warning-bg;
+  }
+
+  //badge classes
+  .badge {
+    &.badge-primary {
+      color: @text-color;
+      background-color: @btn-primary-bg;
+    }
+    &.badge-primary:hover {
+      color: @text-color;
+      background-color: @btn-primary-bg;
+    }
+    &.badge-danger {
+      color: @text-color;
+      background-color: @btn-danger-bg;
+    }
+    &.badge-danger:hover {
+      color: @text-color;
+      background-color: @btn-danger-bg;
+    }
+    &.badge-warning {
+      color: @text-color;
+      background-color: @btn-warning-bg;
+    }
+    .badge-warning:hover {
+      color: @text-color;
+      background-color: @btn-warning-bg;
+    }
+    .badge-success {
+      color: @text-color;
+      background-color: @btn-success-bg;
+    }
+    &.badge-success:hover {
+      color: @text-color;
+      background-color: @btn-success-bg;
+    }
+    &.badge-info {
+      color: @text-color;
+      background-color: @btn-info-bg;
+    }
+    &.badge-info:hover {
+      color: @text-color;
+      background-color: @btn-info-bg;
+    }
+  }
+
+  .h1,.h2,.h3,.h4,.h5,.h6 {
+    width: 100%;
+  }
+
+  .input-group-btn {
+    .btn[disabled] {
+      &:hover, &:focus {
+        background-color: transparent;
+        outline-color: transparent;
+      }
+    }
+  }
+
+  * {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .badge {
+    right: 4px;
+    top: 5px;
+  }
+
+  .close {
+    border: 0;
+    opacity: 0.9;
+    background-color: transparent;
+  }
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  /***Tabs Widget: Styling for the tabs widget comes here********/
+  //Tab Content
+  .app-tabs {
+    .tab-content {
+      background-color: @body-bg;
+      Ignore: ~"a;height: -webkit-calc(100% - 3.2em)";
+      Ignore: ~"a;height: -moz-calc(100% - 3.2em)";
+      Ignore: ~"a;@height: -ms-calc(100% - 3.2em)";
+      Ignore: ~"a;@height: -o-calc(100% - 3.2em)";
+      Ignore: ~"a;@height: calc(100% - 3.2em)";
+      .tab-body {
+        border-color: transparent;
+        padding: @padding-base-horizontal;
+      }
+    }
+  }
+
+  //navigation
+  .nav-tabs, .nav-justified {
+    border: 0;
+    background-color: @wm-nav-tabs-bg;
+    > li {
+      > a {
+        color: @wm-nav-tabs-color;
+        text-transform: uppercase;
+        border-radius: 0;
+        box-shadow: none;
+        margin-right: 0;
+        &:hover, &:focus {
+          outline: none;
+          color: @nav-tabs-active-link-hover-color;
+        }
+      }
+      &.active {
+        > a {
+          &:hover, &:focus {
+            outline: none;
+          }
+        }
+      }
+      //Default styles for menu in nav
+      &.app-nav-item > .dropdown > a.dropdown-toggle {
+        padding: @nav-link-padding;
+        color: @wm-nav-tabs-color;
+        text-transform: uppercase;
+        line-height: 1.42857143;
+        border: 1px solid transparent;
+      }
+    }
+  }
+
+  .app-tabs, .tab-body {
+    border: 1px solid @input-border;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  /***App Message********/
+  .app-message .close {
+    top: initial;
+  }
+  /***Tabs Widget: Styling for the tabs widget comes here********/
+  .list-group-item-separator {
+    margin-bottom: 2px;
+    border-radius: 2px;
+    .form-group {
+      padding: 0 @padding-base-horizontal;
+    }
+  }
+
+  /***Button Style: Defining the sixe of the button for bootstrap classes********/
+  .btn {
+    text-transform: uppercase;
+    &.btn-lg {
+      font-size: 1.4em;
+    }
+    &.btn-sm {
+      font-size: 10px;
+      padding: @padding-small-vertical @padding-small-horizontal;
+    }
+    &.btn-xs {
+      font-size: 8px;
+      padding: @padding-xs-vertical @padding-xs-horizontal;
+    }
+    .caret {
+      //margin-left: 0.7em;
+    }
+    &.active, &:active {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  .btn-group {
+    .btn-shadow();
+    .btn {
+      box-shadow: none;
+      border-color: transparent;
+    }
+  }
+
+  .btn {
+    &.btn-secondary {
+      background-color: @btn-default-bg;
+      color: @btn-default-color;
+      border: 1px solid @btn-default-border;
+    }
+    &.btn-inverse {
+      background-color: @btn-default-color;
+      color: @btn-default-bg;
+      border: 1px solid @btn-default-color;
+      &:hover {
+        background-color: @btn-default-bg;
+        color: @btn-default-color;
+      }
+    }
+    &.btn-transparent {
+      &:hover {
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  .btn-flat {
+    text-transform: uppercase;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: inherit;
+    &.btn-primary {
+      color: @brand-primary;
+      &:hover, &:focus {
+        background-color: @btn-primary-bg;
+        color: @btn-primary-color;
+      }
+    }
+    &.btn-info {
+      color: @brand-info;
+      &:hover, &:focus {
+        background-color: @btn-info-bg;
+        color: @btn-info-color;
+      }
+    }
+    &.btn-warning {
+      color: @brand-warning;
+      &:hover, &:focus {
+        background-color: @btn-warning-bg;
+        color: @btn-warning-color;
+      }
+    }
+    &.btn-danger {
+      color: @brand-danger;
+      &:hover, &:focus {
+        background-color: @btn-danger-bg;
+        color: @btn-danger-color;
+      }
+    }
+  }
+
+  /***Modal Dialog Style: There is no property in bootstrap variable so setting it here********/
+  .modal-header {
+    background-color: @wm-modal-header-bg;
+    border-bottom-color: @modal-header-border-color;
+    color: @wm-modal-header-color;
+    .modal-title {
+      color: @wm-modal-header-color;
+    }
+  }
+
+  /*****login modal form***/
+  .app-login-dialog {
+    .app-dialog-body {
+      .app-form {
+        border: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  //Breadcrumb
+  .breadcrumb {
+    li {
+      a {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  //Progress Bar
+  .progress {
+    box-shadow: none;
+    border-radius: 0;
+    height: .55em;
+    .progress-bar {
+      line-height: .92em;
+    }
+    /****Progress circle***/
+    &.app-progress.circle {
+      path:last-of-type {
+        stroke: @brand-primary;
+      }
+      circle-progress {
+        svg path:last-of-type {
+          stroke: @brand-primary;
+        }
+      }
+      &.progress-circle-success {
+        svg path:last-of-type {
+          stroke: @brand-success;
+        }
+      }
+      &.progress-circle-info {
+          svg path:last-of-type {
+            stroke: @brand-info;
+          }
+      }
+      &.progress-circle-warning {
+          svg path:last-of-type {
+            stroke: @brand-warning;
+          }
+      }
+      &.progress-bar-danger {
+          svg path:last-of-type {
+            stroke: @brand-danger;
+          }
+      }
+      /***Progress circle text color***/
+      .progress-text, text tspan {
+        color: @component-active-color;
+        fill: @component-active-color;
+      }
+    }
+  }
+
+  //Table
+  .table {
+    color: @btn-default-color;
+    > thead {
+      > tr {
+        th {
+          font-weight: normal;
+          background-color: @wm-table-header-bg;
+        }
+      }
+    }
+  }
+
+  /*****************************************************************************************************************************************/
+  /*********************************************************Layout**************************************************************************/
+  /*****************************************************************************************************************************************/
+  .app-content-column {
+    background-color: @body-bg;
+    padding: 1em 1.5em;
+  }
+
+  //Header
+  .app-header, .app-mobile-header {
+    background-color: @wm-header-bg-color;
+    color: @wm-header-text-color;
+    box-shadow: 0px 1px 0px rgba(0,0,0,0.2);
+    border-bottom: 3px solid @brand-primary;
+    height: @wm-header-height;
+    a {
+      color: @wm-header-text-color;
+    }
+
+    .app-search {
+      .form-control {
+        color: @wm-header-text-color;
+        &::-webkit-input-placeholder {
+          color: @wm-header-text-color;
+        }
+        &:-moz-placeholder {
+          color: @wm-header-text-color;
+        }
+        &:-ms-placeholder {
+          color: @wm-header-text-color;
+        }
+      }
+    }
+    .input-group-addon {
+      color: @wm-header-text-color;
+      font-size: 1.1em;
+    }
+
+    .app-mobile-header {
+      background-color: @navbar-default-bg;
+      color: @navbar-default-color;
+      a {
+        color: @navbar-default-color;
+      }
+    }
+  }
+
+  //Top Nav Bar
+  .app-navbar {
+    border-radius: 0;
+    color: @navbar-default-color;
+    padding: 0 1.52em;
+    border: 0;
+    .navbar-nav {
+      li {
+        a, .app-popover-wrapper a {
+          font-size: 1em;
+          padding: 1.2em;
+          font-weight: normal;
+          text-decoration: none;
+          text-transform: uppercase;
+          box-shadow: inset 0px -3px 0 0px transparent;
+          color: @navbar-default-link-color;
+          &:hover, &:focus, &.active, &.app-popover-open {
+            color: @navbar-default-link-active-color;
+            background-color: @navbar-default-hover-bg;
+            -webkit-transition: color .3s ease;
+            -o-transition: color .3s ease;
+            transition: color .3s ease;
+          }
+        }
+        &.active .app-popover-wrapper a {
+          background-color: @navbar-default-link-active-bg;
+          color: @navbar-default-link-active-color;
+        }
+
+        > .dropdown .dropdown-menu {
+          margin: 0;
+          background-color: @dropdown-bg;
+          a, .app-popover-wrapper a {
+            color: @text-color;
+            padding: 1em;
+            font-size: 1em;
+            text-transform: initial;
+            &:hover {
+              background-color: @navbar-default-hover-bg;
+            }
+          }
+        }
+      }
+
+      .app-nav-item {
+        > .dropdown, .app-popover-wrapper {
+          a.dropdown-toggle, a {
+            padding: 1.2em;
+          }
+          .dropdown-menu {
+            li > a {
+              background-color: @input-border;
+              &:hover {
+                background-color: rgba(0,0,0,.03);
+              }
+            }
+          }
+          &.open {
+            .dropdown-toggle {
+              background-color: @brand-primary;
+            }
+          }
+        }
+      }
+    }
+    &.navbar-inverse {
+      li {
+        a, .app-popover-wrapper a {
+          color: @navbar-inverse-color;
+        }
+        &.active .app-popover-wrapper a {
+          background-color: @brand-primary;
+        }
+      }
+      .app-nav-item {
+        > .dropdown {
+          a.dropdown-menu {
+            li > a {
+              background-color: @navbar-inverse-bg;
+            }
+          }
+          &.open {
+            a {
+              color: @navbar-inverse-bg;
+              background-color: @brand-primary;
+            }
+            .dropdown-menu {
+              border-color: @navbar-inverse-bg;
+              background-color: @navbar-inverse-bg;
+              li {
+                > a {
+                  color: @body-bg;
+                  background-color: @navbar-inverse-bg;
+                  &:hover {
+                    background-color: rgba(0, 0, 0, 0.05);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /****nav widget****/
+  .app-nav {
+    &.nav-pills, &.nav-stacked {
+      .app-nav-item {
+        a, .app-menu, .app-popover-wrapper a {
+          border-radius: @border-radius-base;
+          .dropdown-toggle {
+            border-radius: @border-radius-base;
+            padding: @padding-base-horizontal;
+          }
+          &.open {
+            .dropdown-toggle {
+               color: @navbar-default-link-active-color;
+            }
+          }
+          &:hover, .dropdown-toggle:hover, .dropdown-toggle:focus {
+            color: @navbar-default-link-active-color;
+            background-color: @nav-link-hover-bg;
+          }
+        }
+        &.active {
+          > a , .dropdown, .app-popover-wrapper a {
+            color: @navbar-default-link-active-color;
+            background-color: @nav-tabs-active-link-hover-color;
+            .dropdown-toggle {
+              color: @navbar-default-link-active-color;
+              background-color: @nav-tabs-active-link-hover-color;
+              &:active, &:focus, &:active:hover {
+                color: @navbar-default-link-active-color;
+                background-color: @nav-tabs-active-link-hover-color;
+              }
+            }
+            &.open {
+              .dropdown-toggle {
+                color: @navbar-default-link-active-color;
+                background-color: @nav-tabs-active-link-hover-color;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.nav-justified {
+      .app-nav-item {
+        a, .app-menu {
+          text-align: center;
+        }
+      }
+    }
+  }
+  //Popover wrapper styles in Navbar
+  .nav li > .app-popover-wrapper a {
+    padding: @nav-link-padding;
+    &:hover, &:focus {
+      background-color: @nav-link-hover-bg;
+    }
+  }
+
+  //Toggle widget
+  .app-checkbox.app-toggle {
+    label {
+      border: 2px solid @input-border;
+      background-color: @brand-primary;
+      &:hover {
+        border-color: @input-border-focus;
+      }
+      &.unchecked {
+        background-color: @body-bg !important;
+      }
+    }
+  }
+
+  //Switch
+  .app-switch {
+    border-radius: 0;
+    background-color: @body-bg;
+    .btn-group.btn-group-justified {
+      > .btn {
+        border-radius: 0;
+        border: 1px solid @input-border;
+        background-color: @body-bg;
+        color: @text-color;
+        &.hover {
+          background-color: @body-bg;
+        }
+        &.selected {
+          background-color: @brand-primary;
+          color: @text-color;
+          &.hover {
+            background-color: @brand-primary;
+          }
+        }
+      }
+    }
+  }
+
+
+  //Popover
+  .popover {
+    min-width: 16.667em;
+    .popover-content {
+      padding: 0;
+    }
+  }
+
+  //Left & Right Panels
+  .app-left-panel, .app-right-panel {
+    box-shadow: 2px 2px 4px rgba(0,0,0,.15);
+    -webkit-box-shadow: 2px 2px 4px rgba(0,0,0,.15);
+    -moz-box-shadow: 2px 2px 4px rgba(0,0,0,.15);
+    .nav {
+      li {
+        //for overriding the pills default color
+        &.active {
+          > a {
+            color: inherit;
+            background-color: @wm-left-panel-link-active-bg;
+            &:hover, &:focus {
+              color: inherit;
+              background-color: @wm-left-panel-link-active-bg;
+            }
+          }
+        }
+        margin-top: 0;
+        //border-bottom: @wm-left-panel-list-border;
+
+        a, .btn, .dropdown a, .dropdown a.dropdown-toggle, .app-popover a {
+          //letter-spacing: .025em;
+          padding: 1em;
+          position: relative;
+          border-radius: 0;
+          line-height: 1.7;
+          color: @wm-left-panel-link-color;
+          text-shadow: none;
+          font-family: 'Robotomedium', Arial, sans-serif;
+          &:hover {
+            color: @wm-left-panel-link-hover-text-color;
+            text-decoration: none;
+            background-color: @wm-left-panel-link-hover-bg;
+          }
+          &.active {
+            background-color: @wm-left-panel-link-active-bg;
+            &:hover, &:focus {
+              background-color: @wm-left-panel-link-hover-bg;
+              color: inherit;
+            }
+          }
+          .app-icon {
+            margin-right: 0.3em;
+            font-size: 1.143em;
+          }
+          .badge {
+            top: 1.2em !important;
+            padding: 4px 6px;
+          }
+        }
+
+        > .dropdown.open {
+          > .dropdown-menu {
+            position: relative;
+            margin: 0 0 1.333em;
+            border: 0;
+            border-bottom: @wm-left-panel-list-border;
+            box-shadow: none;
+            background-color: @wm-left-panel-dropdown-menu-bg;
+            li {
+              a {
+                padding: 0.92em .92em .92em 2.5em;
+                font-size: 1em;
+              }
+            }
+          }
+        }
+      }
+      &.open {
+        a {
+          &:hover, &:focus {
+            background-color: @wm-left-panel-link-hover-bg;
+          }
+        }
+      }
+    }
+    .app-nav {
+      .app-nav-item {
+        > .dropdown {
+          > a {
+            padding: 1.333em;
+          }
+        }
+      }
+    }
+  }
+
+  //Left Panel
+  .app-left-panel {
+    background-color: @wm-left-panel-bg;
+    border-right: 1px solid @wm-left-panel-border-color;
+  }
+
+  //Right Panel
+  .app-right-panel {
+    background-color: @wm-right-panel-bg;
+    border-left: 1px solid @wm-right-panel-border-color;
+  }
+
+  //Footer
+  .app-footer {
+    padding: 1em 1.5em;
+    background-color: @wm-footer-bg-color;
+    color: @wm-footer-text-color;
+    border-top: 1px solid @wm-footer-border-color;
+    height: @wm-footer-height;
+  }
+
+  .btn-group {
+    .btn.active {
+      box-shadow: none;
+      background-color: @wm-btn-group-active-btn-bg;
+      color: @text-color;
+    }
+  }
+  /******************************************************************************************************************************************/
+  /***************************************************Widgets styling************************************************************************/
+  /******************************************************************************************************************************************/
+  .form-group {
+    margin-bottom: 0.833em;
+    &.live-field.active {
+      .control-label {
+        color: @brand-primary;
+      }
+    }
+    .text-danger, .control-label.text-danger {
+      color: @brand-danger;
+    }
+    .ng-touched.ng-invalid .form-control {
+      border-color: transparent;
+      background-image: none;
+      border: 1px solid @brand-danger;
+      outline: none;
+    }
+  }
+  .input-group-addon.colorpicker-container:last-child {
+    border-left: 1px solid @input-border;
+  }
+  .control-label {
+    font-weight: normal;
+    color: @wm-form-label-color;
+  }
+  //for text, select controls
+  .form-control, .form-group + .form-control, select {
+    border: 1px solid @input-border;
+    border-radius: 2px;
+    background-color: @body-bg;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: background 0s ease-out;
+    -o-transition: background 0s ease-out;
+    transition: background 0s ease-out;
+    &:hover, &:focus {
+      outline: none;
+      border-color: @input-border-focus;
+      -webkit-background-size: 100% 2px, 100% 1px;
+      background-size: 100% 2px, 100% 1px;
+      box-shadow: none;
+    }
+    &.app-select, &.select-locale {
+      background-color: @input-border;
+    }
+    &[readonly], &[disabled] {
+      border-color: transparent;
+      color: @wm-input-disabled-color;
+    }
+  }
+  .input-group-btn {
+    .btn {
+      background-color: @input-border;
+      border: 0;
+      box-shadow: none;
+      color: inherit;
+      &:hover, &:focus {
+        background-color: @input-border;
+      }
+      &.active , &:active:hover {
+        background-color: @brand-primary;
+      }
+      i {
+        font-size: 14pt;
+        color: #ced2dc;
+      }
+    }
+  }
+  .model-holder[bsdatepicker] {
+    min-height: @input-height-base;
+  }
+  //**** form elements*****/
+
+  .radio, .checkbox {
+    input {
+      opacity: 0;
+      z-index: -1;
+      margin: 3px 0 !important;
+    }
+    label {
+      padding-left: @padding-base-horizontal;
+      &.disabled {
+        cursor: not-allowed;
+        span.caption {
+          cursor: not-allowed;
+        }
+      }
+    }
+    .caption {
+      position: relative;
+      min-height: 1em;
+      cursor: pointer;
+      padding-left: 27px;
+      margin: 5px 0;
+      &:before, &:after {
+        position: absolute;
+        content: "";
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        background: transparent;
+      }
+    }
+    label input:focus {
+      + .caption:before {
+        border: 1px solid #1794ef !important;
+      }
+    }
+  }
+
+  //radio buttons
+  .radio {
+    .caption {
+      &:before, &:after {
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+      }
+      &:before {
+        top: 0;
+        left: 0;
+        width: 17px;
+        height: 17px;
+        background-color: @body-bg;
+        border: 1px @pre-border-color solid;
+        .inset-shadow(0, 0, 0, 13px, @body-bg);
+      }
+      &:after {
+        top: 45%;
+        left: 10px;
+        width: 17px;
+        height: 17px;
+        -moz-transform: translate(-50%, -50%) scale(0);
+        -ms-transform: translate(-50%, -50%) scale(0);
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+      }
+    }
+    input:checked + .caption:before {
+      -moz-box-shadow: inset 0 0 0 3px @body-bg;
+      -webkit-box-shadow: inset 0 0 0 3px @body-bg;
+      box-shadow: inset 0 0 0 3px @body-bg;
+      background-color: @brand-primary;
+    }
+    input:checked + .caption:after {
+      -moz-transform: translate(-50%, -50%) scale(1);
+      -ms-transform: translate(-50%, -50%) scale(1);
+      -webkit-transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+
+  //checkbox
+  .checkbox {
+    .caption {
+      &:before {
+        top: 0;
+        left: 0;
+        width: 17px;
+        height: 17px;
+        background-color: @brand-primary;
+        border: 1px @pre-border-color solid;
+        .inset-shadow(0, 0, 0, 13px, @body-bg);
+      }
+      &:after {
+        top: 45%;
+        left: 10px;
+        width: 40px;
+        height: 40px;
+        -moz-transform: translate(-50%, -50%) scale(0);
+        -ms-transform: translate(-50%, -50%) scale(0);
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+      }
+    }
+    input:checked + .caption:before {
+      -moz-box-shadow: inset 0 0 0 13px @brand-primary;
+      -webkit-box-shadow: inset 0 0 0 13px @brand-primary;
+      box-shadow: inset 0 0 0 13px @brand-primary;
+      background-color: @body-bg;
+      border-color: @brand-primary;
+      border-top-style: none;
+      border-right-style: none;
+      padding: 0 3px;
+      color: @wm-checked-color;
+      content: "\2713";
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    }
+    input:checked + .caption:after {
+      -moz-transform: translate(-50%, -50%) scale(1);
+      -ms-transform: translate(-50%, -50%) scale(1);
+      -webkit-transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  //form widgets
+  .app-form, .app-liveform {
+    //for labels in the form
+    .control-label, .app-label {
+      padding: 1em 1em 0;
+      font-family: Robotomedium;
+      margin-bottom: 1em;
+      font-weight: normal;
+      color: @wm-form-label-color;
+    }
+    //action buttons in the form
+    .panel-footer.form-action {
+      background-color: inherit;
+      padding: @padding-base-horizontal;
+      border-top: 1px solid @panel-inner-border;
+    }
+    .form-action {
+      .btn {
+        margin: 0 0.333em;
+        border-radius: @border-radius-base;
+      }
+    }
+
+    .panel-body {
+      padding: 0;
+      .app-grid-layout {
+        padding: @padding-base-horizontal;
+      }
+    }
+    //Styling File Upload in IE
+    input[type="file"] {
+      padding: 0;
+      //Browse textbox
+      &::-ms-value {
+        border: 1px solid @input-border;
+        background-color: @input-bg;
+      }
+
+      //Browse button
+      &::-ms-browse {
+        border: 1px solid @input-border;
+      }
+    }
+    .form-control-static {
+      font-family: @font-family-sans-serif;
+      color: @input-color-placeholder;
+    }
+    .app-date {
+      .input-group-btn {
+        .btn.btn-default {
+          border-width: 0;
+          &:hover {
+            border-width: 0;
+          }
+        }
+      }
+    }
+  }
+
+  //filter
+  .app-livefilter {
+    .control-label, .app-label {
+      padding: 1em 1em 0;
+      margin-bottom: 1em;
+      font-weight: bold;
+    }
+    .panel-footer.form-action {
+      padding: @padding-base-horizontal;
+      border-top: 1px solid @panel-inner-border;
+    }
+    .form-action {
+      .btn {
+        margin: 0 0.333em;
+        border-radius: @border-radius-base;
+      }
+    }
+    .panel-body {
+      padding: @padding-base-horizontal;
+    }
+  }
+  /***Switch widget****/
+  .app-switch {
+    .btn {
+      border-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  /***search widget****/
+  .app-search {
+    border: 1px solid @input-border;
+    background-color: @body-bg;
+    &.input-group {
+      .app-textbox {
+        border-width: 0;
+      }
+      &:hover {
+        border-color: @input-border-focus;
+      }
+    }
+    .input-group-addon {
+      padding: 0.667em;
+      &:hover {
+        background: transparent;
+      }
+    }
+    &.input-group-sm {
+      .input-group-addon {
+        padding: 2px 4px;
+      }
+    }
+  }
+
+  /****Input addon***/
+  .input-group-addon {
+    border:0;
+    border-bottom: 1px solid transparent;
+  }
+
+  /******grid styles*******/
+  .app-grid {
+    .form-search {
+      padding: 1.5em;
+      .input-group.input-group-sm {
+        .input-group-addon, .input-group-btn {
+          padding: 0 4px;
+          .btn {
+            .app-icon {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+    }
+    .table {
+      thead {
+        tr {
+          padding: @padding-base-horizontal 1.72em;
+        }
+        th {
+          background-color: #2f3442;
+          .header-data {
+            text-transform: uppercase;
+          }
+          .sort-buttons-container {
+            .sort-button {
+              //display: none;
+              .up {
+                border-width: 0 0.333em 0.333em;
+                bottom: -2px;
+              }
+              .down {
+                border-width: 0.333em 0.333em 0;
+                top: 0.250em;
+              }
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          &.active {
+            td {
+              color: @text-color;
+            }
+          }
+          td {
+            .row-action-button.btn-transparent:focus {
+              color: @text-color;
+            }
+          }
+        }
+      }
+      th, td, tr {
+        &.info, &.info:hover {
+          background-color: @wm-grid-selection-bg;
+        }
+      }
+    }
+    .input-group-addon {
+      border: 1px solid @input-border;
+      background-color: @body-bg;
+      &:hover {
+        border-color: @input-border-focus;
+      }
+    }
+
+    .panel-footer {
+      .app-datagrid-actions {
+        vertical-align: middle;
+        .btn {
+          margin: 0 0.333em;
+        }
+      }
+      .app-datagrid-paginator {
+        .app-datanavigator a:focus {
+          box-shadow: inset 0px 0px 0px 1px @pagination-hover-border;
+        }
+      }
+    }
+    .app-datagrid {
+      .app-datagrid-cell {
+        &.cell-editing:not(.checkbox-widget) {
+          padding: @padding-small-vertical @padding-small-horizontal;
+        }
+      }
+      .app-grid-header {
+        background-color: #2f3442;
+      }
+      .form-search.form-inline {
+        .form-control.app-select {
+          background-color: @body-bg;
+        }
+      }
+    }
+    .cell-editing {
+      input {
+        background-color: @table-bg;
+      }
+    }
+  }
+
+  //***** data grid basic pagination****///
+
+  .app-datanavigator {
+    .pagination.basic {
+      &.pagination-sm {
+        li a {
+          width: 20pt;
+          height: 20pt;
+        }
+        li.pagination-page a{
+          padding: 6px 0;
+        }
+      }
+      .pagination-prev, .pagination-next, .pagination-first, .pagination-last{
+        a {
+          padding: 3px 7px;
+        }
+      }
+      li {
+        font-size: 1.08em;
+        a {
+          color: @pagination-color;
+          background-color: @wm-pagination-basic-bg;
+          border: 0;
+          border-radius: 50%;
+          padding: 8px 0;
+          margin: 0 2px;
+          width: 27pt;
+          height: 27pt;
+        }
+        &.active {
+          a, a:hover, a:focus {
+            color: @pagination-active-color;
+            background-color: @pagination-active-bg;
+            border: 0;
+          }
+          &:hover {
+            a, a:hover, a:focus {
+              background-color: @wm-pagination-active-hover-bg;
+              color: @pagination-active-color;
+            }
+          }
+        }
+        &:hover, &:focus {
+          a, a:hover, a:focus {
+            color: inherit;
+            background-color: @pagination-hover-bg;
+            border: 0;
+          }
+        }
+        &.disabled {
+          a {
+            opacity: 0.6;
+            background-color: @wm-pagination-basic-bg;
+            color: @pagination-disabled-color;
+          }
+        }
+      }
+    }
+    .pagination {
+      li {
+        &.pagecount {
+          a {
+            background-color: @pagination-active-bg;
+            border-color: @pagination-active-bg;
+            input {
+              color: @pagination-active-color;
+              text-align: center;
+              background-image: none;
+            }
+          }
+        }
+      }
+    }
+    .pager {
+      li {
+        a {
+          margin: 0 .5em 0 0;
+          padding: @padding-base-vertical @padding-base-horizontal;
+        }
+        &.disabled {
+          a {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+    .advanced {
+      li {
+        &.disabled {
+          a {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+
+  //carousel styling: removing the left and right background image
+  .carousel-control {
+    &.left, &.right {
+      background-image: none;
+    }
+  }
+
+  /****accordion classes****/
+  .app-accordion {
+    .app-accordion-panel {
+      box-shadow: none;
+      border-color: @panel-inner-border;
+      .panel-heading {
+        color: @text-color;
+        background-color: transparent;
+        .panel-icon {
+          margin-top: 0;
+        }
+        .panel-title {
+          color: @text-color;
+          .heading {
+            line-height: inherit;
+            font-size: 1em;
+          }
+        }
+        .panel-actions {
+          right: 1em;
+          top: 1.2em;
+          outline: none;
+
+        }
+      }
+      .panel-collapse {
+        border: 0;
+        &:before {
+          content: "";
+          height: 2px;
+          position: absolute;
+          width: 100%;
+          left: 0;
+          top: 0;
+          -webkit-transition: all;
+          -o-transition: all;
+          transition: all;
+          -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+          -webkit-transform: scale(0);
+          -ms-transform: scale(0);
+          -o-transform: scale(0);
+          transform: scale(0);
+        }
+
+        &.in {
+          outline: none;
+          box-shadow: none;
+          &:before {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+            background: @brand-primary;
+          }
+        }
+      }
+      &.panel-default {
+        .panel-collapse::before {
+          background-color: @input-border;
+        }
+      }
+      &.panel-success {
+        > .panel-heading {
+          .panel-title {
+            .panel-icon, .heading, .description {
+              color: @brand-success;
+            }
+          }
+          .panel-actions {
+            .panel-action {
+              color: @brand-success;
+            }
+          }
+        }
+        .panel-collapse::before {
+          background-color: @brand-success;
+        }
+      }
+      &.panel-info {
+        > .panel-heading {
+          .panel-title {
+            .panel-icon, .heading, .description {
+              color: @brand-info;
+            }
+          }
+          .panel-actions {
+            .panel-action {
+              color: @brand-info;
+            }
+          }
+        }
+        .panel-collapse::before {
+          background-color: @brand-info;
+        }
+      }
+      &.panel-warning {
+        > .panel-heading {
+          .panel-title {
+            .panel-icon, .heading, .description {
+              color: @brand-warning;
+            }
+          }
+          .panel-actions {
+            .panel-action {
+              color: @brand-warning;
+            }
+          }
+        }
+        .panel-collapse::before {
+          background-color: @brand-warning;
+        }
+      }
+      &.panel-primary {
+        > .panel-heading {
+          .panel-title {
+            .panel-icon, .heading, .description {
+              color: @brand-primary;
+            }
+          }
+          .panel-actions {
+            .panel-action {
+              color: @brand-primary;
+            }
+          }
+        }
+        .panel-collapse::before {
+          background-color: @brand-primary;
+        }
+      }
+      &.panel-danger {
+        > .panel-heading {
+          .panel-title {
+            .panel-icon, .heading, .description {
+              color: @brand-danger;
+            }
+          }
+          .panel-actions {
+            .panel-action {
+              color: @brand-danger;
+            }
+          }
+        }
+        .panel-collapse::before {
+          background-color: @brand-danger;
+        }
+      }
+    }
+  }
+
+  .panel-group {
+    .panel-heading + .panel-collapse {
+      > .panel-body {
+        border-top: 0;
+      }
+    }
+  }
+
+  /**** panel *****/
+  .panel, .card {
+    border-radius: @border-radius-base;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1em;
+    .panel-heading {
+      .panel-title {
+        .description {
+          font-size: .75em;
+          color: inherit;
+          font-style: normal;
+          margin-top: 5px;
+          opacity: .7;
+        }
+      }
+      .panel-actions {
+        .panel-action {
+          a {
+            &:focus, &:hover {
+              text-decoration: none;
+            }
+          }
+          .app-anchor{
+            font-size: 1.15em;
+            padding: 0 6px;
+            width: 30px;
+            height: 30px;
+            &:hover, &:focus {
+              background-color: rgba(158,158,158,.2);
+              border-radius: 50%;
+              transition: color .5s ease, background .5s ease;
+              -webkit-transition: color .5s ease, background .5s ease;
+              -moz-transition: color .5s ease, background .5s ease;
+              -ms-transition: color .5s ease, background .5s ease;
+              -o-transition: color .5s ease, background .5s ease;
+            }
+          }
+        }
+      }
+    }
+    .panel-content {
+      .panel-help-message.show-help {
+        background: @body-bg;
+        border-left: 1px @input-border solid;
+        .panel-help-header {
+          background-color: @input-border;
+          border-bottom-color: @input-border;
+        }
+      }
+    }
+  }
+  .app-livegrid {
+    .app-liveform {
+      &.panel {
+        border-color: @input-border;
+        .panel-heading {
+          border-bottom-color: @input-border;
+        }
+        //.form-elements {
+        //  .live-field.form-group {
+        //
+        //  }
+        //}
+      }
+    }
+  }
+  .app-livelist, .app-grid {
+    &.panel {
+      background-color: @wm-table-header-bg;
+      box-shadow: none;
+    }
+
+  }
+  .app-list, .app-livelist {
+    .panel-heading {
+      background-color: @input-border;
+    }
+    .app-list-item {
+      &.active {
+        .app-panel, .app-card, .app-tabs .tab-content, .ta-editor  {
+          color: @text-color;
+          border-color: @brand-primary;
+        }
+        .app-form {
+          border-color: transparent;
+        }
+        //Fix for select for an active list item
+        select {
+          option {
+            color: @text-color;
+          }
+        }
+      }
+      .app-form {
+        margin-bottom: 0;
+        box-shadow: none;
+      }
+    }
+  }
+  .app-card {
+    background-color: @body-bg;
+    border: 1px solid @input-border;
+    .app-card-header {
+      background-color: transparent;
+      .card-heading {
+        font-size: 1.155em;
+      }
+
+      .app-card-avatar {
+        height: 18pt;
+        width: 18pt;
+        .app-icon {
+          font-size: 18pt;
+          padding: 5px 0;
+        }
+      }
+      .app-card-header-text {
+        padding-left: 1em;
+      }
+      .app-card-avatar, .app-card-header-text{
+        padding-top: 0;
+      }
+    }
+
+    .card-title {
+      font-size: 1.87em;
+      font-weight: normal;
+      color: rgba(0,0,0,0.87);
+    }
+    .card-text {
+      font-size: 1.1em;
+      line-height: 1.6em;
+    }
+
+    .app-card-actions {
+      padding: .5em;
+    }
+  }
+
+  /*** dropdown menu*****/
+
+
+  .app-menu {
+    .btn {
+      &.dropdown-toggle {
+        color: @text-color;
+        background-color: @body-bg;
+        border: 1px solid @dropdown-border;
+      }
+    }
+    .dropdown-menu {
+      padding: 0;
+      margin: 0;
+      background-color: @body-bg;
+      border: 1px solid @dropdown-border;
+      border-radius: 1px;
+      -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      li {
+        a {
+          font-size: 1.1em;
+          padding: 10px 15px;
+          &:hover {
+            background-color: @input-border;
+          }
+        }
+      }
+    }
+  }
+
+
+
+  //file upload button
+  .app-single-file-upload {
+    .glyphicon {
+      margin-right: 0.500em;
+    }
+  }
+  //stylings for tile widget
+  .app-tile {
+    &.bg-danger, &.bg-success, &.bg-info, &.bg-warning {
+      color: @panel-primary-text;
+    }
+  }
+
+  /*Date, DateTime & Dropdown widgets*/
+  .app-calendar, .app-date, .app-datetime, .app-timeinput {
+    //setting the margin for the group button so that it shows up over the input
+    .input-group-btn:last-child {
+      > .btn, .btn-group {
+        margin-left: 0;
+      }
+    }
+    //setting the base font color for the popup content
+    .dropdown-menu {
+      color: @text-color;
+    }
+
+    thead tr th {
+      button.btn-default {
+        color: @component-active-color;
+        background: transparent;
+        border-color: transparent;
+        box-shadow: none;
+        font-size: 1.24em;
+        padding: 1.4em 1em;
+        text-transform: uppercase;
+        &:hover, &:focus, &:active, &:active:hover, &:active:focus {
+          color: @component-active-color;
+          background-color: rgba(0,0,0,.01);
+          border-color: transparent;
+        }
+      }
+    }
+    tbody {
+      .btn-default, .btn {
+        border-width: 0;
+        color: @wm-datepicker-text-color;
+        width: auto;
+        box-shadow: none;
+        padding: @padding-base-horizontal;
+        &.btn-info {
+          background-color: lighten(@brand-primary, 30%);
+          color: @text-color;
+        }
+        &:hover, &:focus, &.active:hover, &:focus:hover {
+          background-color: @component-active-bg;
+          border-color: @component-active-bg;
+          color: @component-active-color;
+          .text-info {
+            color: inherit;
+          }
+        }
+        .text-info {
+          color: @brand-primary;
+          font-weight: bold;
+        }
+      }
+      td {
+         &.week {
+            span {
+              color: @brand-primary;
+              &:hover {
+                background-color: transparent;
+                color: @brand-primary;
+              }
+            }
+         }
+         span {
+            &.text-info {
+              color: @brand-primary;
+              font-weight: bold;
+            }
+            &.selected {
+              background-color: lighten(@brand-primary, 30%);
+              color: @text-color;
+            }
+            &:hover {
+              background-color: @component-active-bg;
+              border-color: @component-active-bg;
+              color: @component-active-color;
+            }
+            &.disabled, &.is-other-month {
+              color: rgba(168, 168, 168, 0.5);
+              &:hover {
+                color: rgba(0, 0, 0, 0.25);
+                background-color: rgba(168,168,168,0.05);
+              }
+              &:focus {
+                color: rgba(0, 0, 0, 0.5);
+              }
+            }
+         }
+      }
+    }
+    small {
+      font-size: .85em;
+      text-transform: uppercase;
+      color: @component-active-color;
+    }
+  }
+  //styling for the popup calendar actions
+  .bs-datepicker {
+    border: 1px solid @input-border;
+    .bs-datepicker-head {
+      background: @component-active-bg;
+      color: @component-active-color;
+    }
+    .bs-datepicker-body {
+      padding: 0;
+      border: none;
+      background-color: @body-bg;
+      thead tr {
+        background-color: @wm-datepicker-header-bg;
+      }
+      tbody td {
+        color: @text-color;
+        span:not(.selected):focus {
+          background-color: @input-border;
+          color: @text-color;
+        }
+      }
+    }
+    table td.is-highlighted:not(.disabled):not(.selected) span {
+      background-color: @component-active-bg;
+      border-color: @component-active-bg;
+      color: @component-active-color;
+      &.text-info {
+        color: inherit;
+      }
+    }
+  }
+  datepicker {
+    thead {
+      background: @component-active-bg;
+      color: @component-active-color;
+      tr:nth-child(2) {
+        background-color: @wm-datepicker-header-bg;
+      }
+    }
+    tbody {
+      .btn.btn-sm {
+        font-size: 1em;
+      }
+    }
+  }
+  //styling for the popup calendar actions
+  .app-date, .app-datetime {
+    strong {
+      font-weight: normal;
+    }
+    table {
+      outline: none;
+    }
+    tbody {
+      .btn-default {
+        &.active, &:focus {
+          background-color: @component-active-bg;
+          color: @component-active-color;
+
+          &:hover {
+            background-color: @component-active-bg;
+          }
+          .text-info {
+            color: @component-active-color;
+          }
+        }
+        &:hover {
+          background-color: @wm-datepicker-btn-hover-bg;
+          border-color: transparent;
+        }
+      }
+      .btn-sm {
+        font-size: 1em;
+      }
+    }
+
+    .btn-group {
+      box-shadow: none;
+      .btn , & + .btn {
+        background-color: transparent;
+        border-color: transparent;
+        color: @brand-primary;
+        font-size: 1.1em;
+        box-shadow: none;
+      }
+    }
+  }
+
+  //Time Widget classes for styling the buttons
+  .app-timeinput, .app-datetime {
+    tbody {
+      .am-pm .btn {
+        border: 1px solid @input-border;
+        padding: 8px 12px;
+      }
+      .btn-link {
+        width: 100%;
+        background-color: transparent;
+        &:hover {
+          background-color: @btn-primary-bg;
+          color: @btn-primary-color;
+        }
+      }
+    }
+  }
+
+  //Calendar Specific
+  .app-calendar {
+    background-color: @body-bg;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+    .well.well-sm {
+      background-color: @body-bg;
+      padding: 0;
+      margin: 0;
+      border-color: @input-border;
+      button {
+        border: none;
+      }
+    }
+    .fc {
+      .fc-state-default, .fc-button-primary {
+        background: rgba(0,0,0,.05);
+        border: 1px solid rgba(0,0,0,.05);
+        color: @component-active-color;
+        text-shadow: none;
+        &.fc-state-hover, &:focus, &.fc-state-active, &.fc-button-active {
+          color: @btn-default-color;
+          background: @btn-default-bg;
+          border: 1px solid @btn-default-border ;
+        }
+      }
+      &.fc-unthemed {
+        .fc-view-container {
+          table {
+            .fc-head {
+              .fc-head-container {
+                border-color: @input-border;
+              }
+              .fc-row {
+                th {
+                  border-color: @input-border;
+                }
+              }
+            }
+            .fc-body {
+              .fc-widget-content {
+                border-color: @input-border;
+              }
+              .fc-scroller {
+                .fc-row {
+                  table {
+                    tbody {
+                      td {
+                        border-color: @input-border;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .fc-today {
+          background-color: @btn-default-border;
+        }
+      }
+    }
+    .fc-state-highlight {
+      &.fc-today {
+        background-color: transparent;
+        color: @brand-primary;
+      }
+    }
+    .fc {
+      .fc-toolbar {
+        margin-bottom: 0;
+        padding: 1.82em;
+        background-color: @brand-primary;
+        h2 {
+          color: @component-active-color;
+          text-transform: uppercase;
+        }
+      }
+      .fc-view-container {
+        background-color: @body-bg;
+      }
+    }
+    .fc-widget-header {
+      background-color: transparent;
+      color: @wm-calendar-header-color;
+      font-weight: normal;
+      font-size: 1.03em;
+    }
+    .fc-body {
+      .fc-row {
+        min-height: 5em;
+      }
+    }
+    .fc-day-number {
+      padding: .5em .3em;
+      color: @wm-calendar-text-color;
+      font-size: 1.52em;
+      text-align: left;
+    }
+    .fc-event {
+      background-color: @wm-calendar-event-bg;
+      border-color: @input-border;
+      .fc-bg {
+        background-color: @wm-calendar-event-bg;
+      }
+    }
+  }
+
+  /*********************************************************************************************************************************************/
+  /****************************************************Advanced editors******************************************************************************/
+  /*********************************************************************************************************************************************/
+  //Spinner
+  .app-spinner  {
+    .spinner-message {
+      color: @brand-primary;
+      background-color: transparent;
+      border-color: transparent;
+    }
+    .spinner-image {
+      color: @brand-primary;
+    }
+  }
+  .app-richtexteditor {
+    .btn-default {
+      color: @text-color;
+      &.disabled, &[disabled], &.disabled:hover, &[disabled]:hover, &.disabled:focus, &[disabled]:focus,
+      &.disabled.focus, &.focus[disabled], &.disabled:active, &[disabled]:active, &.disabled.active, &.active[disabled],
+      &.disabled.active, &.active[disabled] {
+        background-color: @gray-darker;
+        color: @text-color;
+      }
+      &:focus, &.active , &:active:hover  {
+        background-color: @component-active-bg;
+        color: @component-active-color;
+      }
+    }
+
+    .ta-root {
+      .ta-toolbar.btn-toolbar {
+        background-color: @body-bg;
+        border: 1px solid @input-border;
+        .btn-group {
+          .btn {
+            height: 3em;
+            padding: .75em;
+          }
+        }
+        &:hover {
+          border-color: @input-border-focus;
+        }
+      }
+      .ta-scroll-window {
+        .ta-bind {
+          pre {
+            background-color: @body-bg;
+            color: @text-color;
+            border: 1px solid @input-border;
+            &:hover {
+              border-color: @input-border-focus;
+            }
+          }
+        }
+      }
+    }
+
+    .form-control {
+      background-color: @body-bg;
+      background-image: none;
+    }
+  }
+
+  fieldset[disabled] {
+    .app-richtexteditor {
+      .btn-default, .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
+        background-color: @gray-lighter;
+        color: @text-color;
+      }
+    }
+  }
+
+  //Tree
+  .app-tree {
+    ul {
+      li {
+        span {
+          &:hover {
+            color: @text-color;
+          }
+        }
+        &.selected {
+          > i, > span {
+            color: @brand-primary;
+          }
+        }
+        i.wi.expanded {
+          color: @brand-primary;
+        }
+      }
+    }
+  }
+
+  //App chart strokes
+  .app-chart {
+    svg {
+      .nvd3 {
+        text {
+          fill: @text-color;
+        }
+      }
+    }
+  }
+
+  .nvtooltip {
+    color: @input-border;
+    background-color: rgba(255,255,255,.8);
+  }
+
+  //Chip Widget
+  .app-chips {
+    > li {
+      .app-chip {
+        color: @btn-default-color;
+        border: 1px solid @input-border-focus;
+      }
+    }
+  }
+
+
+  //Wizard widget
+  .app-wizard {
+    border: 1px solid @input-border;
+    .app-wizard-steps {
+      border-bottom: 1px solid @input-border;
+      .app-wizard-step {
+        a {
+          color: @text-color;
+        }
+        &.disabled {
+          a {
+            background-color: @body-bg;
+            &:hover {
+              color: @text-color;
+            }
+          }
+        }
+        &.current {
+          a {
+            background-color: @brand-primary;
+          }
+        }
+        &.active {
+          a {
+            color: @brand-primary;
+            background-color: @body-bg;
+          }
+        }
+        &:not(:last-child) {
+          .arrow {
+            border-color: @input-border;
+          }
+        }
+      }
+    }
+  }
+
+  /***color picker class: adding the default size and padding to the addon*******/
+  .app-colorpicker {
+    &.input-group {
+      width: 13em;
+    }
+  }
+  /***popover class: removing the radius*******/
+  .popover {
+    padding: 0;
+    border-radius: @border-radius-base;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    color: @text-color;
+  }
+
+/***ratings widget styling*******************/
+  .app-ratings {
+    .rating-style > label {
+      color: @wm-rating-text-color;
+
+      &:hover, &:hover ~ label {
+        color: @wm-rating-hover-text-color;
+      }
+
+      &.active {
+        color: @wm-rating-hover-text-color;
+      }
+    }
+  }
+
+  /***fileuploader widget styling*******************/
+  .app-fileupload .app-multi-file-upload, .app-fileupload .app-single-file-upload {
+    height: auto;
+    min-height: 3em;
+    &:hover {
+      border-color: @input-border-focus
+    }
+  }
+
+  .app-files-upload-status {
+    padding-top: 0.833em;
+    &.multiple {
+      padding-top: 0.333em;
+      font-size: 1.2em;
+    }
+  }
+
+  /***Slider widget styling*******************/
+  input[type='range'] {
+    color: @brand-primary;
+  }
+}

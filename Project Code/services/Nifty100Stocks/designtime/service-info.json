@@ -1,0 +1,6 @@
+{
+  "id" : "Nifty100Stocks",
+  "type" : "RestService",
+  "title" : "Nifty100Stocks",
+  "mockEnabled" : false
+}

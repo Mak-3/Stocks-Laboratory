@@ -1,0 +1,221 @@
+{
+  "basePath" : "${rest.alphavantage.basepath}",
+  "paths" : {
+    "/query" : {
+      "x-WM-BASE_PATH" : "/query",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "alphavantage_RestServiceVirtualController-invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "symbol",
+          "format" : "string",
+          "description" : "symbol",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "apikey",
+          "format" : "string",
+          "description" : "apikey",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "function",
+          "format" : "string",
+          "description" : "function",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "tags" : [ "RestServiceVirtualController" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.alphavantage.scheme}://${rest.alphavantage.host}${rest.alphavantage.basepath}/query"
+    }
+  },
+  "host" : "${rest.alphavantage.host}",
+  "schemes" : [ "${rest.alphavantage.scheme}" ],
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "alphavantage.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "200DayMovingAverage", "50DayMovingAverage", "52WeekHigh", "52WeekLow", "Address", "AnalystTargetPrice", "AssetType", "Beta", "BookValue", "CIK", "Country", "Currency", "Description", "DilutedEPSTTM", "DividendDate", "DividendPerShare", "DividendYield", "EBITDA", "EPS", "EVToEBITDA", "EVToRevenue", "ExDividendDate", "Exchange", "FiscalYearEnd", "ForwardPE", "GrossProfitTTM", "Industry", "LatestQuarter", "MarketCapitalization", "Name", "OperatingMarginTTM", "PEGRatio", "PERatio", "PriceToBookRatio", "PriceToSalesRatioTTM", "ProfitMargin", "QuarterlyEarningsGrowthYOY", "QuarterlyRevenueGrowthYOY", "ReturnOnAssetsTTM", "ReturnOnEquityTTM", "RevenuePerShareTTM", "RevenueTTM", "Sector", "SharesOutstanding", "Symbol", "TrailingPE" ],
+      "properties" : {
+        "Description" : {
+          "type" : "string"
+        },
+        "Address" : {
+          "type" : "string"
+        },
+        "200DayMovingAverage" : {
+          "type" : "string"
+        },
+        "Symbol" : {
+          "type" : "string"
+        },
+        "EBITDA" : {
+          "type" : "string"
+        },
+        "EPS" : {
+          "type" : "string"
+        },
+        "ExDividendDate" : {
+          "type" : "string"
+        },
+        "Name" : {
+          "type" : "string"
+        },
+        "Beta" : {
+          "type" : "string"
+        },
+        "Industry" : {
+          "type" : "string"
+        },
+        "FiscalYearEnd" : {
+          "type" : "string"
+        },
+        "DividendYield" : {
+          "type" : "string"
+        },
+        "EVToEBITDA" : {
+          "type" : "string"
+        },
+        "AnalystTargetPrice" : {
+          "type" : "string"
+        },
+        "Currency" : {
+          "type" : "string"
+        },
+        "DividendDate" : {
+          "type" : "string"
+        },
+        "PriceToSalesRatioTTM" : {
+          "type" : "string"
+        },
+        "EVToRevenue" : {
+          "type" : "string"
+        },
+        "52WeekLow" : {
+          "type" : "string"
+        },
+        "GrossProfitTTM" : {
+          "type" : "string"
+        },
+        "DilutedEPSTTM" : {
+          "type" : "string"
+        },
+        "QuarterlyEarningsGrowthYOY" : {
+          "type" : "string"
+        },
+        "CIK" : {
+          "type" : "string"
+        },
+        "OperatingMarginTTM" : {
+          "type" : "string"
+        },
+        "ProfitMargin" : {
+          "type" : "string"
+        },
+        "Sector" : {
+          "type" : "string"
+        },
+        "ForwardPE" : {
+          "type" : "string"
+        },
+        "LatestQuarter" : {
+          "type" : "string"
+        },
+        "TrailingPE" : {
+          "type" : "string"
+        },
+        "RevenueTTM" : {
+          "type" : "string"
+        },
+        "DividendPerShare" : {
+          "type" : "string"
+        },
+        "RevenuePerShareTTM" : {
+          "type" : "string"
+        },
+        "QuarterlyRevenueGrowthYOY" : {
+          "type" : "string"
+        },
+        "ReturnOnAssetsTTM" : {
+          "type" : "string"
+        },
+        "Exchange" : {
+          "type" : "string"
+        },
+        "AssetType" : {
+          "type" : "string"
+        },
+        "BookValue" : {
+          "type" : "string"
+        },
+        "PERatio" : {
+          "type" : "string"
+        },
+        "PriceToBookRatio" : {
+          "type" : "string"
+        },
+        "SharesOutstanding" : {
+          "type" : "string"
+        },
+        "Country" : {
+          "type" : "string"
+        },
+        "MarketCapitalization" : {
+          "type" : "string"
+        },
+        "PEGRatio" : {
+          "type" : "string"
+        },
+        "50DayMovingAverage" : {
+          "type" : "string"
+        },
+        "52WeekHigh" : {
+          "type" : "string"
+        },
+        "ReturnOnEquityTTM" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "x-WM-API_ID" : "b5c4dc97-f558-40f7-a9af-470de19c8ace",
+    "x-WM-SERVICE_ID" : "alphavantage2",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ]
+}

@@ -1,0 +1,32 @@
+{
+  "sslConfig" : {
+    "sslPort" : 443,
+    "useSSL" : false,
+    "excludedUrls" : null
+  },
+  "xssConfig" : {
+    "enforceXssSecurity" : true,
+    "policyFile" : null,
+    "xssFilterStrategy" : "ENCODE",
+    "policyType" : "MANUAL",
+    "dataBackwardCompatibility" : false,
+    "xssSanitizationLayer" : "OUTPUT"
+  },
+  "corsConfig" : {
+    "enabled" : false,
+    "maxAge" : 1600,
+    "allowCredentials" : false,
+    "pathEntries" : [ {
+      "name" : "root",
+      "path" : "/**",
+      "allowedOrigins" : "*"
+    } ]
+  },
+  "frameOptions" : {
+    "enabled" : true,
+    "mode" : "SAMEORIGIN",
+    "allowFromUrl" : null
+  },
+  "customFilterList" : null,
+  "allowedHosts" : null
+}

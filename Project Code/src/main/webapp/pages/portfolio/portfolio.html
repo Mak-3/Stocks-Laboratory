@@ -1,0 +1,90 @@
+<wm-page pagetitle="Portfolio" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-linearlayout direction="column" spacing="4" padding="4px" name="linearlayout1">
+                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem1" horizontalalign="right">
+                    <wm-anchor margin="unset 0.5em" name="anchor1" caption="check your watchlist here" on-click="Actions.goToPage_Watchlist.invoke()"></wm-anchor>
+                </wm-linearlayoutitem>
+            </wm-linearlayout>
+            <wm-tabs type="static" statehandler="URL" name="tabs1">
+                <wm-tabpane name="tabpane1" title="Indian">
+                    <wm-table statehandler="none" name="IndianStockPortfolioTable1" title="Indian_stock_portfolio List" dataset="bind:Variables.Stocks_laboratoryIndianStockPortfolioData.dataSet" navigation="On-Demand">
+                        <wm-table-column binding="stockSymbol" caption="Stock Symbol" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string"></wm-table-column>
+                        <wm-table-column binding="sharesOwned" caption="Shares Owned" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="integer"></wm-table-column>
+                        <wm-table-column binding="purchasePrice" caption="Purchase Price" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="double"></wm-table-column>
+                    </wm-table>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane2" title="American">
+                    <wm-table statehandler="none" name="AmericanStockPortfolioTable1" title="American_stock_portfolio List" dataset="bind:Variables.Stocks_laboratoryAmericanStockPortfolioData.dataSet" navigation="On-Demand" on-rowclick="Widgets.dialog1.open()">
+                        <wm-table-column binding="stockSymbol" caption="Stock Symbol" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string"></wm-table-column>
+                        <wm-table-column binding="sharesOwned" caption="Shares Owned" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="integer"></wm-table-column>
+                        <wm-table-column binding="purchasePrice" caption="Average Price" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="double"></wm-table-column>
+                    </wm-table>
+                </wm-tabpane>
+            </wm-tabs>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Stock holdings" iconclass="fa fa-suitcase" name="dialog1">
+        <wm-dialogactions name="dialogactions1">
+            <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button1"></wm-button>
+        </wm-dialogactions>
+        <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.Stocks_laboratoryCreateAmericanStockTransaction.dataSet" captionalign="left" name="form1">
+            <wm-layoutgrid columns="1" name="layoutgrid2">
+                <wm-gridrow name="gridrow5">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                        <wm-form-field name="AmericanStockTransaction_price" readonly="false" displayname="Purchase Price" key="AmericanStockTransaction.price" type="double" show="true" widget="number" textalign="left" defaultvalue="bind:Widgets.AmericanStockPortfolioTable1.selecteditem.purchasePrice"
+                            inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow6">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn6">
+                        <wm-form-field name="AmericanStockTransaction_shares" readonly="false" displayname="Shares" key="AmericanStockTransaction.shares" type="integer" show="true" widget="number" textalign="left" inputtype="number" placeholder="Enter value"
+                            defaultvalue="bind:Variables.getByUserIdAndStockSymbol.dataSet.sharesOwned"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow7">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                        <wm-form-field name="AmericanStockTransaction_stockSymbol" readonly="true" displayname="Stock Symbol" key="AmericanStockTransaction.stockSymbol" type="string" show="true" widget="text" defaultvalue="bind:Widgets.AmericanStockPortfolioTable1.selecteditem.stockSymbol"
+                            disabled="true" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow9">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                        <wm-form-field name="AmericanStockTransaction_transactionType" readonly="false" displayname="Transaction Type" key="AmericanStockTransaction.transactionType" type="string" show="false" widget="text" defaultvalue="sell" inputtype="text"
+                            placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow10">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                        <wm-form-field name="AmericanStockTransaction_userId" readonly="false" displayname="User Id" key="AmericanStockTransaction.userId" type="integer" show="false" widget="number" textalign="left" defaultvalue="bind:Variables.loggedInUserData.dataSet.id"
+                            inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn name="gridcolumn1" columnwidth="12">
+                        <wm-form-field name="Current" key="Current price" displayname="Current Price" show="true" type="string" widget="number" inputtype="number" placeholder="Enter value" defaultvalue="bind:Variables.NASDAQstockPriceSell.dataSet.price"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn name="gridcolumn2" columnwidth="12">
+                        <wm-form-field name="TotalValue" key="TotalValue" displayname="Total Value" show="true" type="string" widget="number" defaultvalue="bind:Variables.NASDAQstockPriceSell.dataSet.price*Widgets.form1.formWidgets.AmericanStockTransaction_shares.datavalue
+" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn name="gridcolumn1" columnwidth="12">
+                        <wm-form-field name="Invested" key="Invested value" displayname="Invested Value" show="true" type="double" widget="number" inputtype="number" placeholder="Enter value" defaultvalue="bind:Variables.getByUserIdAndStockSymbol.dataSet.purchasePrice*Variables.getByUserIdAndStockSymbol.dataSet.sharesOwned*Variables.USDtoINRconv.dataSet.new_amount"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn name="gridcolumn2" columnwidth="12">
+                        <wm-form-field name="current" key="current Value" displayname="Current Value" show="true" type="double" defaultvalue="bind:Widgets.form1.formWidgets.AmericanStockTransaction_shares.datavalue*Variables.NASDAQstockPriceSell.dataSet.price*Variables.USDtoINRconv.dataSet.new_amount"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="save" display-name="Sell" show="true" class="form-save btn-success" iconclass="" title="Sell" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+        </wm-form>
+    </wm-dialog>
+</wm-page>

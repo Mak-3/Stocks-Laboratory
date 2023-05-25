@@ -1,0 +1,23 @@
+{
+  "endpointAddress" : "https://www.alphavantage.co/query",
+  "method" : "GET",
+  "headers" : { },
+  "redirectEnabled" : true,
+  "requestBody" : "",
+  "queryParams" : {
+    "symbol" : "AAPL",
+    "apikey" : "1X4XN0NDMKE52D6R",
+    "function" : "OVERVIEW"
+  },
+  "authDetails" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 0,
+    "headers" : {
+      "content-type" : [ "application/json" ]
+    },
+    "responseBody" : "{\"Symbol\":\"AAPL\",\"AssetType\":\"Common Stock\",\"Name\":\"Apple Inc\",\"Description\":\"Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software, and online services. Apple is the world's largest technology company by revenue (totalling $274.5 billion in 2020) and, since January 2021, the world's most valuable company. As of 2021, Apple is the world's fourth-largest PC vendor by unit sales, and fourth-largest smartphone manufacturer. It is one of the Big Five American information technology companies, along with Amazon, Google, Microsoft, and Facebook.\",\"CIK\":\"320193\",\"Exchange\":\"NASDAQ\",\"Currency\":\"USD\",\"Country\":\"USA\",\"Sector\":\"TECHNOLOGY\",\"Industry\":\"ELECTRONIC COMPUTERS\",\"Address\":\"ONE INFINITE LOOP, CUPERTINO, CA, US\",\"FiscalYearEnd\":\"September\",\"LatestQuarter\":\"2023-03-31\",\"MarketCapitalization\":\"2701718979000\",\"EBITDA\":\"125287997000\",\"PERatio\":\"29.11\",\"PEGRatio\":\"2.75\",\"BookValue\":\"3.178\",\"DividendPerShare\":\"0\",\"DividendYield\":\"0.0055\",\"EPS\":\"5.9\",\"RevenuePerShareTTM\":\"24.32\",\"ProfitMargin\":\"0\",\"OperatingMarginTTM\":\"0\",\"ReturnOnAssetsTTM\":\"0.196\",\"ReturnOnEquityTTM\":\"147.94\",\"RevenueTTM\":\"387537011000\",\"GrossProfitTTM\":\"170782000000\",\"DilutedEPSTTM\":\"5.9\",\"QuarterlyEarningsGrowthYOY\":\"-0.105\",\"QuarterlyRevenueGrowthYOY\":\"-0.055\",\"AnalystTargetPrice\":\"177.94\",\"TrailingPE\":\"29.11\",\"ForwardPE\":\"25.4\",\"PriceToSalesRatioTTM\":\"5.51\",\"PriceToBookRatio\":\"44.63\",\"EVToRevenue\":\"5.92\",\"EVToEBITDA\":\"17.53\",\"Beta\":\"1.297\",\"52WeekHigh\":\"175.59\",\"52WeekLow\":\"123.98\",\"50DayMovingAverage\":\"160.75\",\"200DayMovingAverage\":\"151.55\",\"SharesOutstanding\":\"15728700000\",\"DividendDate\":\"2023-05-18\",\"ExDividendDate\":\"2023-05-12\"}",
+    "convertedResponse" : null
+  }
+}

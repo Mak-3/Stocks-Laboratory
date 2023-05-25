@@ -1,0 +1,39 @@
+{
+  "endpointAddress" : "https://api.twelvedata.com/quote",
+  "method" : "GET",
+  "headers" : { },
+  "redirectEnabled" : true,
+  "requestBody" : "",
+  "queryParams" : {
+    "symbol" : "AAPL",
+    "apikey" : "20808422e1a9413ea17c13259c41230d",
+    "source" : "docs"
+  },
+  "authDetails" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 200,
+    "headers" : {
+      "Date" : [ "Thu, 11 May 2023 09:08:34 GMT" ],
+      "Content-Type" : [ "application/json; charset=utf-8" ],
+      "Transfer-Encoding" : [ "chunked" ],
+      "Connection" : [ "keep-alive" ],
+      "Access-Control-Allow-Credentials" : [ "true" ],
+      "Access-Control-Allow-Headers" : [ "Content-Type, Accept-Encoding, Authorization, Accept, Origin, X-Requested-With" ],
+      "Access-Control-Allow-Methods" : [ "GET, OPTIONS" ],
+      "Access-Control-Allow-Origin" : [ "*" ],
+      "Api-Credits-Left" : [ "7" ],
+      "Api-Credits-Used" : [ "1" ],
+      "Api-Source-Node" : [ "T" ],
+      "CF-Cache-Status" : [ "DYNAMIC" ],
+      "Report-To" : [ "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=AXG5bbg0l0ZgsEV7D2hkxmgQhCQqZVXNfwWttb694IYdRFLf4OXKy037iF6hF1dgYHV1eLISUPYLWawgv%2BdsG11lvVX20Kv2DAtHvq5shHK3D55YKQi%2BOQqG54unNmAatBJlucI%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}" ],
+      "NEL" : [ "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}" ],
+      "Server" : [ "cloudflare" ],
+      "CF-RAY" : [ "7c5947333f254612-DFW" ],
+      "alt-svc" : [ "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400" ]
+    },
+    "responseBody" : "{\"symbol\":\"AAPL\",\"name\":\"Apple Inc\",\"exchange\":\"NASDAQ\",\"mic_code\":\"XNGS\",\"currency\":\"USD\",\"datetime\":\"2023-05-10\",\"timestamp\":1683748799,\"open\":\"173.02000\",\"high\":\"174.03000\",\"low\":\"171.89999\",\"close\":\"173.56000\",\"volume\":\"53672700\",\"previous_close\":\"171.77000\",\"change\":\"1.78999\",\"percent_change\":\"1.04209\",\"average_volume\":\"63566030\",\"is_market_open\":false,\"fifty_two_week\":{\"low\":\"124.17000\",\"high\":\"176.14999\",\"low_change\":\"49.39000\",\"high_change\":\"-2.59000\",\"low_change_percent\":\"39.77611\",\"high_change_percent\":\"-1.47034\",\"range\":\"124.169998 - 176.149994\"}}",
+    "convertedResponse" : null
+  }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd" xmlns="http://www.springframework.org/schema/beans" xmlns:security="http://www.springframework.org/schema/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <import resource="classpath:FileService.spring.xml"/>
+    <import resource="classpath:IndianNews.spring.xml"/>
+    <import resource="classpath:MyJavaService.spring.xml"/>
+    <import resource="classpath:NASDAQstockPrice.spring.xml"/>
+    <import resource="classpath:Nifty100Stocks.spring.xml"/>
+    <import resource="classpath:Nifty50Stocks.spring.xml"/>
+    <import resource="classpath:USDtoINR.spring.xml"/>
+    <import resource="classpath:alphavantage.spring.xml"/>
+    <import resource="classpath:alphavantage2.spring.xml"/>
+    <import resource="classpath:securityService.spring.xml"/>
+    <import resource="classpath:stocks_laboratory.spring.xml"/>
+    <import resource="classpath:twelvedata.spring.xml"/>
+    <import resource="classpath:twelvedata2.spring.xml"/>
+    <import resource="classpath:twelvedata3.spring.xml"/>
+    <import resource="classpath:twelvedata4.spring.xml"/>
+    <import resource="classpath:twelvedata5.spring.xml"/>
+    <import resource="classpath:twelvedata6.spring.xml"/>
+    <import resource="classpath:twelvedata7.spring.xml"/>
+</beans>

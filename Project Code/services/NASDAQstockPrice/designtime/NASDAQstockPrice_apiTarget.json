@@ -1,0 +1,103 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "91f302d5-a5c1-4fd5-99ff-1a0814663098",
+    "x-WM-SERVICE_ID" : "p",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "host" : "realstonks.p.rapidapi.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "NASDAQstockPrice"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/{name}" : {
+      "get" : {
+        "tags" : [ "NASDAQstockPrice" ],
+        "operationId" : "NASDAQstockPrice_invoke",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "X-RapidAPI-Key",
+          "in" : "header",
+          "description" : "X-RapidAPI-Key",
+          "required" : false,
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : true,
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "name" : "X-RapidAPI-Host",
+          "in" : "header",
+          "description" : "X-RapidAPI-Host",
+          "required" : false,
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : true,
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "name" : "name",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/{name}",
+      "x-WM-TAG" : "NASDAQstockPrice",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.NASDAQstockPrice.scheme}://${rest.NASDAQstockPrice.host}${rest.NASDAQstockPrice.basepath}/{name}"
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "required" : [ "change_percentage", "change_point", "price", "total_vol" ],
+      "properties" : {
+        "change_point" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "change_percentage" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "total_vol" : {
+          "type" : "string"
+        },
+        "price" : {
+          "type" : "number",
+          "format" : "double"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "NASDAQstockPrice.RootResponse",
+      "x-WM-TAGS" : [ "NASDAQstockPrice" ]
+    }
+  }
+}

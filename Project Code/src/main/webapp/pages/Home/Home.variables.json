@@ -1,0 +1,471 @@
+{
+  "Alphavantage2Invoke2" : {
+    "_id" : "wm-Alphavantage2Invoke2-wm.ServiceVariable-1684006041888",
+    "name" : "Alphavantage2Invoke2",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "apikey",
+      "value" : "1X4XN0NDMKE52D6R",
+      "type" : "string"
+    }, {
+      "target" : "function",
+      "value" : "NEWS_SENTIMENT",
+      "type" : "string"
+    }, {
+      "target" : "tickers",
+      "value" : "bind:Widgets.search1.query",
+      "type" : "string"
+    } ],
+    "type" : "alphavantage2.RootResponse",
+    "service" : "alphavantage2",
+    "operation" : "invoke",
+    "operationId" : "alphavantage2_invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "alphavantage2"
+  },
+  "americanTimeSeries100" : {
+    "_id" : "wm-americanTimeSeries-wm.ServiceVariable-1683989163349",
+    "name" : "americanTimeSeries100",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "symbol",
+      "value" : "AAPL",
+      "type" : "string"
+    }, {
+      "target" : "outputsize",
+      "value" : "100",
+      "type" : "string"
+    }, {
+      "target" : "apikey",
+      "value" : "20808422e1a9413ea17c13259c41230d",
+      "type" : "string"
+    }, {
+      "target" : "interval",
+      "value" : "1day",
+      "type" : "string"
+    }, {
+      "target" : "source",
+      "value" : "docs",
+      "type" : "string"
+    } ],
+    "type" : "twelvedata6.RootResponse",
+    "service" : "twelvedata6",
+    "operation" : "invoke",
+    "operationId" : "twelvedata6_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "americanTimeSeries25" : {
+    "_id" : "wm-americanTimeSeries25-wm.ServiceVariable-1683992010669",
+    "name" : "americanTimeSeries25",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "symbol",
+      "value" : "MSFT",
+      "type" : "string"
+    }, {
+      "target" : "outputsize",
+      "value" : "25",
+      "type" : "string"
+    }, {
+      "target" : "apikey",
+      "value" : "20808422e1a9413ea17c13259c41230d",
+      "type" : "string"
+    }, {
+      "target" : "interval",
+      "value" : "1day",
+      "type" : "string"
+    }, {
+      "target" : "source",
+      "value" : "docs",
+      "type" : "string"
+    } ],
+    "type" : "twelvedata6.RootResponse",
+    "service" : "twelvedata6",
+    "operation" : "invoke",
+    "operationId" : "twelvedata6_RestServiceVirtualController-invoke",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false
+  },
+  "americanTimeSeries50" : {
+    "_id" : "wm-americanTimeSeries50-wm.ServiceVariable-1683991986841",
+    "name" : "americanTimeSeries50",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "symbol",
+      "value" : "MSFT",
+      "type" : "string"
+    }, {
+      "target" : "outputsize",
+      "value" : "50",
+      "type" : "string"
+    }, {
+      "target" : "apikey",
+      "value" : "20808422e1a9413ea17c13259c41230d",
+      "type" : "string"
+    }, {
+      "target" : "interval",
+      "value" : "1day",
+      "type" : "string"
+    }, {
+      "target" : "source",
+      "value" : "docs",
+      "type" : "string"
+    } ],
+    "type" : "twelvedata6.RootResponse",
+    "service" : "twelvedata6",
+    "operation" : "invoke",
+    "operationId" : "twelvedata6_RestServiceVirtualController-invoke",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false
+  },
+  "americanTimeSeries7" : {
+    "_id" : "wm-americanTimeSeries7-wm.ServiceVariable-1683992037272",
+    "name" : "americanTimeSeries7",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "symbol",
+      "value" : "MSFT",
+      "type" : "string"
+    }, {
+      "target" : "outputsize",
+      "value" : "7",
+      "type" : "string"
+    }, {
+      "target" : "apikey",
+      "value" : "20808422e1a9413ea17c13259c41230d",
+      "type" : "string"
+    }, {
+      "target" : "interval",
+      "value" : "1day",
+      "type" : "string"
+    }, {
+      "target" : "source",
+      "value" : "docs",
+      "type" : "string"
+    } ],
+    "type" : "twelvedata6.RootResponse",
+    "service" : "twelvedata6",
+    "operation" : "invoke",
+    "operationId" : "twelvedata6_RestServiceVirtualController-invoke",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false
+  },
+  "appleStockPrice" : {
+    "_id" : "wm-appleStockPrice-wm.ServiceVariable-1684229948568",
+    "name" : "appleStockPrice",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "X-RapidAPI-Key",
+      "value" : [ "9bd2aa8d90msh89253751226ef58p127f9djsn29ed772c4dac" ],
+      "type" : "string"
+    }, {
+      "target" : "X-RapidAPI-Host",
+      "value" : [ "realstonks.p.rapidapi.com" ],
+      "type" : "string"
+    }, {
+      "target" : "name",
+      "value" : "AAPL",
+      "type" : "string"
+    } ],
+    "type" : "NASDAQstockPrice.RootResponse",
+    "service" : "NASDAQstockPrice",
+    "operation" : "invoke",
+    "operationId" : "NASDAQstockPrice_invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "NASDAQstockPrice"
+  },
+  "IndianNewsInvoke2" : {
+    "_id" : "wm-IndianNewsInvoke2-wm.ServiceVariable-1684072076996",
+    "name" : "IndianNewsInvoke2",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "X-RapidAPI-Key",
+      "value" : [ "9bd2aa8d90msh89253751226ef58p127f9djsn29ed772c4dac" ],
+      "type" : "string"
+    }, {
+      "target" : "X-RapidAPI-Host",
+      "value" : [ "share-market-news-api-india.p.rapidapi.com" ],
+      "type" : "string"
+    } ],
+    "type" : "IndianNews.Response.RootResponseROOTEntryItem",
+    "service" : "IndianNews",
+    "operation" : "invoke",
+    "operationId" : "IndianNews_invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "IndianNews"
+  },
+  "indianStocks" : {
+    "_id" : "wm-indianStocks-wm.ServiceVariable-1684218886994",
+    "name" : "indianStocks",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "Indices",
+      "value" : "NIFTY 100",
+      "type" : "java.lang.String"
+    }, {
+      "target" : "X-RapidAPI-Key",
+      "value" : [ "9bd2aa8d90msh89253751226ef58p127f9djsn29ed772c4dac" ],
+      "type" : "java.lang.String"
+    }, {
+      "target" : "X-RapidAPI-Host",
+      "value" : [ "latest-stock-price.p.rapidapi.com" ],
+      "type" : "java.lang.String"
+    } ],
+    "type" : "Nifty100Stocks.Response.RootResponseROOTEntryItem",
+    "service" : "Nifty100Stocks",
+    "operation" : "invoke",
+    "operationId" : "Nifty100Stocks_invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Nifty100Stocks"
+  },
+  "microsoftStockPrice" : {
+    "_id" : "wm-microsoftStockPrice-wm.ServiceVariable-1684229998306",
+    "name" : "microsoftStockPrice",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "X-RapidAPI-Key",
+      "value" : [ "9bd2aa8d90msh89253751226ef58p127f9djsn29ed772c4dac" ],
+      "type" : "string"
+    }, {
+      "target" : "X-RapidAPI-Host",
+      "value" : [ "realstonks.p.rapidapi.com" ],
+      "type" : "string"
+    }, {
+      "target" : "name",
+      "value" : "MSFT",
+      "type" : "string"
+    } ],
+    "type" : "NASDAQstockPrice.RootResponse",
+    "service" : "NASDAQstockPrice",
+    "operation" : "invoke",
+    "operationId" : "NASDAQstockPrice_invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "NASDAQstockPrice"
+  },
+  "nasdaqSymbols" : {
+    "_id" : "wm-nasdaqSymbols-wm.ServiceVariable-1684043521789",
+    "name" : "nasdaqSymbols",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "apikey",
+      "value" : "20808422e1a9413ea17c13259c41230d",
+      "type" : "string"
+    }, {
+      "target" : "exchange",
+      "value" : "NASDAQ",
+      "type" : "string"
+    }, {
+      "target" : "source",
+      "value" : "docs",
+      "type" : "string"
+    } ],
+    "type" : "twelvedata3.RootResponse",
+    "service" : "twelvedata3",
+    "operation" : "invoke",
+    "operationId" : "twelvedata3_invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "twelvedata3"
+  },
+  "Nifty100StocksInvoke" : {
+    "_id" : "wm-Nifty100StocksInvoke-wm.ServiceVariable-1684228338716",
+    "name" : "Nifty100StocksInvoke",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "Indices",
+      "value" : "NIFTY 100",
+      "type" : "string"
+    }, {
+      "target" : "X-RapidAPI-Key",
+      "value" : [ "9bd2aa8d90msh89253751226ef58p127f9djsn29ed772c4dac" ],
+      "type" : "string"
+    }, {
+      "target" : "X-RapidAPI-Host",
+      "value" : [ "latest-stock-price.p.rapidapi.com" ],
+      "type" : "string"
+    } ],
+    "type" : "Nifty100Stocks.Response.RootResponseROOTEntryItem",
+    "service" : "Nifty100Stocks",
+    "operation" : "invoke",
+    "operationId" : "Nifty100Stocks_invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Nifty100Stocks"
+  },
+  "teslaStockPrice" : {
+    "_id" : "wm-tslaStockPrice-wm.ServiceVariable-1684230026433",
+    "name" : "teslaStockPrice",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "X-RapidAPI-Key",
+      "value" : [ "9bd2aa8d90msh89253751226ef58p127f9djsn29ed772c4dac" ],
+      "type" : "string"
+    }, {
+      "target" : "X-RapidAPI-Host",
+      "value" : [ "realstonks.p.rapidapi.com" ],
+      "type" : "string"
+    }, {
+      "target" : "name",
+      "value" : "TSLA",
+      "type" : "string"
+    } ],
+    "type" : "NASDAQstockPrice.RootResponse",
+    "service" : "NASDAQstockPrice",
+    "operation" : "invoke",
+    "operationId" : "NASDAQstockPrice_invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "NASDAQstockPrice"
+  },
+  "Twelvedata7Invoke" : {
+    "_id" : "wm-Twelvedata7Invoke-wm.ServiceVariable-1684010959044",
+    "name" : "Twelvedata7Invoke",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "symbol",
+      "value" : "AAPL,TSLA,MSFT,GOOGL,GOOGL",
+      "type" : "string"
+    }, {
+      "target" : "apikey",
+      "value" : "20808422e1a9413ea17c13259c41230d",
+      "type" : "string"
+    }, {
+      "target" : "source",
+      "value" : "docs",
+      "type" : "string"
+    } ],
+    "type" : "twelvedata7.RootResponse",
+    "service" : "twelvedata7",
+    "operation" : "invoke",
+    "operationId" : "twelvedata7_invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "columnField" : "AAPL",
+    "dataField" : "AAPL.close",
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : true,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "twelvedata7",
+    "transformationColumns" : [ ]
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "x-WM-API_ID" : "0a691974-4bbe-4e7c-88ce-d9ba8248b8bb",
+    "x-WM-SERVICE_ID" : "p",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "host" : "currency-converter-by-api-ninjas.p.rapidapi.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "USDtoINR"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/USDtoINR/convertcurrency" : {
+      "get" : {
+        "tags" : [ "USDtoINR" ],
+        "operationId" : "USDtoINR_invoke",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "X-RapidAPI-Host",
+          "in" : "header",
+          "description" : "X-RapidAPI-Host",
+          "required" : false,
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : true,
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "name" : "X-RapidAPI-Key",
+          "in" : "header",
+          "description" : "X-RapidAPI-Key",
+          "required" : false,
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : true,
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "name" : "amount",
+          "in" : "query",
+          "description" : "amount",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "name" : "want",
+          "in" : "query",
+          "description" : "want",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "name" : "have",
+          "in" : "query",
+          "description" : "have",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/USDtoINR/convertcurrency",
+      "x-WM-TAG" : "USDtoINR",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.USDtoINR.scheme}://${rest.USDtoINR.host}${rest.USDtoINR.basepath}/convertcurrency"
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "required" : [ "new_amount", "new_currency", "old_amount", "old_currency" ],
+      "properties" : {
+        "new_amount" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "new_currency" : {
+          "type" : "string"
+        },
+        "old_amount" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "old_currency" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "USDtoINR.RootResponse",
+      "x-WM-TAGS" : [ "USDtoINR" ]
+    }
+  }
+}

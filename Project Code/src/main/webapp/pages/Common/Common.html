@@ -1,0 +1,38 @@
+<wm-partial name="CommonPage">
+    <wm-logindialog modal="true" name="CommonLoginDialog" iconclass="wi wi-sign-in" title="Login">
+        <wm-form name="loginform">
+            <wm-message show="false" class="app-login-dialog-message" name="loginmessage"></wm-message>
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn name="gridcolumn1">
+                        <wm-composite name="usernamefield">
+                            <wm-label class="col-md-3 control-label" caption="Username" name="usernamelabel"></wm-label>
+                            <wm-container class="col-md-9" name="container1">
+                                <wm-text placeholder="Enter username" class="col-md-8 app-login-dialog-username" name="j_username" autocomplete="off" autocorrect="off" updateon="default" autocapitalize="off" required="true"></wm-text>
+                            </wm-container>
+                        </wm-composite>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn name="gridcolumn2">
+                        <wm-composite name="passwordfield">
+                            <wm-label class="col-md-3 control-label" caption="Password" name="passwordlabel"></wm-label>
+                            <wm-container class="col-md-9" name="container2">
+                                <wm-text type="password" placeholder="Enter password" class="col-md-8 app-login-dialog-password" name="j_password" autocomplete="off" autocorrect="off" updateon="default" autocapitalize="off" required="true"></wm-text>
+                            </wm-container>
+                        </wm-composite>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-form>
+        <wm-dialogactions>
+            <wm-button class='btn-primary' caption='Sign in' data-role='loginbutton' on-click="doLogin()"></wm-button>
+        </wm-dialogactions>
+    </wm-logindialog>
+    <wm-alertdialog name="CommonAlertDialog" controller="NotificationDialogController" notificationdialog="alert" message="bind:notification.text" title="bind:notification.title" oktext="bind:notification.okButtonText" alerttype="bind:notification.alerttype"
+                    on-ok="notification.onOk()" on-close="notification.onClose()">
+    </wm-alertdialog>
+    <wm-confirmdialog name="CommonConfirmDialog" controller="NotificationDialogController" notificationdialog="confirm" message="bind:notification.text" title="bind:notification.title" oktext="bind:notification.okButtonText" canceltext="bind:notification.cancelButtonText"
+                      on-ok="notification.onOk()" on-cancel="notification.onCancel()">
+    </wm-confirmdialog>
+</wm-partial>
