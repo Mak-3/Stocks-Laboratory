@@ -1,11 +1,8 @@
 # Project Name
 **STOCKS LABORATORY**
 
-# Overview
-A fully functional and responsive web application for paper trading simulation with fundamental and technical analysis of a company or a stock
-
 # Description
-With its virtual money feature and the incorporation of fundamental and sentimental analysis, this application provides a valuable opportunity to mitigate the risks associated with trading in the stock market, allowing users to gain hands-on experience and a comprehensive understanding of a particular stock's overview.
+Utilizing cutting-edge technology,I have developed a robust, interactive web application that provides users with a comprehensive paper trading simulation experience. This platform incorporates advanced features such as real-time fundamental and sentimental analysis, allowing investors to analyze companies or stocks with precision and make informed decisions
 
 # Images
 ![image-000](https://github.com/Mak-3/Stocks-Laboratory/assets/75625675/2f5effe5-38ea-4276-8c93-4100e2de5245)
